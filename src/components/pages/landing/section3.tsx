@@ -6,7 +6,7 @@ import { Stack, Title } from '@mantine/core';
 export const LandingSection3 = () => {
   return (
     <>
-      <Stack py={SIZE_CONFIG.SECTION_SPACE} align="center" mih="100vh">
+      <Stack pt={SIZE_CONFIG.SECTION_SPACE} align="center" mih="100vh">
         <Title fw={300} maw={600} ta="center" c={COLOR.TURQUOISE}>
           Our dedicated team seamlessly integrates with your business so you can
           scale with confidence.
@@ -20,12 +20,12 @@ export const LandingSection3 = () => {
         <CommonSectionCard
           title="From our Partners"
           description="I would not work with any other service provider. The best part of
-              working with TechSpeed is they provide you with flexibility. My
-              advice for anyone considering TechSpeed is pretty straightforward.
-              Do it."
+        working with TechSpeed is they provide you with flexibility. My
+        advice for anyone considering TechSpeed is pretty straightforward.
+        Do it."
           writer="Rajiv Chegu"
           position="Strategy and New Business"
-          image=''
+          image="https://images.unsplash.com/photo-1719937206667-ac87c15ad3e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8"
         />
       </Stack>
     </>
