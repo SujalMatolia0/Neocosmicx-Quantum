@@ -1,3 +1,4 @@
+import { CommonFooter } from '@/components/footer/common';
 import { CommonLayout } from '@/components/layout/common';
 import { LandingHero } from '@/components/pages/landing/hero';
 import { LandingSection1 } from '@/components/pages/landing/section1';
@@ -16,6 +17,7 @@ export default function Page() {
         <LandingSection4 />
         <LandingSection5 />
         <LandingSection6 />
+        <CommonFooter />
       </CommonLayout>
     </>
   );
