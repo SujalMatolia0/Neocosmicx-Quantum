@@ -1,5 +1,5 @@
 import { CommonButton } from '@/components/indie/common_button';
-import { COLOR } from '@/configs/theme';
+import { COLOR, SIZE_CONFIG } from '@/configs/theme';
 import { useSizeHelper } from '@/lib/hooks/size_helper';
 import { Box, Divider, Grid, Group, Stack, Text, Title } from '@mantine/core';
 import { IconCheck } from '@tabler/icons-react';
@@ -20,7 +20,7 @@ export const LandingHero = () => {
   const size = useSizeHelper();
   return (
     <>
-      <Grid  mih="79vh" columns={10}>
+      <Grid  mih="83vh" py={SIZE_CONFIG.SECTION_SPACE} columns={10}>
         <Grid.Col span={4} pl={130}>
           <Stack>
             <Title fw={300} lh={1} size={size.TITLE_1}>

@@ -6,14 +6,16 @@ interface Props {
   description: string;
   writer: string;
   position: string;
-  image: string;
+  image?: string;
 }
 
 export const CommonSectionCard = (props: Props) => {
   return (
     <>
       <Paper
-        ml={-600}
+        pos="relative"
+        right={300}
+        top={50}
         radius="xl"
         bg={COLOR.GRAY}
         h={60}
@@ -23,6 +25,7 @@ export const CommonSectionCard = (props: Props) => {
         }}
       ></Paper>
       <Paper
+        pos="relative"
         p="xl"
         mih={250}
         w={650}
@@ -41,15 +44,10 @@ export const CommonSectionCard = (props: Props) => {
           <Text size="sm">{props.position}</Text>
         </Stack>
       </Paper>
-      <Image
-        ml={2200}
-        src={props.image}
-        alt="pic"
-        style={{
-          zIndex: 2,
-        }}
-      />
       <Paper
+        pos="relative"
+        left={300}
+        top={-50}
         radius="xl"
         bg={COLOR.GRAY}
         h={60}
@@ -58,6 +56,20 @@ export const CommonSectionCard = (props: Props) => {
           zIndex: 0,
         }}
       ></Paper>
+      {props.image && (
+        <Image
+          h={300}
+          w={300}
+          pos="relative"
+          left={450}
+          top={-350}
+          src={props.image}
+          alt="pic"
+          style={{
+            zIndex: 2,
+          }}
+        />
+      )}
     </>
   );
 };

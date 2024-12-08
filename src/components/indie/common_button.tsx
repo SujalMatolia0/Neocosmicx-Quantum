@@ -11,6 +11,7 @@ export const CommonButton = (params: {
   return (
     <>
       <Button
+      w="fit-content"
         variant={params.variant}
         h={50}
         radius="lg"
