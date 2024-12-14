@@ -10,7 +10,7 @@ export const CommonLayout = (props: Props) => {
     <>
       <Container size='2000px' p={0}>
         <Stack gap={0}>
-          <CommonHeader />
+          {/* <CommonHeader /> */}
           {props.children}
         </Stack>
       </Container>

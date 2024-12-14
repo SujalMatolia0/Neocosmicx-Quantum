@@ -1,22 +1,37 @@
 import { CommonCard } from '@/components/indie/common_card';
 import { CommonSectionCard } from '@/components/indie/common_section_card';
 import { COLOR, SIZE_CONFIG } from '@/configs/theme';
-import { Stack, Title } from '@mantine/core';
+import { SimpleGrid, Stack, Text, Title } from '@mantine/core';
 
 export const LandingSection3 = () => {
   return (
     <>
       <Stack pt={SIZE_CONFIG.SECTION_SPACE} align="center" mih="100vh">
         <Title fw={300} maw={600} ta="center" c={COLOR.TURQUOISE}>
-          Our dedicated team seamlessly integrates with your business so you can
-          scale with confidence.
+          Our Accreditation
         </Title>
-        <CommonCard
-          title="hi"
-          image="/"
-          description="sdjsakjhasjhabdshf adhbfaksjbhf"
-          data={[{ title: 'Title 1' }, { title: 'Title 2' }]}
-        />
+        <Text c="dimmed">Get Global recognition for your Quantum skills </Text>
+
+        <SimpleGrid cols={{ base: 1, md: 3 }}>
+          <CommonCard
+            title="Quantum Workshop"
+            image="/"
+            description="Global recognition of Quantum for beginner"
+            data={[{ title: 'Title 1' }, { title: 'Title 2' }]}
+          />
+          <CommonCard
+            title="Quantum Workshop"
+            image="/"
+            description="Global recognition of Quantum for beginner"
+            data={[{ title: 'Title 1' }, { title: 'Title 2' }]}
+          />
+          <CommonCard
+            title="Quantum Workshop"
+            image="/"
+            description="Global recognition of Quantum for beginner"
+            data={[{ title: 'Title 1' }, { title: 'Title 2' }]}
+          />{' '}
+        </SimpleGrid>
         <CommonSectionCard
           title="From our Partners"
           description="I would not work with any other service provider. The best part of

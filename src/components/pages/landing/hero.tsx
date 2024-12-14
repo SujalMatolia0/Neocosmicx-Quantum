@@ -1,6 +1,7 @@
 import { CommonButton } from '@/components/indie/common_button';
 import { COLOR, SIZE_CONFIG } from '@/configs/theme';
 import { useSizeHelper } from '@/lib/hooks/size_helper';
+import { useMediaQuerys } from '@filante/cobalt/hooks';
 import { Box, Divider, Grid, Group, Stack, Text, Title } from '@mantine/core';
 import { IconCheck } from '@tabler/icons-react';
 import { Children } from 'react';
@@ -18,18 +19,18 @@ const DATA = [
 ];
 export const LandingHero = () => {
   const size = useSizeHelper();
+  const { MD } = useMediaQuerys();
   return (
     <>
-      <Grid  mih="83vh" py={SIZE_CONFIG.SECTION_SPACE} columns={10}>
-        <Grid.Col span={4} pl={130}>
+      <Grid mih="100vh" py={SIZE_CONFIG.SECTION_SPACE} columns={10}>
+        <Grid.Col span={5} pl={MD ? 130 : 'md'}>
           <Stack>
             <Title fw={300} lh={1} size={size.TITLE_1}>
-              All-in-one outsourcing
+              A Global Professional of Quantum
             </Title>
-            <Text>Human powered, AI-enhanced outsourcing services.</Text>
+            <Text>Join Us to expertise your Quantum expertise </Text>
             <Group>
               <CommonButton variant="outline" title="Call us at night" />
-
               <CommonButton title="Call us at night" />
             </Group>
           </Stack>
@@ -41,8 +42,8 @@ export const LandingHero = () => {
             pos="absolute"
             bg={COLOR.TURQUOISE}
           >
-            <Stack gap='sm' px={100} pt={100} justify='end'>
-              <Divider color={COLOR.GRAY}/>
+            <Stack gap="sm" px={100} pt={100} justify="end">
+              <Divider color={COLOR.GRAY} />
               {Children.toArray(
                 DATA.map((item) => (
                   <>
@@ -57,7 +58,7 @@ export const LandingHero = () => {
             </Stack>
           </Box>
         </Grid.Col>
-        <Grid.Col span={6}></Grid.Col>
+        <Grid.Col span={5}></Grid.Col>
       </Grid>
     </>
   );
