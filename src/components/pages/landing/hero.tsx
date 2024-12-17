@@ -31,32 +31,35 @@ export const LandingHero = () => {
             <Text>Join Us to expertise your Quantum expertise </Text>
             <Group>
               <CommonButton variant="outline" title="Call us at night" />
-              <CommonButton title="Call us at night" />
+              <CommonButton  title="Call us at night" />
             </Group>
           </Stack>
-          <Box
-            w={550}
-            h={300}
-            left={0}
-            bottom={0}
-            pos="absolute"
-            bg={COLOR.TURQUOISE}
-          >
-            <Stack gap="sm" px={100} pt={100} justify="end">
-              <Divider color={COLOR.GRAY} />
-              {Children.toArray(
-                DATA.map((item) => (
-                  <>
-                    <Group>
-                      <IconCheck color={COLOR.GRAY} />
-                      <Text c={COLOR.PEACH}>{item.text}</Text>
-                    </Group>
-                    <Divider />
-                  </>
-                ))
-              )}
-            </Stack>
-          </Box>
+
+          {MD ? (
+            <Box
+              w={550}
+              h={300}
+              left={0}
+              bottom={0}
+              pos="absolute"
+              bg={COLOR.TURQUOISE}
+            >
+              <Stack gap="sm" px={100} pt={100} justify="end">
+                <Divider color={COLOR.GRAY} />
+                {Children.toArray(
+                  DATA.map((item) => (
+                    <>
+                      <Group>
+                        <IconCheck color={COLOR.GRAY} />
+                        <Text c={COLOR.PEACH}>{item.text}</Text>
+                      </Group>
+                      <Divider />
+                    </>
+                  ))
+                )}
+              </Stack>
+            </Box>
+          ) : null}
         </Grid.Col>
         <Grid.Col span={5}></Grid.Col>
       </Grid>

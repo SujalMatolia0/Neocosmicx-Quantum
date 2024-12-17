@@ -78,7 +78,7 @@ export const LandingSection1 = () => {
           )}
         </Carousel>
 
-        <SimpleGrid px="140" cols={{ base: 1, md: 2 }}>
+        <SimpleGrid px={MD ? '140' : 'xs'} cols={{ base: 1, md: 2 }}>
           <Group></Group>
           <Stack pl={MD ? '80' : 'xs'}>
             <Paper
@@ -97,9 +97,8 @@ export const LandingSection1 = () => {
               </Center>
             </Paper>
             <Title c={COLOR.PEACH}>
-              Our customized program on Quantum computing
-              provides a uniques opportunity to empower, retain, and advance
-              your talent.
+              Our customized program on Quantum computing provides a uniques
+              opportunity to empower, retain, and advance your talent.
             </Title>
             <Text c={COLOR.PEACH}>
               We are the first who provides Quantum computing with fully
