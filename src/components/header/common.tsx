@@ -9,11 +9,11 @@ const DATA = [
     link: 'https://example.com',
   },
   {
-    name: 'Memberships',
+    name: 'Accreditations',
     link: 'https://example.com',
   },
   {
-    name: 'Memberships',
+    name: 'Continuous Learning ',
     link: 'https://example.com',
   },
 ];
@@ -33,8 +33,8 @@ export const CommonHeader = () => {
           )}
         </Group>
         <Group>
-          <CommonButton variant="transparent" title="Call us at night" />
-          <CommonButton title="Call us at night" />
+          <CommonButton variant="transparent" title="LogIn" />
+          <CommonButton title="SignUp" />
         </Group>
       </Group>
     </>

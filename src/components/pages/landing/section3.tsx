@@ -1,30 +1,42 @@
 import { CommonCard } from '@/components/indie/common_card';
 import { CommonSectionCard } from '@/components/indie/common_section_card';
 import { COLOR, SIZE_CONFIG } from '@/configs/theme';
-import { Stack, Title } from '@mantine/core';
+import { Center, SimpleGrid, Stack, Text, Title } from '@mantine/core';
 
 export const LandingSection3 = () => {
   return (
     <>
       <Stack pt={SIZE_CONFIG.SECTION_SPACE} align="center" mih="100vh">
         <Title fw={300} maw={600} ta="center" c={COLOR.TURQUOISE}>
-          Our dedicated team seamlessly integrates with your business so you can
-          scale with confidence.
+          Our Accreditation
         </Title>
-        <CommonCard
-          title="hi"
-          image="/"
-          description="sdjsakjhasjhabdshf adhbfaksjbhf"
-          data={[{ title: 'Title 1' }, { title: 'Title 2' }]}
-        />
+        <Text c="dimmed">Get Global recognition for your Quantum skills </Text>
+
+        <SimpleGrid cols={{ base: 1, md: 3, sm: 2 }}>
+          <CommonCard
+            title="Quantum Workshop"
+            image="https://images.pexels.com/photos/4195504/pexels-photo-4195504.jpeg?auto=compress&cs=tinysrgb&w=600"
+            description="Global recognition of Quantum for beginner"
+            data={[{ title: 'Title 1' }, { title: 'Title 2' }]}
+          />
+          <CommonCard
+            title="Quantum Workshop"
+            image="https://images.pexels.com/photos/4195504/pexels-photo-4195504.jpeg?auto=compress&cs=tinysrgb&w=600"
+            description="Global recognition of Quantum for beginner"
+            data={[{ title: 'Title 1' }, { title: 'Title 2' }]}
+          />
+          <CommonCard
+            title="Quantum Workshop"
+            image="https://images.pexels.com/photos/4195504/pexels-photo-4195504.jpeg?auto=compress&cs=tinysrgb&w=600"
+            description="Global recognition of Quantum for beginner"
+            data={[{ title: 'Title 1' }, { title: 'Title 2' }]}
+          />{' '}
+        </SimpleGrid>
         <CommonSectionCard
-          title="From our Partners"
-          description="I would not work with any other service provider. The best part of
-        working with TechSpeed is they provide you with flexibility. My
-        advice for anyone considering TechSpeed is pretty straightforward.
-        Do it."
-          writer="Rajiv Chegu"
-          position="Strategy and New Business"
+          title="A Quantum Leap in Research"
+          description="As a quantum researcher, I've benefited greatly from CVRCQRD's platform. It's streamlined my work, boosted my skills, and fosters a collaborative environment. Highly recommended!"
+          writer="Mr. Noor Ul Hasan"
+          position="Quantum Researcher"
           image="https://images.unsplash.com/photo-1719937206667-ac87c15ad3e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8"
         />
       </Stack>

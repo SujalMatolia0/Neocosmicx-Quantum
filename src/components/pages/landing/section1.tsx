@@ -5,14 +5,15 @@ import {
   SimpleGrid,
   Stack,
   Text,
+  Image,
   Title,
 } from '@mantine/core';
 import { Children, useRef } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
 import { Carousel } from '@mantine/carousel';
 import { COLOR, SIZE_CONFIG } from '@/configs/theme';
-import Image from 'next/image';
 import { CommonButton } from '@/components/indie/common_button';
+import { useMediaQuerys } from '@filante/cobalt/hooks';
 
 const DATA = [
   {
@@ -46,10 +47,16 @@ const DATA = [
 
 export const LandingSection1 = () => {
   const autoplay = useRef(Autoplay({ delay: 800 }));
+  const { MD } = useMediaQuerys();
   return (
     <>
-      <Stack bg={COLOR.TURQUOISE} gap="lg" py={SIZE_CONFIG.SECTION_SPACE} mih="100vh">
-        <Carousel
+      <Stack
+        bg={COLOR.TURQUOISE}
+        gap="lg"
+        py={SIZE_CONFIG.SECTION_SPACE}
+        mih="100vh"
+      >
+        {/* <Carousel
           py="xl"
           loop
           withControls={false}
@@ -70,43 +77,46 @@ export const LandingSection1 = () => {
             ))
           )}
         </Carousel>
-
-        <SimpleGrid px="140" cols={2}>
-          <Group></Group>
-          <Stack pl="80">
-            <Paper
-              bg={COLOR.GREEN}
-              h={150}
-              w={150}
-              radius="50%"
-              style={{
-                rotate: '35deg',
-              }}
-            >
-              <Center h="100%">
-                <Text c={COLOR.TURQUOISE} maw={80}>
-                  jklasdak sk jsdna;sjd;oi
-                </Text>
-              </Center>
-            </Paper>
+ */}
+        <SimpleGrid px={MD ? '140' : 'xs'} cols={{ base: 1, md: 2 }}>
+          <Group>
+            <Image src="https://images.pexels.com/photos/4195504/pexels-photo-4195504.jpeg?auto=compress&cs=tinysrgb&w=600" />
+          </Group>
+          <Stack pl={MD ? '80' : 'xs'}>
+            {MD ? (
+              <Paper
+                bg={COLOR.GREEN}
+                h={150}
+                w={150}
+                radius="50%"
+                style={{
+                  rotate: '35deg',
+                }}
+              >
+                <Center h="100%">
+                  <Text ta="left" c={COLOR.TURQUOISE} maw={80}>
+                    Quantum computing Training
+                  </Text>
+                </Center>
+              </Paper>
+            ) : null}
             <Title c={COLOR.PEACH}>
-              TechSpeed, a leader in data processing solutions since 2002,
-              offers a complete suite of outsourcing solutions.
+              Our customized program on Quantum computing provides a uniques
+              opportunity to empower, retain, and advance your talent.
             </Title>
             <Text c={COLOR.PEACH}>
-              We are the first BPO that combines AI technology with fully
-              integrated human support to help firms of all sizes work faster,
-              smarter, and cheaper leveraging US-based project management and
-              global production teams.
+              We are the first who provides Quantum computing with fully
+              integrated platform to support and work faster, smarter and give
+              global recognition to researcher.
             </Text>
             <Text c={COLOR.PEACH}>
-              Our goal is to keep your costs low, quality high, and customers
-              satisfied.
+              Our platform is to keep your learning faster, easy productive.
             </Text>
           </Stack>
         </SimpleGrid>
-        <Group pt="xl" justify='center' gap="xl">
-            <CommonButton title='hisdas' color={COLOR.PEACH} /><CommonButton title='sadba' />
+        <Group pt="xl" justify="center" gap="xl">
+          <CommonButton title="Enroll Now!!" color={COLOR.PEACH} />
+          <CommonButton title="Start Learning" />
         </Group>
       </Stack>
     </>
