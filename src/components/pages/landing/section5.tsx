@@ -15,18 +15,18 @@ import { Children } from 'react';
 const DATA = [
   {
     image: 'https://picsum.photos/200/300',
-    title: 'Title 1',
-    description: 'Description 1',
+    title: 'Sustainability',
+    description: 'Developing sustainable quantum technologies for the future',
   },
   {
     image: 'https://picsum.photos/200/301',
-    title: 'Title 2',
-    description: 'Description 2',
+    title: 'Excellence',
+    description: 'Striving for the highest standards of quality and precision',
   },
   {
     image: 'https://picsum.photos/200/302',
-    title: 'Title 3',
-    description: 'Description 3',
+    title: 'Integrity',
+    description: 'Upholding ethical principles and transparent practices',
   },
 ];
 
@@ -72,7 +72,7 @@ export const LandingSection5 = () => {
                   <Title c={COLOR.GREEN} ta="center" order={2}>
                     {item.title}
                   </Title>
-                  <Text c={COLOR.GREEN} size="sm">
+                  <Text c={COLOR.PEACH} ta="center" size="sm">
                     {item.description}
                   </Text>
                 </Stack>
@@ -84,11 +84,25 @@ export const LandingSection5 = () => {
 
         <Space h="xl" />
         <Group gap={0}>
-          <Paper style={{ borderColor: COLOR.GREEN}} h={120} w={250} radius={0} withBorder bg="transparent"></Paper>
+          <Paper
+            style={{ borderColor: COLOR.GREEN }}
+            h={120}
+            w={250}
+            radius={0}
+            withBorder
+            bg="transparent"
+          ></Paper>
           {Children.toArray(
             LOGO.map((item) => (
               <>
-                <Paper style={{ borderColor: COLOR.GREEN}} h={120} w={250} radius={0} withBorder bg="transparent">
+                <Paper
+                  style={{ borderColor: COLOR.GREEN }}
+                  h={120}
+                  w={250}
+                  radius={0}
+                  withBorder
+                  bg="transparent"
+                >
                   <Image h={120} w={250} src={item.image} alt="logo" />
                 </Paper>
               </>

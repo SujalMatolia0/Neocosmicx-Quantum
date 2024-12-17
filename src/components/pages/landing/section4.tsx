@@ -15,12 +15,12 @@ import { Children } from 'react';
 
 const DATA = [
   {
-    title: 'Title 1',
-    description: 'Description 1',
-    btnTitle: 'Button 1',
+    title: 'Quantum Innovation, Engineered',
+    description: 'Since 2002, we’ve been at the forefront of quantum computing, delivering cutting-edge solutions.',
+    btnTitle: 'Discover Our Solutions',
     list: [
-      'Credentialed: 85% of your staff will have a masters and 100% of them a high school degree as a minimum.',
-      'Certified: 85% of your staff will have a masters and 100% of',
+      'Expert Team: Our team of seasoned quantum researchers brings a wealth of knowledge and experience to every project.',
+      'Proven Track Record: We’ve successfully delivered innovative quantum solutions, contributing to groundbreaking advancements.',
     ],
   },
 ];
@@ -36,8 +36,7 @@ export const LandingSection4 = () => {
         py={SIZE_CONFIG.SECTION_SPACE}
       >
         <Title c={COLOR.GRAY} fw={300} size={size.TITLE_1} maw={800} ta="center">
-          Lets own a minority women business since 2002.
-        </Title>
+        Driving the Future of Quantum Computing        </Title>
         {Children.toArray(
           DATA.map((item) => (
             <>

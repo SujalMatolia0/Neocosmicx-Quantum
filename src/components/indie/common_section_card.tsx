@@ -1,4 +1,5 @@
 import { COLOR } from '@/configs/theme';
+import { useMediaQuerys } from '@filante/cobalt/hooks';
 import { Image, Paper, Space, Stack, Text, Title } from '@mantine/core';
 
 interface Props {
@@ -10,6 +11,7 @@ interface Props {
 }
 
 export const CommonSectionCard = (props: Props) => {
+  const { MD } = useMediaQuerys();
   return (
     <>
       <Paper
@@ -18,8 +20,8 @@ export const CommonSectionCard = (props: Props) => {
         top={50}
         radius="xl"
         bg={COLOR.GRAY}
-        h={60}
-        w={100}
+        h={MD ? 60 : 250}
+        w={MD ? 100 : 50}
         style={{
           zIndex: 0,
         }}
@@ -27,8 +29,9 @@ export const CommonSectionCard = (props: Props) => {
       <Paper
         pos="relative"
         p="xl"
-        mih={250}
-        w={650}
+        // No change on hight
+        mih={MD ? 250 : 100}
+        w={MD ? 650 : 300}
         shadow="xl"
         style={{
           zIndex: 1,
@@ -58,11 +61,11 @@ export const CommonSectionCard = (props: Props) => {
       ></Paper>
       {props.image && (
         <Image
-          h={300}
-          w={300}
+          h={MD?300:250}
+          w={MD?300:250}
           pos="relative"
-          left={450}
-          top={-350}
+          left={MD ? 450 : 0}
+          top={MD ? -350 : -750}
           src={props.image}
           alt="pic"
           style={{

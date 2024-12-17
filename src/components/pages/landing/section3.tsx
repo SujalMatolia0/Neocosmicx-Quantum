@@ -12,7 +12,7 @@ export const LandingSection3 = () => {
         </Title>
         <Text c="dimmed">Get Global recognition for your Quantum skills </Text>
 
-        <SimpleGrid cols={{ base: 1, md: 3 }}>
+        <SimpleGrid cols={{ base: 1, md: 3, sm: 2 }}>
           <CommonCard
             title="Quantum Workshop"
             image="/"
@@ -33,13 +33,10 @@ export const LandingSection3 = () => {
           />{' '}
         </SimpleGrid>
         <CommonSectionCard
-          title="From our Partners"
-          description="I would not work with any other service provider. The best part of
-        working with TechSpeed is they provide you with flexibility. My
-        advice for anyone considering TechSpeed is pretty straightforward.
-        Do it."
-          writer="Rajiv Chegu"
-          position="Strategy and New Business"
+          title="A Quantum Leap in Research"
+          description="As a quantum researcher, I've benefited greatly from CVRCQRD's platform. It's streamlined my work, boosted my skills, and fosters a collaborative environment. Highly recommended!"
+          writer="Mr. Noor Ul Hasan"
+          position="Quantum Researcher"
           image="https://images.unsplash.com/photo-1719937206667-ac87c15ad3e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8"
         />
       </Stack>

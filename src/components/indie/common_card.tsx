@@ -12,6 +12,8 @@ interface Props {
   }[];
 }
 
+
+
 export const CommonCard = (props: Props) => {
   return (
     <>
