@@ -20,7 +20,7 @@ export const CommonCard = (props: Props) => {
       <Card radius="lg">
         <Card.Section p="lg">
           <Stack align="center">
-            <Image src={props.image} alt="Card image" />
+            <Image h='10vw' radius='lg' src={props.image} alt="Card image" />
             <Text tt="uppercase" size="sm">
               {props.title}
             </Text>

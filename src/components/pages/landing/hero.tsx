@@ -22,7 +22,7 @@ export const LandingHero = () => {
   const { MD } = useMediaQuerys();
   return (
     <>
-      <Grid mih="100vh" py={SIZE_CONFIG.SECTION_SPACE} columns={10}>
+      <Grid mih="83vh" py={SIZE_CONFIG.SECTION_SPACE} columns={10}>
         <Grid.Col span={5} pl={MD ? 130 : 'md'}>
           <Stack>
             <Title fw={300} lh={1} size={size.TITLE_1}>
@@ -31,14 +31,14 @@ export const LandingHero = () => {
             <Text>Join Us to expertise your Quantum expertise </Text>
             <Group>
               <CommonButton variant="outline" title="Call us at night" />
-              <CommonButton  title="Call us at night" />
+              <CommonButton title="Call us at night" />
             </Group>
           </Stack>
 
           {MD ? (
             <Box
               w={550}
-              h={300}
+              h="50%"
               left={0}
               bottom={0}
               pos="absolute"

@@ -5,13 +5,13 @@ import {
   SimpleGrid,
   Stack,
   Text,
+  Image,
   Title,
 } from '@mantine/core';
 import { Children, useRef } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
 import { Carousel } from '@mantine/carousel';
 import { COLOR, SIZE_CONFIG } from '@/configs/theme';
-import Image from 'next/image';
 import { CommonButton } from '@/components/indie/common_button';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
 
@@ -56,7 +56,7 @@ export const LandingSection1 = () => {
         py={SIZE_CONFIG.SECTION_SPACE}
         mih="100vh"
       >
-        <Carousel
+        {/* <Carousel
           py="xl"
           loop
           withControls={false}
@@ -77,25 +77,29 @@ export const LandingSection1 = () => {
             ))
           )}
         </Carousel>
-
+ */}
         <SimpleGrid px={MD ? '140' : 'xs'} cols={{ base: 1, md: 2 }}>
-          <Group></Group>
+          <Group>
+            <Image src="https://images.pexels.com/photos/4195504/pexels-photo-4195504.jpeg?auto=compress&cs=tinysrgb&w=600" />
+          </Group>
           <Stack pl={MD ? '80' : 'xs'}>
-            <Paper
-              bg={COLOR.GREEN}
-              h={150}
-              w={150}
-              radius="50%"
-              style={{
-                rotate: '35deg',
-              }}
-            >
-              <Center h="100%">
-                <Text ta="left" c={COLOR.TURQUOISE} maw={80}>
-                  Quantum computing Training
-                </Text>
-              </Center>
-            </Paper>
+            {MD ? (
+              <Paper
+                bg={COLOR.GREEN}
+                h={150}
+                w={150}
+                radius="50%"
+                style={{
+                  rotate: '35deg',
+                }}
+              >
+                <Center h="100%">
+                  <Text ta="left" c={COLOR.TURQUOISE} maw={80}>
+                    Quantum computing Training
+                  </Text>
+                </Center>
+              </Paper>
+            ) : null}
             <Title c={COLOR.PEACH}>
               Our customized program on Quantum computing provides a uniques
               opportunity to empower, retain, and advance your talent.

@@ -191,15 +191,15 @@ export const CommonFooter = () => {
               </Stack>
               <Stack>
                 <CommonTag
-                  title="Solutions"
+                  title="GET IN TOUCH"
                   list={[
                     {
-                      title: 'AI Driven Processing',
+                      title: 'GET IN TOUCH',
                       links: [
-                        { text: 'Data Entry' },
-                        { text: 'Content Management' },
-                        { text: 'Content Management' },
-                        { text: 'Content Management' },
+                        { text: 'Headquarters -India ' },
+                        { text: 'Jaipur' },
+                        { text: 'Jodhpur' },
+                        { text: 'Ahmadabad' },
                       ],
                     },
                     {

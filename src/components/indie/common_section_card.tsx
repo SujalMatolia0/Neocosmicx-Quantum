@@ -61,8 +61,9 @@ export const CommonSectionCard = (props: Props) => {
       ></Paper>
       {props.image && (
         <Image
-          h={MD?300:250}
-          w={MD?300:250}
+          h={MD ? 300 : 250}
+          w={MD ? 300 : 250}
+          radius="lg"
           pos="relative"
           left={MD ? 450 : 0}
           top={MD ? -350 : -750}
