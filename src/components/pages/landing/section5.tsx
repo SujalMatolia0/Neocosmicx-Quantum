@@ -1,10 +1,12 @@
 import { CommonButton } from '@/components/indie/common_button';
 import { COLOR, SIZE_CONFIG } from '@/configs/theme';
+import { useMediaQuerys } from '@filante/cobalt/hooks';
 import {
   AspectRatio,
   Group,
   Image,
   Paper,
+  SimpleGrid,
   Space,
   Stack,
   Text,
@@ -43,6 +45,7 @@ const LOGO = [
 ];
 
 export const LandingSection5 = () => {
+  const { MD } = useMediaQuerys();
   return (
     <>
       <Stack
@@ -80,35 +83,42 @@ export const LandingSection5 = () => {
             ))
           )}
         </Group>
-        <CommonButton color={COLOR.PEACH} title="call us at night" />
+        <CommonButton color={COLOR.PEACH} title="Get in touch" />
 
         <Space h="xl" />
-        <Group gap={0}>
+        <SimpleGrid spacing={0} cols={{ base: 1, md: 4 }}>
           <Paper
             style={{ borderColor: COLOR.GREEN }}
             h={120}
-            w={250}
+            w={MD ? 250 : 350}
             radius={0}
             withBorder
             bg="transparent"
-          ></Paper>
+          >
+            test
+          </Paper>
           {Children.toArray(
             LOGO.map((item) => (
               <>
                 <Paper
                   style={{ borderColor: COLOR.GREEN }}
                   h={120}
-                  w={250}
+                  w={MD ? 250 : 350}
                   radius={0}
                   withBorder
                   bg="transparent"
                 >
-                  <Image h={120} w={250} src={item.image} alt="logo" />
+                  <Image
+                    h={120}
+                    w={MD ? 250 : 350}
+                    src={item.image}
+                    alt="logo"
+                  />
                 </Paper>
               </>
             ))
           )}
-        </Group>
+        </SimpleGrid>
       </Stack>
     </>
   );

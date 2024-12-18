@@ -1,5 +1,6 @@
 import { CommonButton } from '@/components/indie/common_button';
 import { COLOR } from '@/configs/theme';
+import { useMediaQuerys } from '@filante/cobalt/hooks';
 import {
   Divider,
   Grid,
@@ -16,34 +17,45 @@ import { Children } from 'react';
 
 const DATA = [
   {
-    title: 'Title 1 sjdnak',
+    title: 'Backup and Recovery',
   },
   {
-    title: 'Title 1',
+    title: 'Regular Audits',
   },
   {
-    title: 'Title 1',
+    title: 'Access Control',
   },
   {
-    title: 'Title 1',
+    title: 'Data Encryption',
   },
 ];
 
 export const LandingSection6 = () => {
+  const { MD } = useMediaQuerys();
   return (
     <>
-      <Stack  mih="100vh" py={100}>
-        <Title ta="center" c={COLOR.TURQUOISE} fw={300}>
+      <Stack mih="100vh" py={100}>
+        {MD ? null : (
+          <Image src="https://picsum.photos/200/300" h="20vw" alt="pic" />
+        )}
+        <Title p={MD ? '' : 'md'} ta="center" c={COLOR.TURQUOISE} fw={300}>
           Security Protocols
         </Title>
-        <Text mx="auto" ta="center" maw={700} c={COLOR.TURQUOISE}>
-          In TechSpeed’s 20+ year history, we have never lost a document,
-          mismanaged an electronic data file, or had a breach of
-          confidentiality. Our process includes:
+        <Text
+          mx="auto"
+          p={MD ? '' : 'md'}
+          ta="center"
+          maw={700}
+          c={COLOR.TURQUOISE}
+        >
+          At CVRCQRD, we adhere to the highest security standards to protect
+          your research data, intellectual property, and sensitive information.
+          Our robust protocols ensure the utmost confidentiality, integrity, and
+          availability across all operations. Our process includes:{' '}
         </Text>
-        <Space h={80}/>
-        <SimpleGrid cols={2} px={200}>
-          <Stack gap="sm" >
+        <Space h={80} />
+        <SimpleGrid cols={{ base: 1, md: 2 }} px={MD ? 200 : 20}>
+          <Stack gap="sm">
             <Divider c={COLOR.TURQUOISE} />
             {Children.toArray(
               DATA.map((item) => (
@@ -60,10 +72,12 @@ export const LandingSection6 = () => {
                 </>
               ))
             )}
-            <CommonButton title='call us at night' />
+            <CommonButton title="call us for Support" />
           </Stack>
           <Group mx="auto">
-            <Image src="https://picsum.photos/200/300" alt="pic" />
+            {MD ? (
+              <Image src="https://picsum.photos/200/300" alt="pic" />
+            ) : null}
           </Group>
         </SimpleGrid>
       </Stack>
