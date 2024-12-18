@@ -12,15 +12,13 @@ interface Props {
   }[];
 }
 
-
-
 export const CommonCard = (props: Props) => {
   return (
     <>
       <Card radius="lg">
-        <Card.Section p="lg">
+        <Card.Section bg="#f5f5f5" p="lg">
           <Stack align="center">
-            <Image h='10vw' radius='lg' src={props.image} alt="Card image" />
+            <Image h="10vw" radius="lg" src={props.image} alt="Card image" />
             <Text tt="uppercase" size="sm">
               {props.title}
             </Text>
@@ -33,7 +31,7 @@ export const CommonCard = (props: Props) => {
               props.data.map((item) => (
                 <>
                   <Group>
-                    <IconArrowRight color='white' />
+                    <IconArrowRight color="white" />
                     <Text size="sm" c="white" td="underline">
                       {item.title}
                     </Text>

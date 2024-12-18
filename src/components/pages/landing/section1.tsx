@@ -80,7 +80,7 @@ export const LandingSection1 = () => {
  */}
         <SimpleGrid px={MD ? '140' : 'xs'} cols={{ base: 1, md: 2 }}>
           <Group>
-            <Image src="https://images.pexels.com/photos/4195504/pexels-photo-4195504.jpeg?auto=compress&cs=tinysrgb&w=600" />
+            <Image radius="lg" src="https://images.pexels.com/photos/4195504/pexels-photo-4195504.jpeg?auto=compress&cs=tinysrgb&w=600" />
           </Group>
           <Stack pl={MD ? '80' : 'xs'}>
             {MD ? (

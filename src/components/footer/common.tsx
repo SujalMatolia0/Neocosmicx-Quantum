@@ -1,6 +1,7 @@
 import { COLOR, SIZE_CONFIG } from '@/configs/theme';
 import {
   ActionIcon,
+  AspectRatio,
   Center,
   Group,
   Image,
@@ -14,27 +15,41 @@ import {
 } from '@mantine/core';
 import { CommonButton } from '../indie/common_button';
 import { Children } from 'react';
-import { IconBrandFacebook } from '@tabler/icons-react';
+import {
+  IconBrandFacebook,
+  IconBrandLinkedin,
+  IconBrandTwitter,
+  IconBrandWhatsapp,
+  IconBrandYoutube,
+} from '@tabler/icons-react';
+import { useMediaQuerys } from '@filante/cobalt/hooks';
 
 const SocialLogo = [
   {
     icon: (
       <>
-        <IconBrandFacebook />
+        <IconBrandLinkedin />
       </>
     ),
   },
   {
     icon: (
       <>
-        <IconBrandFacebook />
+        <IconBrandTwitter />
       </>
     ),
   },
   {
     icon: (
       <>
-        <IconBrandFacebook />
+        <IconBrandYoutube />
+      </>
+    ),
+  },
+  {
+    icon: (
+      <>
+        <IconBrandWhatsapp />
       </>
     ),
   },
@@ -80,145 +95,127 @@ const CommonTag = (props: CommonTagsProps) => (
 );
 
 export const CommonFooter = () => {
+  const { MD } = useMediaQuerys();
   return (
     <>
       <Stack
         mih="100vh"
         bg={COLOR.TURQUOISE}
-        pl={150}
+        pl={MD ? 150 : 'md'}
         pt={SIZE_CONFIG.SECTION_SPACE}
       >
-        <SimpleGrid cols={2}>
+        <SimpleGrid cols={{ base: 1, md: 2 }}>
           <Stack maw={500}>
             <Title c={COLOR.GREEN}>
-              Smart outsourcing using a perfect blend of people and technology.
+              Empowering Quantum Solutions with People and Technology
             </Title>
             <Text c={COLOR.GREEN}>
-              100% on-time delivery guaranteed. You need it quick, fast,
-              yesterday. We understand. Tell us your data entry outsourcing
-              objectives and we will build a data solution customized to your
-              needs.
+              At CVRCQRD, we combine the power of cutting-edge quantum computing
+              technology with expert talent to deliver precise, efficient, and
+              innovative solutions. Whether it's training, research
+              collaboration, or quantum computing advancements, we ensure:
             </Text>
             <Group>
-              <CommonButton title="give us a call" color={COLOR.PEACH} />
-              <CommonButton title="give us a call" />
+              <CommonButton title="Let’s Collaborate" color={COLOR.PEACH} />
+              {/* <CommonButton title="Let’s Collaborate" /> */}
             </Group>
           </Stack>
-          <Group>
-            <Image alt="pic" />
-          </Group>
+          {/* <Group> */}
+          <Image
+            px="md"
+            src="https://plus.unsplash.com/premium_photo-1733266880122-1e9a03068ab1?q=80&w=1956&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="image"
+          />
+          {/* </Group> */}
         </SimpleGrid>
-        <SimpleGrid cols={2}>
+        <SimpleGrid cols={{ base: 1, md: 2 }}>
           <Stack>
-            <Image alt="logo" />
+            <AspectRatio m="auto" maw={350} ratio={11 / 9}>
+              <Image src="/logo-removebg.png" alt="logo" />
+            </AspectRatio>
           </Stack>
           <Stack>
-            <SimpleGrid cols={3}>
-              <Stack>
-                <CommonTag
-                  title="Solutions"
-                  list={[
-                    {
-                      title: 'AI Driven Processing',
-                      links: [
-                        { text: 'Data Entry' },
-                        { text: 'Content Management' },
-                        { text: 'Content Management' },
-                        { text: 'Content Management' },
-                      ],
-                    },
-                    {
-                      title: 'AI Driven Processing',
-                      links: [
-                        { text: 'Data Entry' },
-                        { text: 'Content Management' },
-                        { text: 'Content Management' },
-                        { text: 'Content Management' },
-                      ],
-                    },
-                    {
-                      title: 'AI Driven Processing',
-                      links: [
-                        { text: 'Data Entry' },
-                        { text: 'Content Management' },
-                        { text: 'Content Management' },
-                        { text: 'Content Management' },
-                      ],
-                    },
-                  ]}
-                />
-              </Stack>
-              <Stack>
-                <CommonTag
-                  title="Solutions"
-                  list={[
-                    {
-                      links: [
-                        { text: 'Data Entry' },
-                        { text: 'Content Management' },
-                        { text: 'Content Management' },
-                        { text: 'Content Management' },
-                      ],
-                    },
-                  ]}
-                />
-                <CommonTag
-                  title="Solutions"
-                  list={[
-                    {
-                      links: [
-                        { text: 'Data Entry' },
-                        { text: 'Content Management' },
-                        { text: 'Content Management' },
-                        { text: 'Content Management' },
-                      ],
-                    },
-                  ]}
-                />
-                <CommonTag
-                  title="Solutions"
-                  list={[
-                    {
-                      links: [
-                        { text: 'Data Entry' },
-                        { text: 'Content Management' },
-                        { text: 'Content Management' },
-                        { text: 'Content Management' },
-                      ],
-                    },
-                  ]}
-                />
-              </Stack>
+            <SimpleGrid cols={{ base: 2, md: 3 }}>
+              {MD ? (
+                <Stack>
+                  <CommonTag
+                    title="SOLUTIONS"
+                    list={[
+                      {
+                        links: [
+                          { text: 'Quantum for Business (Finance)' },
+                          { text: 'Quantum Simulation' },
+                          { text: 'Quantum Space' },
+                          { text: 'Quantum Chemistry ' },
+                          { text: 'Quantum Machine Learning' },
+                        ],
+                      },
+                    ]}
+                  />{' '}
+                  <CommonTag
+                    title="ABOUT"
+                    list={[
+                      {
+                        links: [
+                          { text: 'About' },
+                          { text: 'Pricing' },
+                          { text: 'Career (Join Us)' },
+                          { text: 'FAQ' },
+                        ],
+                      },
+                    ]}
+                  />
+                </Stack>
+              ) : null}
+
+              {MD ? (
+                <Stack>
+                  <CommonTag
+                    title="RESOURCES"
+                    list={[
+                      {
+                        links: [
+                          { text: 'Case Studies' },
+                          { text: 'Learning' },
+                          { text: 'Blogs' },
+                          { text: 'Community' },
+                        ],
+                      },
+                    ]}
+                  />
+                  <CommonTag
+                    title="PARTNERS"
+                    list={[
+                      {
+                        links: [
+                          { text: 'Startup India' },
+                          { text: 'MNIT' },
+                          { text: 'BITS Pilani' },
+                          { text: 'SEO Meta Code' },
+                        ],
+                      },
+                    ]}
+                  />
+                </Stack>
+              ) : null}
               <Stack>
                 <CommonTag
                   title="GET IN TOUCH"
                   list={[
                     {
-                      title: 'GET IN TOUCH',
+                      title: 'Headquarter- JDH',
                       links: [
-                        { text: 'Headquarters -India ' },
-                        { text: 'Jaipur' },
-                        { text: 'Jodhpur' },
-                        { text: 'Ahmadabad' },
+                        { text: 'Jodhpur,Rajasthan' },
+                        { text: '8005982481' },
                       ],
                     },
                     {
-                      title: 'AI Driven Processing',
-                      links: [
-                        { text: 'Data Entry' },
-                        { text: 'Content Management' },
-                        { text: 'Content Management' },
-                        { text: 'Content Management' },
-                      ],
+                      title: 'Operation- JAI',
+                      links: [{ text: 'Jaipur, Rajasthan' }],
                     },
                     {
-                      title: 'AI Driven Processing',
-                      links: [
-                        { text: 'Data Entry' },
-                        { text: 'Content Management' },
-                        { text: 'Content Management' },
-                        { text: 'Content Management' },
-                      ],
+                      title: 'Contact Us',
+                      links: [{ text: 'info@neocosmicx.in' }],
                     },
                   ]}
                 />
@@ -226,7 +223,7 @@ export const CommonFooter = () => {
             </SimpleGrid>
           </Stack>
         </SimpleGrid>
-        <SimpleGrid cols={2}>
+        <SimpleGrid cols={{ base: 1, md: 2 }}>
           <Stack>
             <Group>
               {Children.toArray(
@@ -245,18 +242,8 @@ export const CommonFooter = () => {
             </Group>
             <Text size="xs" c={COLOR.GREEN}>
               Copyright 2023 | All Rights Reserved Login Privacy Policy
-              Disclaimer <br /> Design: TkBoom
             </Text>
           </Stack>
-          <Group gap="xl">
-            {Children.toArray(
-              SocialLogo.map((item) => (
-                <>
-                  <Image src={item.icon} alt="pic" />
-                </>
-              ))
-            )}
-          </Group>
         </SimpleGrid>
         <Paper
           bg={COLOR.GREEN}

@@ -21,7 +21,7 @@ const DATA = [
 export const CommonHeader = () => {
   return (
     <>
-      <Group px={80} py={40} justify="space-between">
+      <Group px={80} py={20} justify="space-between">
         <Group gap="xl">
           <Title c={COLOR.TURQUOISE}>CVRCQRD</Title>
           {Children.toArray(
