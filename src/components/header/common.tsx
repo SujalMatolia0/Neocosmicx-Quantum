@@ -19,6 +19,7 @@ import { CommonMenuSection } from '../indie/common_modal_section';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
 import { IconMenu2, IconX } from '@tabler/icons-react';
 import { ICON_SIZE } from '@filante/cobalt';
+import Link from 'next/link';
 
 const DATA = [
   {
@@ -91,7 +92,8 @@ const DATA = [
   },
   {
     name: 'Contact',
-  }
+    link: '/contact',
+  },
 ];
 
 export const CommonHeader = () => {
@@ -103,14 +105,21 @@ export const CommonHeader = () => {
       {MD ? (
         <Group px={80} py={20} justify="space-between">
           <Group gap="xl">
-            <AspectRatio ratio={11 / 9} maw={60}>
-              <Image src="/logo-removebg.png" alt='logo' />
-            </AspectRatio>
+            <Link href="/">
+              <AspectRatio ratio={11 / 9} maw={60}>
+                <Image src="/logo-removebg.png" />
+              </AspectRatio>
+            </Link>
             {Children.toArray(
               DATA.map((item) => (
                 <Menu trigger="hover" openDelay={100}>
                   <Menu.Target>
-                    <Text c={COLOR.TURQUOISE} style={{ cursor: 'pointer' }}>
+                    <Text
+                      c={COLOR.TURQUOISE}
+                      component={Link}
+                      href={item.link || ''}
+                      style={{ cursor: 'pointer' }}
+                    >
                       {item.name}
                     </Text>
                   </Menu.Target>
@@ -138,9 +147,11 @@ export const CommonHeader = () => {
       ) : (
         <>
           <Group p="sm" justify="space-between">
-            <AspectRatio ratio={11 / 9} maw={50}>
-              <Image src="/logo-removebg.png" alt='logo' />
-            </AspectRatio>
+            <Link href="/">
+              <AspectRatio ratio={11 / 9} maw={50}>
+                <Image src="/logo-removebg.png" />
+              </AspectRatio>
+            </Link>
             <ActionIcon
               size="xl"
               onClick={() => setModalOpen(true)}
