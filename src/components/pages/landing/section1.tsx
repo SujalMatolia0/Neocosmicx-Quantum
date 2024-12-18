@@ -8,45 +8,12 @@ import {
   Image,
   Title,
 } from '@mantine/core';
-import { Children, useRef } from 'react';
-import Autoplay from 'embla-carousel-autoplay';
-import { Carousel } from '@mantine/carousel';
 import { COLOR, SIZE_CONFIG } from '@/configs/theme';
 import { CommonButton } from '@/components/indie/common_button';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
 
-const DATA = [
-  {
-    logo: '',
-  },
-  {
-    logo: '',
-  },
-  {
-    logo: '',
-  },
-  {
-    logo: '',
-  },
-  {
-    logo: '',
-  },
-  {
-    logo: '',
-  },
-  {
-    logo: '',
-  },
-  {
-    logo: '',
-  },
-  {
-    logo: '',
-  },
-];
-
 export const LandingSection1 = () => {
-  const autoplay = useRef(Autoplay({ delay: 800 }));
+  // const autoplay = useRef(Autoplay({ delay: 800 }));
   const { MD } = useMediaQuerys();
   return (
     <>
@@ -80,7 +47,7 @@ export const LandingSection1 = () => {
  */}
         <SimpleGrid px={MD ? '140' : 'xs'} cols={{ base: 1, md: 2 }}>
           <Group>
-            <Image src="https://images.pexels.com/photos/4195504/pexels-photo-4195504.jpeg?auto=compress&cs=tinysrgb&w=600" />
+            <Image radius="lg" alt='pic' src="https://images.pexels.com/photos/4195504/pexels-photo-4195504.jpeg?auto=compress&cs=tinysrgb&w=600" />
           </Group>
           <Stack pl={MD ? '80' : 'xs'}>
             {MD ? (

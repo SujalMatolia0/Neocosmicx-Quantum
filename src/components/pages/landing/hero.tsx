@@ -22,44 +22,57 @@ export const LandingHero = () => {
   const { MD } = useMediaQuerys();
   return (
     <>
-      <Grid mih="83vh" py={SIZE_CONFIG.SECTION_SPACE} columns={10}>
-        <Grid.Col span={5} pl={MD ? 130 : 'md'}>
-          <Stack>
-            <Title fw={300} lh={1} size={size.TITLE_1}>
-              A Global Professional of Quantum
+      <Grid
+        mih="calc(100vh - 5.7rem)"
+        py={SIZE_CONFIG.SECTION_SPACE}
+        columns={10}
+      >
+        <Grid.Col
+          style={{ zIndex: 1 }}
+          span={{ base: 10, md: 5.5 }}
+          pl={MD ? 130 : 'md'}
+        >
+          <Stack align="start">
+            <Title fw={300} lh={1} c={COLOR.TURQUOISE} size={size.TITLE_1}>
+              A Global Expert of Quantum
             </Title>
-            <Text>Join Us to expertise your Quantum expertise </Text>
+            <Text size={size.TEXT_1}>
+              Join Us to expertise your Quantum expertise
+            </Text>
             <Group>
-              <CommonButton variant="outline" title="Call us at night" />
-              <CommonButton title="Call us at night" />
+              <CommonButton variant="outline" title="Become a Member" />
+              <CommonButton title="Quantum Platform" />
             </Group>
           </Stack>
 
-          {MD ? (
-            <Box
-              w={550}
-              h="50%"
-              left={0}
-              bottom={0}
-              pos="absolute"
-              bg={COLOR.TURQUOISE}
+          <Box
+            w={MD ? '40%' : '100%'}
+            h={MD ? '40%' : '30%'}
+            left={0}
+            bottom={0}
+            pos="absolute"
+            bg={COLOR.TURQUOISE}
+          >
+            <Stack
+              gap="sm"
+              px={MD ? '60px' : 'md'}
+              pt={MD ? '65px' : 'lg'}
+              justify="end"
             >
-              <Stack gap="sm" px={100} pt={100} justify="end">
-                <Divider color={COLOR.GRAY} />
-                {Children.toArray(
-                  DATA.map((item) => (
-                    <>
-                      <Group>
-                        <IconCheck color={COLOR.GRAY} />
-                        <Text c={COLOR.PEACH}>{item.text}</Text>
-                      </Group>
-                      <Divider />
-                    </>
-                  ))
-                )}
-              </Stack>
-            </Box>
-          ) : null}
+              <Divider color={COLOR.GRAY} />
+              {Children.toArray(
+                DATA.map((item) => (
+                  <>
+                    <Group>
+                      <IconCheck color={COLOR.GRAY} />
+                      <Text c={COLOR.PEACH}>{item.text}</Text>
+                    </Group>
+                    <Divider />
+                  </>
+                ))
+              )}
+            </Stack>
+          </Box>
         </Grid.Col>
         <Grid.Col span={5}></Grid.Col>
       </Grid>

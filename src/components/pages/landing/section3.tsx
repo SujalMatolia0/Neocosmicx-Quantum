@@ -1,7 +1,7 @@
 import { CommonCard } from '@/components/indie/common_card';
 import { CommonSectionCard } from '@/components/indie/common_section_card';
 import { COLOR, SIZE_CONFIG } from '@/configs/theme';
-import { Center, SimpleGrid, Stack, Text, Title } from '@mantine/core';
+import { SimpleGrid, Stack, Text, Title } from '@mantine/core';
 
 export const LandingSection3 = () => {
   return (

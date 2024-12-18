@@ -50,12 +50,12 @@ export const LandingSection4 = () => {
         {Children.toArray(
           DATA.map((item) => (
             <>
-              <Paper m="100" p={MD ? 'xl' : 'sm'}>
+              <Paper m={MD?"100":"md"} p="xl">
                 <Stack>
                   <Title c={COLOR.TURQUOISE} ta="center">
                     {item.title}
                   </Title>
-                  <SimpleGrid cols={{base:1, md:2}} px={MD?150:0}>
+                  <SimpleGrid cols={{ base: 1, md: 2 }} px={MD ? 150 : 0}>
                     <Stack>
                       <Text c={COLOR.TURQUOISE}>{item.description}</Text>
                       <CommonButton title={item.btnTitle} />
@@ -67,7 +67,7 @@ export const LandingSection4 = () => {
                           <>
                             <Grid>
                               <Grid.Col span={1}>
-                                <IconCheck color={COLOR.TURQUOISE} />
+                                <IconCheck  color={COLOR.TURQUOISE} />
                               </Grid.Col>
                               <Grid.Col span="auto">
                                 <Text c={COLOR.TURQUOISE}>{listItem}</Text>
