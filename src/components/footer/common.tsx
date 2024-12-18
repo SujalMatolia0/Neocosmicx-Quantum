@@ -16,7 +16,6 @@ import {
 import { CommonButton } from '../indie/common_button';
 import { Children } from 'react';
 import {
-  IconBrandFacebook,
   IconBrandLinkedin,
   IconBrandTwitter,
   IconBrandWhatsapp,
@@ -112,21 +111,18 @@ export const CommonFooter = () => {
             <Text c={COLOR.GREEN}>
               At CVRCQRD, we combine the power of cutting-edge quantum computing
               technology with expert talent to deliver precise, efficient, and
-              innovative solutions. Whether it's training, research
+              innovative solutions. Whether it&apos;s training, research
               collaboration, or quantum computing advancements, we ensure:
             </Text>
             <Group>
-              <CommonButton title="Let’s Collaborate" color={COLOR.PEACH} />
-              {/* <CommonButton title="Let’s Collaborate" /> */}
+              <CommonButton title="Let&apos;s Collaborate" color={COLOR.PEACH} />
             </Group>
           </Stack>
-          {/* <Group> */}
           <Image
             px="md"
             src="https://plus.unsplash.com/premium_photo-1733266880122-1e9a03068ab1?q=80&w=1956&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="image"
           />
-          {/* </Group> */}
         </SimpleGrid>
         <SimpleGrid cols={{ base: 1, md: 2 }}>
           <Stack>
@@ -259,7 +255,7 @@ export const CommonFooter = () => {
         >
           <Center h="100%">
             <Text c={COLOR.TURQUOISE} maw={80}>
-              jklasdak sk jsdna;sjd;oi
+              CVRCQRD
             </Text>
           </Center>
         </Paper>

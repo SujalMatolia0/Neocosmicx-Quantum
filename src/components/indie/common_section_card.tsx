@@ -29,7 +29,6 @@ export const CommonSectionCard = (props: Props) => {
       <Paper
         pos="relative"
         p="xl"
-        // No change on hight
         mih={MD ? 250 : 100}
         w={MD ? 650 : 300}
         shadow="xl"

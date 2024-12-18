@@ -41,7 +41,7 @@ export const LandingHero = () => {
             </Text>
             <Group>
               <CommonButton variant="outline" title="Become a Member" />
-              <CommonButton title="Quantum Learning" />
+              <CommonButton title="Quantum Platform" />
             </Group>
           </Stack>
 

@@ -2,7 +2,6 @@ import { COLOR } from '@/configs/theme';
 import {
   Group,
   Text,
-  Title,
   Menu,
   SimpleGrid,
   Modal,
@@ -11,12 +10,14 @@ import {
   Center,
   Accordion,
   Stack,
+  Image,
+  AspectRatio,
 } from '@mantine/core';
 import { CommonButton } from '../indie/common_button';
 import { Children, useState } from 'react';
 import { CommonMenuSection } from '../indie/common_modal_section';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
-import { IconMenu2, icons, IconX } from '@tabler/icons-react';
+import { IconMenu2, IconX } from '@tabler/icons-react';
 import { ICON_SIZE } from '@filante/cobalt';
 
 const DATA = [
@@ -94,9 +95,11 @@ export const CommonHeader = () => {
   return (
     <>
       {MD ? (
-        <Group px={80} py={40} justify="space-between">
+        <Group px={80} py={20} justify="space-between">
           <Group gap="xl">
-            <Title c={COLOR.TURQUOISE}>CVRCQRD</Title>
+            <AspectRatio ratio={11 / 9} maw={60}>
+              <Image src="/logo-removebg.png" alt='logo' />
+            </AspectRatio>
             {Children.toArray(
               DATA.map((item) => (
                 <Menu trigger="hover" openDelay={100}>
@@ -129,7 +132,9 @@ export const CommonHeader = () => {
       ) : (
         <>
           <Group p="sm" justify="space-between">
-            <Title c={COLOR.TURQUOISE}>CVRCQRD</Title>
+            <AspectRatio ratio={11 / 9} maw={50}>
+              <Image src="/logo-removebg.png" alt='logo' />
+            </AspectRatio>
             <ActionIcon
               size="xl"
               onClick={() => setModalOpen(true)}
@@ -169,7 +174,7 @@ export const CommonHeader = () => {
             }}
           >
             <Stack>
-              <Group justify='center'>
+              <Group justify="center">
                 <CommonButton variant="outline" title="LogIn" />
                 <CommonButton title="SignUp" />
               </Group>

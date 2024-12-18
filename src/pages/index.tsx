@@ -6,7 +6,6 @@ import { LandingSection3 } from '@/components/pages/landing/section3';
 import { LandingSection4 } from '@/components/pages/landing/section4';
 import { LandingSection5 } from '@/components/pages/landing/section5';
 import { LandingSection6 } from '@/components/pages/landing/section6';
-import { LandingSection7 } from '@/components/pages/landing/section7';
 
 export default function Page() {
   return (
