@@ -86,6 +86,12 @@ const DATA = [
       },
     ],
   },
+  {
+    name: 'Corporate Training',
+  },
+  {
+    name: 'Contact',
+  }
 ];
 
 export const CommonHeader = () => {
@@ -109,8 +115,8 @@ export const CommonHeader = () => {
                     </Text>
                   </Menu.Target>
                   <Menu.Dropdown>
-                    <SimpleGrid cols={item.menu.length}>
-                      {item.menu.map((menuItem) => (
+                    <SimpleGrid cols={item.menu?.length}>
+                      {item.menu?.map((menuItem) => (
                         <Menu.Item key={menuItem.title}>
                           <CommonMenuSection
                             title={menuItem.title}
@@ -185,7 +191,7 @@ export const CommonHeader = () => {
                       <Text c={COLOR.TURQUOISE}>{item.name}</Text>
                     </Accordion.Control>
                     <Accordion.Panel>
-                      {item.menu.map((menuItem) => (
+                      {item.menu?.map((menuItem) => (
                         <Text
                           c={COLOR.GREEN}
                           key={menuItem.title}
