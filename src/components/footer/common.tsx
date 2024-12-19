@@ -123,9 +123,9 @@ export const CommonFooter = () => {
           <Image px="md" radius="xl" src="/quantum-chip.jpeg" alt="image" />
         </SimpleGrid>
         <SimpleGrid cols={{ base: 1, md: 2 }}>
-          <Stack>
-            <AspectRatio m="auto" maw={350} ratio={11 / 9}>
-              <Image src="/logo-removebg.png" alt="logo" />
+          <Stack justify="center">
+            <AspectRatio ratio={11 / 9}>
+              <Image mah="11vw" src="/logo-full.png" alt="logo" />
             </AspectRatio>
           </Stack>
           <Stack>
