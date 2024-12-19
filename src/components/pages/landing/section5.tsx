@@ -122,6 +122,7 @@ export const LandingSection5 = () => {
                         <Image
                           mah={MD?"4vw":"15vw"}
                           src={item.image}
+                          alt='image'
                         />
                       </AspectRatio>
                       <Text

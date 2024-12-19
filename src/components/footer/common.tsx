@@ -21,7 +21,7 @@ import {
   IconBrandWhatsapp,
   IconBrandYoutube,
 } from '@tabler/icons-react';
-import { sizeHelper, useMediaQuerys } from '@filante/cobalt/hooks';
+import { useMediaQuerys } from '@filante/cobalt/hooks';
 import { useSizeHelper } from '@/lib/hooks/size_helper';
 
 const SocialLogo = [

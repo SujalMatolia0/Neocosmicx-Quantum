@@ -4,7 +4,6 @@ import { useSizeHelper } from '@/lib/hooks/size_helper';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
 import {
   AspectRatio,
-  BackgroundImage,
   Box,
   Divider,
   Grid,
