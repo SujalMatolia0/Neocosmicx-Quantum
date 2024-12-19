@@ -36,7 +36,13 @@ export const LandingSection6 = () => {
     <>
       <Stack mih="100vh" py={100}>
         {MD ? null : (
-          <Image src="https://picsum.photos/200/300" h="20vw" alt="pic" />
+          <Image
+            p="md"
+            radius="xl"
+            src="/quantum-security.webp"
+            h="20vw"
+            alt="pic"
+          />
         )}
         <Title p={MD ? '' : 'md'} ta="center" c={COLOR.TURQUOISE} fw={300}>
           Security Protocols
@@ -76,7 +82,7 @@ export const LandingSection6 = () => {
           </Stack>
           <Group mx="auto">
             {MD ? (
-              <Image src="https://picsum.photos/200/300" alt="pic" />
+              <Image radius="lg" src="/quantum-security.webp" alt="pic" />
             ) : null}
           </Group>
         </SimpleGrid>

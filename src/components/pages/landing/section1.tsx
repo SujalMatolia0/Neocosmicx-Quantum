@@ -21,7 +21,7 @@ export const LandingSection1 = () => {
         bg={COLOR.TURQUOISE}
         gap="lg"
         py={SIZE_CONFIG.SECTION_SPACE}
-        mih="100vh"
+        mih="100%"
       >
         {/* <Carousel
           py="xl"
@@ -47,7 +47,7 @@ export const LandingSection1 = () => {
  */}
         <SimpleGrid px={MD ? '140' : 'xs'} cols={{ base: 1, md: 2 }}>
           <Group>
-            <Image radius="lg" alt='pic' src="https://images.pexels.com/photos/4195504/pexels-photo-4195504.jpeg?auto=compress&cs=tinysrgb&w=600" />
+            <Image radius="lg" alt="pic" src="/section-one.jpeg" />
           </Group>
           <Stack pl={MD ? '80' : 'xs'}>
             {MD ? (
