@@ -86,7 +86,7 @@ export const LandingHero = () => {
         </Grid.Col>
         <Grid.Col p={0} span={4.5}>
           {MD ? (
-            <AspectRatio ratio={9 / 16} p={0} maw={250}>
+            <AspectRatio mx='auto' ratio={9 / 16} p={0} maw={250}>
               <Image src="/hero-removebg.png" alt="image" />
             </AspectRatio>
           ) : (

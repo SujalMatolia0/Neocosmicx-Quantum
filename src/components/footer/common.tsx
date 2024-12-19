@@ -124,8 +124,8 @@ export const CommonFooter = () => {
         </SimpleGrid>
         <SimpleGrid cols={{ base: 1, md: 2 }}>
           <Stack justify="center">
-            <AspectRatio ratio={11 / 9}>
-              <Image mah="11vw" src="/logo-full.png" alt="logo" />
+            <AspectRatio ratio={11 / 2.8} maw="300">
+              <Image src="/logo-full.png" alt="logo" />
             </AspectRatio>
           </Stack>
           <Stack>

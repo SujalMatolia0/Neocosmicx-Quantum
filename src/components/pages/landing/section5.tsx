@@ -117,12 +117,12 @@ export const LandingSection5 = () => {
                   bg="transparent"
                 >
                   <Center h="100%">
-                    <Group justify="space-between">
+                    <Group p="sm" justify="space-between">
                       <AspectRatio ratio={2 / 2}>
                         <Image
-                          mah={MD?"4vw":"15vw"}
+                          mah={MD ? '4vw' : '15vw'}
                           src={item.image}
-                          alt='image'
+                          alt="image"
                         />
                       </AspectRatio>
                       <Text
