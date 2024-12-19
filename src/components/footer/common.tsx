@@ -22,6 +22,7 @@ import {
   IconBrandYoutube,
 } from '@tabler/icons-react';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
+import { useSizeHelper } from '@/lib/hooks/size_helper';
 
 const SocialLogo = [
   {
@@ -95,6 +96,7 @@ const CommonTag = (props: CommonTagsProps) => (
 
 export const CommonFooter = () => {
   const { MD } = useMediaQuerys();
+  const size = useSizeHelper();
   return (
     <>
       <Stack
@@ -115,19 +117,15 @@ export const CommonFooter = () => {
               collaboration, or quantum computing advancements, we ensure:
             </Text>
             <Group>
-              <CommonButton title="Let&apos;s Collaborate" color={COLOR.PEACH} />
+              <CommonButton title="Let's Collaborate" color={COLOR.PEACH} />
             </Group>
           </Stack>
-          <Image
-            px="md"
-            src="https://plus.unsplash.com/premium_photo-1733266880122-1e9a03068ab1?q=80&w=1956&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="image"
-          />
+          <Image px="md" radius="xl" src="/quantum-chip.jpeg" alt="image" />
         </SimpleGrid>
         <SimpleGrid cols={{ base: 1, md: 2 }}>
-          <Stack>
-            <AspectRatio m="auto" maw={350} ratio={11 / 9}>
-              <Image src="/logo-removebg.png" alt="logo" />
+          <Stack justify="center">
+            <AspectRatio ratio={11 / 2.8} maw="300">
+              <Image src="/logo-full.png" alt="logo" />
             </AspectRatio>
           </Stack>
           <Stack>
@@ -237,24 +235,28 @@ export const CommonFooter = () => {
               )}
             </Group>
             <Text size="xs" c={COLOR.GREEN}>
-              Copyright 2023 | All Rights Reserved Login Privacy Policy
+              Copyright 2024 | All Rights Reserved Login Privacy Policy
             </Text>
           </Stack>
         </SimpleGrid>
         <Paper
           bg={COLOR.GREEN}
-          h={150}
-          w={150}
+          h={MD ? 150 : 80}
+          w={MD ? 150 : 80}
           pos="relative"
-          left={1200}
-          bottom={40}
+          left={MD ? '80%' : '70%'}
+          bottom={MD ? 40 : 350}
           radius="50%"
           style={{
             rotate: '35deg',
           }}
         >
           <Center h="100%">
-            <Text c={COLOR.TURQUOISE} maw={80}>
+            <Text
+              size={MD ? size.TEXT_1 : '3.5vw'}
+              c={COLOR.TURQUOISE}
+              maw={80}
+            >
               CVRCQRD
             </Text>
           </Center>

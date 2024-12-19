@@ -2,7 +2,17 @@ import { CommonButton } from '@/components/indie/common_button';
 import { COLOR, SIZE_CONFIG } from '@/configs/theme';
 import { useSizeHelper } from '@/lib/hooks/size_helper';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
-import { Box, Divider, Grid, Group, Stack, Text, Title } from '@mantine/core';
+import {
+  AspectRatio,
+  Box,
+  Divider,
+  Grid,
+  Group,
+  Image,
+  Stack,
+  Text,
+  Title,
+} from '@mantine/core';
 import { IconCheck } from '@tabler/icons-react';
 import { Children } from 'react';
 
@@ -74,7 +84,15 @@ export const LandingHero = () => {
             </Stack>
           </Box>
         </Grid.Col>
-        <Grid.Col span={5}></Grid.Col>
+        <Grid.Col p={0} span={4.5}>
+          {MD ? (
+            <AspectRatio mx='auto' ratio={9 / 16} p={0} maw={250}>
+              <Image src="/hero-removebg.png" alt="image" />
+            </AspectRatio>
+          ) : (
+            <></>
+          )}
+        </Grid.Col>
       </Grid>
     </>
   );

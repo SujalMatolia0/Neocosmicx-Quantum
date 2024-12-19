@@ -107,7 +107,7 @@ export const CommonHeader = () => {
           <Group gap="xl">
             <Link href="/">
               <AspectRatio ratio={11 / 9} maw={60}>
-                <Image src="/logo-removebg.png" />
+                <Image src="/logo-removebg.png" alt="logo" />
               </AspectRatio>
             </Link>
             {Children.toArray(
@@ -149,7 +149,7 @@ export const CommonHeader = () => {
           <Group p="sm" justify="space-between">
             <Link href="/">
               <AspectRatio ratio={11 / 9} maw={50}>
-                <Image src="/logo-removebg.png" />
+                <Image src="/logo-removebg.png" alt="logo" />
               </AspectRatio>
             </Link>
             <ActionIcon

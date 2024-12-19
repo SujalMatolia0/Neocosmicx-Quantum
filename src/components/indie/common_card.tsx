@@ -1,5 +1,5 @@
 import { COLOR } from '@/configs/theme';
-import { Card, Group, Image, Stack, Text } from '@mantine/core';
+import { AspectRatio, Card, Group, Image, Stack, Text } from '@mantine/core';
 import { IconArrowRight } from '@tabler/icons-react';
 import { Children } from 'react';
 
@@ -18,7 +18,14 @@ export const CommonCard = (props: Props) => {
       <Card radius="lg">
         <Card.Section bg="#f5f5f5" p="lg">
           <Stack align="center">
-            <Image h="10vw" radius="lg" src={props.image} alt="Card image" />
+            <AspectRatio ratio={6 / 5}>
+              <Image
+                mah="40vh"
+                radius="lg"
+                src={props.image}
+                alt="Card image"
+              />
+            </AspectRatio>
             <Text tt="uppercase" size="sm">
               {props.title}
             </Text>

@@ -3,6 +3,7 @@ import { COLOR, SIZE_CONFIG } from '@/configs/theme';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
 import {
   AspectRatio,
+  Center,
   Group,
   Image,
   Paper,
@@ -16,17 +17,17 @@ import { Children } from 'react';
 
 const DATA = [
   {
-    image: 'https://picsum.photos/200/300',
+    image: '/quantum-25.avif',
     title: 'Sustainability',
     description: 'Developing sustainable quantum technologies for the future',
   },
   {
-    image: 'https://picsum.photos/200/301',
+    image: '/quantum-26.avif',
     title: 'Excellence',
     description: 'Striving for the highest standards of quality and precision',
   },
   {
-    image: 'https://picsum.photos/200/302',
+    image: '/quantum-27.webp',
     title: 'Integrity',
     description: 'Upholding ethical principles and transparent practices',
   },
@@ -34,13 +35,16 @@ const DATA = [
 
 const LOGO = [
   {
-    image: 'https://picsum.photos/200/300',
+    text: 'Q-ML',
+    image: '/q-ml.png',
   },
   {
-    image: 'https://picsum.photos/200/300',
+    text: 'Q-Space',
+    image: '/q-space.png',
   },
   {
-    image: 'https://picsum.photos/200/300',
+    text: 'Q-Sim',
+    image: '/q-sim.png',
   },
 ];
 
@@ -95,7 +99,11 @@ export const LandingSection5 = () => {
             withBorder
             bg="transparent"
           >
-            test
+            <Center h="100%">
+              <Text size={MD ? '2.5vw' : '11vw'} c={COLOR.PEACH} ta="center">
+                Our Services
+              </Text>
+            </Center>
           </Paper>
           {Children.toArray(
             LOGO.map((item) => (
@@ -108,12 +116,24 @@ export const LandingSection5 = () => {
                   withBorder
                   bg="transparent"
                 >
-                  <Image
-                    h={120}
-                    w={MD ? 250 : 350}
-                    src={item.image}
-                    alt="logo"
-                  />
+                  <Center h="100%">
+                    <Group p="sm" justify="space-between">
+                      <AspectRatio ratio={2 / 2}>
+                        <Image
+                          mah={MD ? '4vw' : '15vw'}
+                          src={item.image}
+                          alt="image"
+                        />
+                      </AspectRatio>
+                      <Text
+                        size={MD ? '2.5vw' : '10vw'}
+                        c={COLOR.PEACH}
+                        ta="center"
+                      >
+                        {item.text}
+                      </Text>
+                    </Group>
+                  </Center>
                 </Paper>
               </>
             ))
