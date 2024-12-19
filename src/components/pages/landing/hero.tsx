@@ -9,7 +9,6 @@ import {
   Grid,
   Group,
   Image,
-  rem,
   Stack,
   Text,
   Title,
