@@ -253,7 +253,7 @@ export const CommonFooter = () => {
         >
           <Center h="100%">
             <Text
-              size={MD ? size.TEXT_1 : '3.5vw'}
+              size={MD ?"1.2vw" : '3.5vw'}
               c={COLOR.TURQUOISE}
               maw={80}
             >
