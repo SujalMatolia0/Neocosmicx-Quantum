@@ -100,7 +100,7 @@ export const LandingSection5 = () => {
             bg="transparent"
           >
             <Center h="100%">
-              <Text size={MD ? '2.5vw' : '11vw'} c={COLOR.PEACH} ta="center">
+              <Text size={MD ? '2vw' : '11vw'} c={COLOR.PEACH} ta="center">
                 Our Services
               </Text>
             </Center>
@@ -117,16 +117,16 @@ export const LandingSection5 = () => {
                   bg="transparent"
                 >
                   <Center h="100%">
-                    <Group p="sm" justify="space-between">
+                    <Group p="sm" justify="space-around">
                       <AspectRatio ratio={2 / 2}>
                         <Image
-                          mah={MD ? '4vw' : '15vw'}
+                          mah={MD ? '3vw' : '15vw'}
                           src={item.image}
                           alt="image"
                         />
                       </AspectRatio>
                       <Text
-                        size={MD ? '2.5vw' : '10vw'}
+                        size={MD ? '2vw' : '10vw'}
                         c={COLOR.PEACH}
                         ta="center"
                       >

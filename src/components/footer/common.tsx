@@ -22,7 +22,6 @@ import {
   IconBrandYoutube,
 } from '@tabler/icons-react';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
-import { useSizeHelper } from '@/lib/hooks/size_helper';
 
 const SocialLogo = [
   {
@@ -96,7 +95,6 @@ const CommonTag = (props: CommonTagsProps) => (
 
 export const CommonFooter = () => {
   const { MD } = useMediaQuerys();
-  const size = useSizeHelper();
   return (
     <>
       <Stack
@@ -253,7 +251,7 @@ export const CommonFooter = () => {
         >
           <Center h="100%">
             <Text
-              size={MD ? size.TEXT_1 : '3.5vw'}
+              size={MD ?"1.2vw" : '3.5vw'}
               c={COLOR.TURQUOISE}
               maw={80}
             >

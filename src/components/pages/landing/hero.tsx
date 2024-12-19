@@ -34,7 +34,8 @@ export const LandingHero = () => {
     <>
       <Grid
         mih="calc(100vh - 5.7rem)"
-        py={SIZE_CONFIG.SECTION_SPACE}
+        // mih="100vh"
+        pt={SIZE_CONFIG.SECTION_SPACE}
         columns={10}
       >
         <Grid.Col
@@ -63,11 +64,29 @@ export const LandingHero = () => {
             pos="absolute"
             bg={COLOR.TURQUOISE}
           >
+            <video
+              style={{
+                width: '100%',
+                height: '25%',
+                objectFit: 'cover',
+                position: 'absolute',
+                top: 0,
+              }}
+              src="/wave.mp4"
+              autoPlay
+              loop
+            />
             <Stack
               gap="sm"
               px={MD ? '60px' : 'md'}
-              pt={MD ? '65px' : 'lg'}
+              // pt={MD ? rem(80) : 'lg'}
               justify="end"
+              style={{
+                position: 'absolute',
+                top: '10%',
+                width: '100%',
+                height: '80%',
+              }}
             >
               <Divider color={COLOR.GRAY} />
               {Children.toArray(
@@ -75,7 +94,9 @@ export const LandingHero = () => {
                   <>
                     <Group>
                       <IconCheck color={COLOR.GRAY} />
-                      <Text c={COLOR.PEACH}>{item.text}</Text>
+                      <Text size={MD ? '1.2vw' : '4vw'} c={COLOR.PEACH}>
+                        {item.text}
+                      </Text>
                     </Group>
                     <Divider />
                   </>
@@ -86,7 +107,7 @@ export const LandingHero = () => {
         </Grid.Col>
         <Grid.Col p={0} span={4.5}>
           {MD ? (
-            <AspectRatio mx='auto' ratio={9 / 16} p={0} maw={250}>
+            <AspectRatio mx="auto" ratio={9 / 17} mah="70vh" p={0} maw="50%">
               <Image src="/hero-removebg.png" alt="image" />
             </AspectRatio>
           ) : (
