@@ -20,33 +20,31 @@ import { useMediaQuerys } from '@filante/cobalt/hooks';
 import { IconMenu2, IconX } from '@tabler/icons-react';
 import { ICON_SIZE } from '@filante/cobalt';
 import Link from 'next/link';
+import { text } from 'stream/consumers';
 
 const DATA = [
   {
-    name: 'Memberships',
+    name: 'Solutions',
     menu: [
       {
-        title: 'Individual',
-        description:
-          'Tailored for personal growth in quantum computing. Gain access to exclusive resources and events.',
+        title: 'Membership',
+        list: [{ text: 'Indivisual ' }, { text: 'Corporate ' }],
       },
       {
-        title: 'Corporate',
-        description:
-          'Empower your team with quantum expertise. Ideal for organizations looking to innovate.',
+        title: 'Q-Programming',
+        list: [{ text: 'Q-Composer' }, { text: 'Q-Space' }, { text: 'Q-ML' }],
       },
       {
-        title: 'Student',
-        description:
-          'Affordable plans for students eager to learn quantum concepts. Includes mentorship programs.',
+        title: 'Accreditations',
+        list: [{ text: 'hi' }],
       },
     ],
   },
   {
-    name: 'Accreditation',
+    name: 'Resources',
     menu: [
       {
-        title: 'Charted Quantum Boffin',
+        title: 'Chapter',
         description:
           'Recognizes advanced expertise in quantum theory and applications. Prestigious global certification.',
       },
@@ -104,12 +102,15 @@ export const CommonHeader = () => {
     <>
       {MD ? (
         <Group px={80} py={20} justify="space-between">
+          {/* Logo */}
           <Group gap="xl">
             <Link href="/">
               <AspectRatio ratio={11 / 9} maw={60}>
                 <Image src="/logo-removebg.png" alt="logo" />
               </AspectRatio>
             </Link>
+
+            {/* Desktop Menu */}
             {Children.toArray(
               DATA.map((item) => (
                 <Menu trigger="hover" openDelay={100}>
@@ -123,29 +124,34 @@ export const CommonHeader = () => {
                       {item.name}
                     </Text>
                   </Menu.Target>
-                  <Menu.Dropdown>
-                    <SimpleGrid cols={item.menu?.length}>
-                      {item.menu?.map((menuItem) => (
-                        <Menu.Item key={menuItem.title}>
-                          <CommonMenuSection
-                            title={menuItem.title}
-                            description={menuItem.description}
-                          />
-                        </Menu.Item>
-                      ))}
-                    </SimpleGrid>
-                  </Menu.Dropdown>
+                  {item.menu && (
+                    <Menu.Dropdown>
+                      <SimpleGrid cols={item.menu.length}>
+                        {item.menu.map((menuItem) => (
+                          <Menu.Item key={menuItem.title}>
+                            <CommonMenuSection
+                              title={menuItem.title}
+                              list={menuItem.list || []}
+                            />
+                          </Menu.Item>
+                        ))}
+                      </SimpleGrid>
+                    </Menu.Dropdown>
+                  )}
                 </Menu>
               ))
             )}
           </Group>
+
+          {/* Desktop Buttons */}
           <Group>
-            <CommonButton variant="transparent" title="LogIn" />
-            <CommonButton title="SignUp" />
+            <CommonButton variant="transparent" title="Get Connected" />
+            <CommonButton title="Q-Platform" />
           </Group>
         </Group>
       ) : (
         <>
+          {/* Mobile Header */}
           <Group p="sm" justify="space-between">
             <Link href="/">
               <AspectRatio ratio={11 / 9} maw={50}>
@@ -165,6 +171,8 @@ export const CommonHeader = () => {
               </Paper>
             </ActionIcon>
           </Group>
+
+          {/* Mobile Modal */}
           <Modal
             fullScreen
             opened={modalOpen}
@@ -173,28 +181,24 @@ export const CommonHeader = () => {
             c={COLOR.TURQUOISE}
             closeButtonProps={{
               icon: (
-                <>
-                  <ActionIcon
-                    size="xl"
-                    variant="filled"
-                    color={COLOR.TURQUOISE}
-                    mr={15}
-                  >
-                    <Paper h={20} w={20} radius="50%" bg={COLOR.GREEN}>
-                      <Center h="100%">
-                        <IconX size={ICON_SIZE.SM} color={COLOR.TURQUOISE} />
-                      </Center>
-                    </Paper>
-                  </ActionIcon>
-                </>
+                <ActionIcon size="xl" variant="filled" color={COLOR.TURQUOISE}>
+                  <Paper h={20} w={20} radius="50%" bg={COLOR.GREEN}>
+                    <Center h="100%">
+                      <IconX size={ICON_SIZE.SM} color={COLOR.TURQUOISE} />
+                    </Center>
+                  </Paper>
+                </ActionIcon>
               ),
             }}
           >
             <Stack>
+              {/* Mobile Buttons */}
               <Group justify="center">
-                <CommonButton variant="outline" title="LogIn" />
-                <CommonButton title="SignUp" />
+                <CommonButton variant="outline" title="Get Connected" />
+                <CommonButton title="Q-Platform" />
               </Group>
+
+              {/* Mobile Accordion Menu */}
               <Accordion>
                 {DATA.map((item) => (
                   <Accordion.Item value={item.name} key={item.name}>
