@@ -1,7 +1,5 @@
 import { COLOR } from '@/configs/theme';
-import { ICON_SIZE } from '@filante/cobalt';
 import { Stack, Text } from '@mantine/core';
-import { IconArrowRight } from '@tabler/icons-react';
 import Link from 'next/link';
 
 interface Props {
@@ -47,7 +45,7 @@ export const CommonMenuSection = ({ data }: Props) => {
             </Text>
           )}
 
-          <Text
+          {/* <Text
             td="underline"
             c={COLOR.GREEN}
             component={Link}
@@ -55,7 +53,7 @@ export const CommonMenuSection = ({ data }: Props) => {
             size="xs"
           >
             Coming Soon <IconArrowRight size={ICON_SIZE.XS} />
-          </Text>
+          </Text> */}
         </Stack>
       ))}
     </>

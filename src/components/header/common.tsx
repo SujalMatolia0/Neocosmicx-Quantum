@@ -13,22 +13,23 @@ import {
   Image,
   AspectRatio,
 } from '@mantine/core';
-import { CommonButton } from '../indie/common_button';
+import { CommonButton } from '../indie/common_button'; // Ensure this is correctly imported
 import { useState } from 'react';
-import { CommonMenuSection } from '../indie/common_modal_section';
-import { useMediaQuerys } from '@filante/cobalt/hooks';
+import { CommonMenuSection } from '../indie/common_modal_section'; // Ensure this is correctly imported
+import { useMediaQuerys } from '@filante/cobalt/hooks'; // Ensure this is correctly imported
 import { IconMenu2, IconX } from '@tabler/icons-react';
 import { ICON_SIZE } from '@filante/cobalt';
 import Link from 'next/link';
 
 const DATA = [
   {
-    name: 'Solutions',
+    title: 'Solutions',
     menu: [
       {
         title: 'Membership',
         list: [
           { text: 'Individual', link: '/' },
+          { text: 'Corporate', link: '/' },
           { text: 'Corporate', link: '/' },
         ],
       },
@@ -42,98 +43,95 @@ const DATA = [
       },
       {
         title: 'Accreditations',
-        list: [{ text: 'Hi', link: '/' }],
+        list: [
+          { text: 'Link1', link: '/' },
+          { text: 'Link2', link: '/' },
+          { text: 'Link3', link: '/' },
+        ],
       },
     ],
   },
   {
-    name: 'Resources',
+    title: 'Resources',
     menu: [
       {
-        title: 'Chapter',
-        description:
-          'Recognizes advanced expertise in quantum theory and applications. Prestigious global certification.',
-      },
-      {
-        title: 'Charted Associate Quantum Scientist',
-        description:
-          'Aimed at mid-level professionals in quantum science. Boost your career with this certification.',
-      },
-      {
-        title: 'Certified Quantum Engineer',
-        description:
-          'Focuses on practical quantum engineering skills. Ideal for hardware and system design professionals.',
+        title: 'Resources Menu',
+        list: [
+          { text: 'Chapter', link: '/' },
+          { text: 'Journal (Q-Plus)', link: '/' },
+          { text: 'Blogs', link: '/blog' },
+          { text: 'Challenges', link: '/' },
+        ],
       },
     ],
   },
   {
-    name: 'School',
+    title: 'Learnings',
     menu: [
       {
-        title: 'Quantum Machine Learning',
-        description:
-          'Explore the intersection of quantum computing and AI. Learn to design quantum-powered algorithms.',
-      },
-      {
-        title: 'Basic Quantum Computation',
-        description:
-          'An introductory course covering quantum gates, algorithms, and foundational principles.',
-      },
-      {
-        title: 'Quantum Communication',
-        description:
-          'Dive into secure communication using quantum cryptography and entanglement-based protocols.',
-      },
-      {
-        title: 'Quantum Drug Discovery',
-        description:
-          'Learn how quantum methods are revolutionizing the pharmaceutical industry through rapid simulations.',
+        title: 'Learning Menu',
+        list: [
+          { text: 'Courses', link: '/' },
+          { text: 'Trainings', link: '/' },
+          { text: 'Research', link: '/' },
+          { text: 'Codebook', link: '/' },
+        ],
       },
     ],
   },
   {
-    name: 'Corporate Training',
+    title: 'About',
+    menu: [
+      {
+        title: 'About Us',
+        list: [
+          { text: 'Company', link: '/about' },
+          { text: 'Team', link: '/team' },
+          { text: 'Pricing', link: '/pricing' },
+          { text: 'Join Us', link: '/joinUs' },
+          { text: 'FAQs', link: '/joinUs' },
+        ],
+      },
+    ],
   },
   {
-    name: 'Contact',
-    link: '/contact',
+    title: 'Contact',
+    description: '/contact',
   },
 ];
 
 export const CommonHeader = () => {
-  const { MD } = useMediaQuerys();
+  const { MD } = useMediaQuerys(); // Assuming useMediaQuerys() is correctly defined elsewhere
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <>
       {MD ? (
         <Group px={80} py={20} justify="space-between">
-          {/* Logo */}
           <Link href="/">
             <AspectRatio ratio={11 / 9} maw={60}>
               <Image src="/logo-removebg.png" alt="logo" />
             </AspectRatio>
           </Link>
 
-          {/* Desktop Menu */}
           <Group gap="xl">
             {DATA.map((item) => (
-              <Menu key={item.name} trigger="hover" openDelay={100}>
+              <Menu key={item.title} trigger="hover" openDelay={100}>
                 <Menu.Target>
                   <Text
                     c={COLOR.TURQUOISE}
                     component={Link}
-                    href={item.link || '/'}
-                    style={{ cursor: item.link ? 'pointer' : 'default' }}
+                    href={item.description || '/'}
+                    style={{ cursor: item.description ? 'pointer' : 'default' }}
                   >
-                    {item.name}
+                    {item.title}
                   </Text>
                 </Menu.Target>
                 {item.menu && (
                   <Menu.Dropdown>
                     <SimpleGrid cols={item.menu.length}>
-                      {item.menu.map((menuItem) => (
-                        <Menu.Item key={menuItem.title}>
+                      {item.menu.map((menuItem, idx) => (
+                        <Menu.Item key={idx}>
                           <CommonMenuSection data={[menuItem]} />
                         </Menu.Item>
                       ))}
@@ -144,7 +142,6 @@ export const CommonHeader = () => {
             ))}
           </Group>
 
-          {/* Desktop Buttons */}
           <Group>
             <CommonButton variant="transparent" title="Get Connected" />
             <CommonButton title="Q-Platform" />
@@ -152,7 +149,6 @@ export const CommonHeader = () => {
         </Group>
       ) : (
         <>
-          {/* Mobile Header */}
           <Group p="sm" justify="space-between">
             <Link href="/">
               <AspectRatio ratio={11 / 9} maw={50}>
@@ -173,7 +169,6 @@ export const CommonHeader = () => {
             </ActionIcon>
           </Group>
 
-          {/* Mobile Modal */}
           <Modal
             fullScreen
             opened={modalOpen}
@@ -193,29 +188,29 @@ export const CommonHeader = () => {
             }}
           >
             <Stack>
-              {/* Mobile Buttons */}
               <Group justify="center">
                 <CommonButton variant="outline" title="Get Connected" />
                 <CommonButton title="Q-Platform" />
               </Group>
 
-              {/* Mobile Accordion Menu */}
               <Accordion>
                 {DATA.map((item) => (
-                  <Accordion.Item value={item.name} key={item.name}>
+                  <Accordion.Item value={item.title} key={item.title}>
                     <Accordion.Control>
-                      <Text c={COLOR.TURQUOISE}>{item.name}</Text>
+                      <Text c={COLOR.TURQUOISE}>{item.title}</Text>
                     </Accordion.Control>
                     <Accordion.Panel>
-                      {item.menu?.map((menuItem) => (
-                        <Text
-                          c={COLOR.GREEN}
-                          key={menuItem.title}
-                          mt="xs"
-                          size="sm"
-                        >
-                          {menuItem.title}
-                        </Text>
+                      {item.menu?.map((menuItem, idx) => (
+                        <Stack key={idx}>
+                          <Text c={COLOR.GREEN} mt="xs" size="sm">
+                            {menuItem.title}
+                          </Text>
+                          {menuItem.list.map((linkItem, linkIdx) => (
+                            <Text key={linkIdx} c={COLOR.GREEN} size="sm">
+                              <Link href={linkItem.link}>{linkItem.text}</Link>
+                            </Text>
+                          ))}
+                        </Stack>
                       ))}
                     </Accordion.Panel>
                   </Accordion.Item>
