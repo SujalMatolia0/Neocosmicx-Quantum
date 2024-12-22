@@ -1,33 +1,32 @@
-import { CommonButton } from '@/components/indie/common_button';
-import { COLOR, SIZE_CONFIG } from '@/configs/theme';
-import { useSizeHelper } from '@/lib/hooks/size_helper';
-import { useMediaQuerys } from '@filante/cobalt/hooks';
+import { SIZE_CONFIG, COLOR } from '@/configs/theme';
 import {
-  AspectRatio,
+  Grid,
+  Stack,
+  Title,
+  Group,
   Box,
   Divider,
-  Grid,
-  Group,
-  Image,
-  Stack,
+  AspectRatio,
   Text,
-  Title,
+  Image,
 } from '@mantine/core';
 import { IconCheck } from '@tabler/icons-react';
 import { Children } from 'react';
+import { CommonButton } from './common_button';
+import { useMediaQuerys } from '@filante/cobalt/hooks';
+import { useSizeHelper } from '@/lib/hooks/size_helper';
 
-const DATA = [
-  {
-    text: 'Scalable Back Office Support Teams',
-  },
-  {
-    text: 'Scalable Back Office Support Teams',
-  },
-  {
-    text: 'Scalable Back Office Support Teams',
-  },
-];
-export const LandingHero = () => {
+interface Props {
+  title: string;
+  text: string;
+  button: string;
+  image: string;
+  data: {
+    line: string;
+  }[];
+}
+
+export const CommonHero = (props: Props) => {
   const size = useSizeHelper();
   const { MD } = useMediaQuerys();
   return (
@@ -45,19 +44,17 @@ export const LandingHero = () => {
         >
           <Stack align="start">
             <Title fw={300} lh={1} c={COLOR.TURQUOISE} size={size.TITLE_1}>
-              A Global Expert of Quantum
+              {props.title}
             </Title>
-            <Text size={size.TEXT_1}>
-              Join Us to expertise your Quantum expertise
-            </Text>
+            <Text size={size.TEXT_1}>{props.text} </Text>
             <Group>
-              <CommonButton variant="outline" title="Become a Member" />
-              <CommonButton title="Quantum Platform" />
+              {/* <CommonButton variant="outline" title="Become a Member" /> */}
+              <CommonButton title="Update content" />
             </Group>
           </Stack>
 
           <Box
-            w={MD ? '56%' : '100%'}
+            w={MD ? '40%' : '100%'}
             h={MD ? '40%' : '30%'}
             left={0}
             bottom={0}
@@ -90,12 +87,12 @@ export const LandingHero = () => {
             >
               <Divider color={COLOR.GRAY} />
               {Children.toArray(
-                DATA.map((item) => (
+                props.data.map((item) => (
                   <>
                     <Group>
                       <IconCheck color={COLOR.GRAY} />
                       <Text size={MD ? '1.2vw' : '4vw'} c={COLOR.PEACH}>
-                        {item.text}
+                        {item.line}
                       </Text>
                     </Group>
                     <Divider />
