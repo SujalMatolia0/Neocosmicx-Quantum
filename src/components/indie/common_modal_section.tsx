@@ -3,40 +3,61 @@ import { ICON_SIZE } from '@filante/cobalt';
 import { Stack, Text } from '@mantine/core';
 import { IconArrowRight } from '@tabler/icons-react';
 import Link from 'next/link';
-import { Children } from 'react';
 
 interface Props {
-  title: string;
-  list: {
-    text: string;
-  }[];
+  data: (
+    | {
+        title: string;
+        list: {
+          text: string;
+          link: string;
+        }[];
+      }
+    | {
+        title: string;
+        description: string;
+      }
+  )[];
 }
 
-export const CommonMenuSection = (props: Props) => {
+export const CommonMenuSection = ({ data }: Props) => {
   return (
     <>
-      <Stack maw={200} justify="start">
-        <Text c={COLOR.TURQUOISE} size="lg">
-          {props.title}
-        </Text>
-        {Children.toArray(
-          props.list.map((link) => (
-            <>
-              <Text size="sm">{link.text}</Text>
-            </>
-          ))
-        )}
+      {data.map((item, index) => (
+        <Stack key={index} maw={200} justify="start">
+          <Text c={COLOR.TURQUOISE} size="lg">
+            {item.title}
+          </Text>
 
-        <Text
-          td="underline"
-          c={COLOR.GREEN}
-          component={Link}
-          href="/coming_soon"
-          size="xs"
-        >
-          Coming Soon <IconArrowRight size={ICON_SIZE.XS} />
-        </Text>
-      </Stack>
+          {'list' in item &&
+            item.list.map((listItem, listIndex) => (
+              <Text
+                key={listIndex}
+                component={Link}
+                href={listItem.link}
+                size="sm"
+              >
+                {listItem.text}
+              </Text>
+            ))}
+
+          {'description' in item && (
+            <Text size="sm" c={COLOR.GRAY}>
+              {item.description}
+            </Text>
+          )}
+
+          <Text
+            td="underline"
+            c={COLOR.GREEN}
+            component={Link}
+            href="/coming_soon"
+            size="xs"
+          >
+            Coming Soon <IconArrowRight size={ICON_SIZE.XS} />
+          </Text>
+        </Stack>
+      ))}
     </>
   );
 };

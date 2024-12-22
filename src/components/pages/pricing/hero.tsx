@@ -9,10 +9,13 @@ export const PricingHero = () => {
         <Title c={COLOR.TURQUOISE}>Pricing</Title>
         <Text p="md" maw={900} ta="center" c={COLOR.GRAY}>
           We offer customized pricing based on your needs and the number of team
-          members you require. Let us know what you're looking for and we'll
-          work with you to create a plan that fits your budget.
+          members you require. Let us know what you&apos;re looking for and
+          we&apos;ll work with you to create a plan that fits your budget.
         </Text>
-        <CommonButton color={COLOR.TURQUOISE} title="Get Your Free Estimate Now" />
+        <CommonButton
+          color={COLOR.TURQUOISE}
+          title="Get Your Free Estimate Now"
+        />
       </Stack>
     </>
   );

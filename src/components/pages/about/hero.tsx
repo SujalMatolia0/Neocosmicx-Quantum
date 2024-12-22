@@ -1,16 +1,7 @@
 import { COLOR } from '@/configs/theme';
 import { useSizeHelper } from '@/lib/hooks/size_helper';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
-import {
-  AspectRatio,
-  Center,
-  Group,
-  Paper,
-  SimpleGrid,
-  Stack,
-  Text,
-  Title,
-} from '@mantine/core';
+import { Paper, SimpleGrid, Stack, Text, Title } from '@mantine/core';
 import { Children } from 'react';
 
 const DATA = [

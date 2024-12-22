@@ -14,13 +14,12 @@ import {
   AspectRatio,
 } from '@mantine/core';
 import { CommonButton } from '../indie/common_button';
-import { Children, useState } from 'react';
+import { useState } from 'react';
 import { CommonMenuSection } from '../indie/common_modal_section';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
 import { IconMenu2, IconX } from '@tabler/icons-react';
 import { ICON_SIZE } from '@filante/cobalt';
 import Link from 'next/link';
-import { text } from 'stream/consumers';
 
 const DATA = [
   {
@@ -28,15 +27,22 @@ const DATA = [
     menu: [
       {
         title: 'Membership',
-        list: [{ text: 'Indivisual ' }, { text: 'Corporate ' }],
+        list: [
+          { text: 'Individual', link: '/' },
+          { text: 'Corporate', link: '/' },
+        ],
       },
       {
         title: 'Q-Programming',
-        list: [{ text: 'Q-Composer' }, { text: 'Q-Space' }, { text: 'Q-ML' }],
+        list: [
+          { text: 'Q-Composer', link: '/' },
+          { text: 'Q-Space', link: '/' },
+          { text: 'Q-ML', link: '/' },
+        ],
       },
       {
         title: 'Accreditations',
-        list: [{ text: 'hi' }],
+        list: [{ text: 'Hi', link: '/' }],
       },
     ],
   },
@@ -103,44 +109,39 @@ export const CommonHeader = () => {
       {MD ? (
         <Group px={80} py={20} justify="space-between">
           {/* Logo */}
-          <Group gap="xl">
-            <Link href="/">
-              <AspectRatio ratio={11 / 9} maw={60}>
-                <Image src="/logo-removebg.png" alt="logo" />
-              </AspectRatio>
-            </Link>
+          <Link href="/">
+            <AspectRatio ratio={11 / 9} maw={60}>
+              <Image src="/logo-removebg.png" alt="logo" />
+            </AspectRatio>
+          </Link>
 
-            {/* Desktop Menu */}
-            {Children.toArray(
-              DATA.map((item) => (
-                <Menu trigger="hover" openDelay={100}>
-                  <Menu.Target>
-                    <Text
-                      c={COLOR.TURQUOISE}
-                      component={Link}
-                      href={item.link || ''}
-                      style={{ cursor: 'pointer' }}
-                    >
-                      {item.name}
-                    </Text>
-                  </Menu.Target>
-                  {item.menu && (
-                    <Menu.Dropdown>
-                      <SimpleGrid cols={item.menu.length}>
-                        {item.menu.map((menuItem) => (
-                          <Menu.Item key={menuItem.title}>
-                            <CommonMenuSection
-                              title={menuItem.title}
-                              list={menuItem.list || []}
-                            />
-                          </Menu.Item>
-                        ))}
-                      </SimpleGrid>
-                    </Menu.Dropdown>
-                  )}
-                </Menu>
-              ))
-            )}
+          {/* Desktop Menu */}
+          <Group gap="xl">
+            {DATA.map((item) => (
+              <Menu key={item.name} trigger="hover" openDelay={100}>
+                <Menu.Target>
+                  <Text
+                    c={COLOR.TURQUOISE}
+                    component={Link}
+                    href={item.link || '/'}
+                    style={{ cursor: item.link ? 'pointer' : 'default' }}
+                  >
+                    {item.name}
+                  </Text>
+                </Menu.Target>
+                {item.menu && (
+                  <Menu.Dropdown>
+                    <SimpleGrid cols={item.menu.length}>
+                      {item.menu.map((menuItem) => (
+                        <Menu.Item key={menuItem.title}>
+                          <CommonMenuSection data={[menuItem]} />
+                        </Menu.Item>
+                      ))}
+                    </SimpleGrid>
+                  </Menu.Dropdown>
+                )}
+              </Menu>
+            ))}
           </Group>
 
           {/* Desktop Buttons */}

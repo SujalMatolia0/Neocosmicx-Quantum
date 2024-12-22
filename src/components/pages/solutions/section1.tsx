@@ -1,13 +1,5 @@
 import { CommonButton } from '@/components/indie/common_button';
-import {
-  AspectRatio,
-  Center,
-  Image,
-  SimpleGrid,
-  Stack,
-  Text,
-  Title,
-} from '@mantine/core';
+import { Image, SimpleGrid, Stack, Text, Title } from '@mantine/core';
 
 export const SolutionSection1 = () => {
   return (

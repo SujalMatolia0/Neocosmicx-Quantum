@@ -54,7 +54,7 @@ export const AboutSection2 = () => {
   const { MD } = useMediaQuerys();
   return (
     <>
-      <Center mih="100vh" bg={COLOR.TURQUOISE}>
+      <Center py={SIZE_CONFIG.SECTION_SPACE} mih="100vh" bg={COLOR.TURQUOISE}>
         <Stack align="center">
           <Title c={COLOR.GREEN}>Our Process</Title>
           <Text maw={800} c={COLOR.PEACH} ta="center">
@@ -63,7 +63,7 @@ export const AboutSection2 = () => {
             success. We foster a culture of continuous learning and strive every
             day to exceed our clients’ expectations.
           </Text>
-          <SimpleGrid spacing={0} cols={{ base: 1, md: 3 }}>
+          <SimpleGrid miw="90vw" p="md" spacing={0} cols={{ base: 1, md: 3 }}>
             {Children.toArray(
               DATA.map((item) => (
                 <>
@@ -72,12 +72,15 @@ export const AboutSection2 = () => {
                     bg="transparent"
                     style={{ borderColor: COLOR.GREEN }}
                     // h={120}
-                    //   w={MD ? 250 : 350}
+                    // w={MD ? "90%" : "5.5vw"}
                     radius={0}
                     withBorder
                     mih={140}
                   >
-                    <Stack justify="space-around">
+                    <Stack
+                      //  miw={MD ? 350 : 300}
+                      justify="space-between"
+                    >
                       <Group justify="end">
                         <AspectRatio ratio={2 / 2}>
                           <Image

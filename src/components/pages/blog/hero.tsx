@@ -1,6 +1,6 @@
 import { useSizeHelper } from '@/lib/hooks/size_helper';
 import { Select, Stack, Title } from '@mantine/core';
-import { IconArrowBack, IconArrowDown } from '@tabler/icons-react';
+import { IconArrowDown } from '@tabler/icons-react';
 
 export const BlogHero = () => {
   const size = useSizeHelper();

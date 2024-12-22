@@ -3,7 +3,6 @@ import { useMediaQuerys } from '@filante/cobalt/hooks';
 import {
   AspectRatio,
   Center,
-  Group,
   Image,
   Paper,
   SimpleGrid,
@@ -11,7 +10,6 @@ import {
   Text,
 } from '@mantine/core';
 import { Children } from 'react';
-import { text } from 'stream/consumers';
 
 const DATA = [
   {

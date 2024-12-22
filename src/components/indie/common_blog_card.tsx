@@ -14,11 +14,7 @@ import {
   Text,
   Title,
 } from '@mantine/core';
-import {
-  IconArrowRight,
-  IconArrowRightCircle,
-  IconArrowRightCircleFilled,
-} from '@tabler/icons-react';
+import { IconArrowRight } from '@tabler/icons-react';
 
 interface Props {
   image: string;
@@ -34,6 +30,7 @@ export const CommonBlogCard = (props: Props) => {
     <>
       <Center py={SIZE_CONFIG.SECTION_SPACE} maw="100vw">
         <Paper
+          m="md"
           mih="20vw"
           style={{
             borderColor: 'black',
@@ -49,6 +46,7 @@ export const CommonBlogCard = (props: Props) => {
                   radius="lg"
                   width="fit-content"
                   src={props.image}
+                  alt="image"
                 />
               </AspectRatio>
             </Grid.Col>

@@ -57,7 +57,7 @@ export const LandingHero = () => {
           </Stack>
 
           <Box
-            w={MD ? '40%' : '100%'}
+            w={MD ? '56%' : '100%'}
             h={MD ? '40%' : '30%'}
             left={0}
             bottom={0}
