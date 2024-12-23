@@ -57,7 +57,7 @@ const DATA = [
       {
         title: 'Resources Menu',
         list: [
-          { text: 'Chapter', link: '/' },
+          { text: 'Chapter', link: '/chapter' },
           { text: 'Journal (Q-Plus)', link: '/' },
           { text: 'Blogs', link: '/blog' },
           { text: 'Challenges', link: '/' },
@@ -74,7 +74,7 @@ const DATA = [
           { text: 'Courses', link: '/' },
           { text: 'Trainings', link: '/' },
           { text: 'Research', link: '/' },
-          { text: 'Codebook', link: '/' },
+          { text: 'Codebook', link: '/codebook' },
         ],
       },
     ],
