@@ -1,15 +1,7 @@
 import { SIZE_CONFIG, COLOR } from '@/configs/theme';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
 import { Carousel } from '@mantine/carousel';
-import {
-  AspectRatio,
-  Button,
-  Center,
-  Image,
-  Paper,
-  Stack,
-  Title,
-} from '@mantine/core';
+import { AspectRatio, Image, Paper, Stack, Title } from '@mantine/core';
 import { Children } from 'react';
 const TEAM = [
   {

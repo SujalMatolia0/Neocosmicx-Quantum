@@ -1,16 +1,6 @@
 import { COLOR, SIZE_CONFIG } from '@/configs/theme';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
-import {
-  Card,
-  Center,
-  Image,
-  Paper,
-  SimpleGrid,
-  Stack,
-  Text,
-  Title,
-} from '@mantine/core';
-import { title } from 'process';
+import { Image, Paper, SimpleGrid, Stack, Text, Title } from '@mantine/core';
 import { Children } from 'react';
 
 const DATA = [
@@ -82,7 +72,6 @@ export const CodeBookSection3 = () => {
                   p="md"
                   withBorder
                   bg="white"
-                  
                 >
                   <Stack>
                     <Image radius="lg" alt="image" src={item.image} />

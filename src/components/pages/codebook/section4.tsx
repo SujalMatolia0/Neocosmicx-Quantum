@@ -1,14 +1,6 @@
 import { COLOR, SIZE_CONFIG } from '@/configs/theme';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
-import {
-  Stack,
-  Title,
-  SimpleGrid,
-  Button,
-  Text,
-  Paper,
-  Image,
-} from '@mantine/core';
+import { Stack, Title, SimpleGrid, Text, Paper, Image } from '@mantine/core';
 import { Children } from 'react';
 
 // Reference page
@@ -45,7 +37,7 @@ export const CodeBookSection4 = () => {
       >
         <Title ta="center">New Codebook content</Title>
         <Text ta="center">
-          Here's the latest to help you navigate your quantum journey.
+          Here&apos;s the latest to help you navigate your quantum journey.
         </Text>
         <SimpleGrid cols={{ base: 1, md: 3 }}>
           {Children.toArray(
@@ -61,7 +53,7 @@ export const CodeBookSection4 = () => {
                   bg="white"
                 >
                   <Stack align="center">
-                    <Image radius="lg" src="/quantum-27.webp" />
+                    <Image alt="image" radius="lg" src="/quantum-27.webp" />
                     <Title>{item.title}</Title>
                     <Text ta="center">{item.text} </Text>
                   </Stack>

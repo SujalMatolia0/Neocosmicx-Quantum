@@ -1,6 +1,6 @@
 import { COLOR } from '@/configs/theme';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
-import { Button, Center, SimpleGrid, Stack, Text, Title } from '@mantine/core';
+import { Button, SimpleGrid, Stack, Text, Title } from '@mantine/core';
 
 export const CodeBookSection2 = () => {
   const { MD } = useMediaQuerys();
@@ -14,7 +14,7 @@ export const CodeBookSection2 = () => {
       >
         <Title ta="center">New Codebook content</Title>
         <Text ta="center">
-          Here's the latest to help you navigate your quantum journey.
+          Here&apos;s the latest to help you navigate your quantum journey.
         </Text>
         <SimpleGrid cols={{ base: 1, md: 3 }}>
           <Button>Quantum Fault Tolerance Path</Button>

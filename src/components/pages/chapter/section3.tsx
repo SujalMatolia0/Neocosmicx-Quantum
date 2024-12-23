@@ -1,14 +1,12 @@
 import {
   AspectRatio,
   Center,
-  Group,
   Image,
   SimpleGrid,
   Stack,
   Text,
   Title,
 } from '@mantine/core';
-import { IconArrowUpRight } from '@tabler/icons-react';
 import { Children } from 'react';
 
 const DATA = [

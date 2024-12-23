@@ -1,6 +1,6 @@
 import { useMediaQuerys } from '@filante/cobalt/hooks';
 import { Carousel } from '@mantine/carousel';
-import { Button, Group, Image, Paper, Stack, Text } from '@mantine/core';
+import { Group, Image, Paper, Stack, Text } from '@mantine/core';
 import { IconChevronRight } from '@tabler/icons-react';
 import { Children, useRef } from 'react';
 import Autoplay from 'embla-carousel-autoplay';

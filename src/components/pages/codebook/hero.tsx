@@ -1,11 +1,9 @@
 import { CommonButton } from '@/components/indie/common_button';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
 import {
-  Center,
   Group,
   Image,
   Input,
-  rem,
   SimpleGrid,
   Stack,
   Text,
