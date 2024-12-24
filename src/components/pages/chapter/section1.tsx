@@ -57,7 +57,7 @@ export const ChapterSection1 = () => {
                 <Carousel.Slide>
                   <Paper
                     style={{ borderRadius: '10px', borderColor: COLOR.GREEN }}
-                    mih={MD ? '50vh' : '60vh'}
+                    mih={MD ? '50vh' : '30vh'}
                     radius={0}
                     withBorder
                     bg="transparent"

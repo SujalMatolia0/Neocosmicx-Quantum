@@ -60,7 +60,7 @@ const DATA = [
           { text: 'Chapter', link: '/chapter' },
           { text: 'Journal (Q-Plus)', link: '/' },
           { text: 'Blogs', link: '/blog' },
-          { text: 'Challenges', link: '/' },
+          { text: 'Challenges', link: '/challenges' },
         ],
       },
     ],
