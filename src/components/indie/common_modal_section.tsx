@@ -22,7 +22,7 @@ export const CommonMenuSection = ({ data }: Props) => {
   return (
     <>
       {data.map((item, index) => (
-        <Stack key={index} maw={200} justify="start">
+        <Stack align="start" key={index} maw={200} justify="start">
           <Text c={COLOR.TURQUOISE} size="lg">
             {item.title}
           </Text>

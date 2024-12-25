@@ -34,11 +34,14 @@ const DATA = [
         ],
       },
       {
-        title: 'Q-Programming',
+        title: 'Sectors',
         list: [
-          { text: 'Q-Composer', link: '/' },
-          { text: 'Q-Space', link: '/' },
-          { text: 'Q-ML', link: '/' },
+          { text: 'Q-ML', link: '/q-ml' },
+          { text: 'Q-Space', link: '/q-space' },
+          { text: 'Transmission & mobility', link: '/transportation' },
+          { text: 'Pharma', link: '/pharma' },
+          { text: 'Communication', link: '/communication' },
+          { text: 'Defense', link: '/defense' },
         ],
       },
       {
@@ -58,7 +61,7 @@ const DATA = [
         title: 'Resources Menu',
         list: [
           { text: 'Chapter', link: '/chapter' },
-          { text: 'Journal (Q-Plus)', link: '/' },
+          { text: 'Journal (Q-Plus)', link: '/journal' },
           { text: 'Blogs', link: '/blog' },
           { text: 'Challenges', link: '/challenges' },
         ],
@@ -71,9 +74,9 @@ const DATA = [
       {
         title: 'Learning Menu',
         list: [
-          { text: 'Courses', link: '/' },
-          { text: 'Trainings', link: '/' },
-          { text: 'Research', link: '/' },
+          { text: 'Courses', link: '/courses' },
+          { text: 'Trainings', link: '/training' },
+          { text: 'Research', link: '/research' },
           { text: 'Codebook', link: '/codebook' },
         ],
       },
@@ -88,8 +91,8 @@ const DATA = [
           { text: 'Company', link: '/about' },
           { text: 'Team', link: '/team' },
           { text: 'Pricing', link: '/pricing' },
-          { text: 'Join Us', link: '/joinUs' },
-          { text: 'FAQs', link: '/joinUs' },
+          { text: 'Join Us', link: '/join-Us' },
+          { text: 'FAQs', link: '/faq' },
         ],
       },
     ],
@@ -128,7 +131,16 @@ export const CommonHeader = () => {
                   </Text>
                 </Menu.Target>
                 {item.menu && (
-                  <Menu.Dropdown>
+                  <Menu.Dropdown
+                    style={{
+                      background: 'rgba(255, 255, 255, 0.2)', // Semi-transparent background
+                      backdropFilter: 'blur(15px)', // Mirror-like effect
+                      border: '1px solid rgba(255, 255, 255, 0.3)', // Subtle border for definition
+                      borderRadius: '8px', // Rounded corners
+                      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)', // Soft shadow
+                      padding: '8px', // Inner spacing
+                    }}
+                  >
                     <SimpleGrid cols={item.menu.length}>
                       {item.menu.map((menuItem, idx) => (
                         <Menu.Item key={idx}>

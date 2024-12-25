@@ -6,7 +6,7 @@ export default function Courses() {
   return (
     <>
       <CommonLayout>
-        <CoursesHero />
+        <h1>ResearchPage</h1>
         <CommonFooter />
       </CommonLayout>
     </>

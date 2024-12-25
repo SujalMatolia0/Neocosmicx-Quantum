@@ -4,7 +4,6 @@ import { Carousel } from '@mantine/carousel';
 import {
   Stack,
   Title,
-  SimpleGrid,
   Center,
   AspectRatio,
   Text,
@@ -12,10 +11,9 @@ import {
   Group,
   Button,
   Paper,
-  Badge,
   Container,
 } from '@mantine/core';
-import { IconBoltFilled, IconFlame } from '@tabler/icons-react';
+import { IconBoltFilled } from '@tabler/icons-react';
 import { Children } from 'react';
 
 const DATA = [

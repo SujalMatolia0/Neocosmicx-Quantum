@@ -1,7 +1,6 @@
 import { SIZE_CONFIG } from '@/configs/theme';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
 import {
-  Center,
   Group,
   Paper,
   SimpleGrid,

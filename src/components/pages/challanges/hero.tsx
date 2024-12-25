@@ -1,5 +1,3 @@
-import { CommonButton } from '@/components/indie/common_button';
-import { COLOR, SIZE_CONFIG } from '@/configs/theme';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
 import {
   SimpleGrid,
