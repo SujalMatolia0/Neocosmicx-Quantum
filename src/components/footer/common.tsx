@@ -237,7 +237,7 @@ export const CommonFooter = () => {
             </Text>
           </Stack>
         </SimpleGrid>
-        <Paper
+        {/* <Paper
           bg={COLOR.GREEN}
           h={MD ? 150 : 80}
           w={MD ? 150 : 80}
@@ -258,7 +258,7 @@ export const CommonFooter = () => {
               CVRCQRD
             </Text>
           </Center>
-        </Paper>
+        </Paper> */}
       </Stack>
     </>
   );
