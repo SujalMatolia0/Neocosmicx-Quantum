@@ -1,36 +1,57 @@
-import { Image, SimpleGrid, Stack, Text, Title } from '@mantine/core';
+import { CommonButton } from '@/components/indie/common_button';
+import { SIZE_CONFIG } from '@/configs/theme';
+import {
+  Container,
+  Image,
+  SimpleGrid,
+  Stack,
+  Text,
+  Title,
+} from '@mantine/core';
 
 export const JoinUsSection2 = () => {
   return (
     <>
-      <SimpleGrid cols={{ base: 1, md: 2 }}>
-        <Image src="/quantum-25.avif" />
-        <Stack>
-          <Text>Teams</Text>
-          <Title>Find your team</Title>
-          <Text>
-            Together, we create access to information and build products for
-            everyone. Want to be a Googler? Find your team.
-          </Text>
-        </Stack>
-        <SimpleGrid cols={{ base: 1, md: 2 }}>
+      <Container mih="100vh" size="lg" py={SIZE_CONFIG.SECTION_SPACE}>
+        <SimpleGrid h="100%" cols={{ base: 1, md: 2 }}>
+          <Image radius="lg" m="auto" src="/quantum-25.avif" />
           <Stack>
-            <Title>Engineering & Tech</Title>
-            <Text>
-              Develop the products and tools of the future for billions of
-              users.
+            <Text>Teams</Text>
+            <Title>Find your team</Title>
+            <Text size="md">
+              Together, we create access to information and build products for
+              everyone. Want to be a Googler? Find your team.
             </Text>
-          </Stack>
-          <Stack>
-            <Title>Engineering & Tech</Title>
-            <Text>
-              Develop the products and tools of the future for billions of
-              users.
-            </Text>
+            <SimpleGrid cols={{ base: 1, md: 2 }}>
+              <Stack>
+                <Title size="lg">Engineering & Tech</Title>
+                <Text size="md">
+                  Develop the products and tools of the future for billions of
+                  users.
+                </Text>
+                <Title size="lg">Engineering & Tech</Title>
+                <Text size="md">
+                  Develop the products and tools of the future for billions of
+                  users.
+                </Text>
+              </Stack>
+              <Stack>
+                <Title size="lg">Engineering & Tech</Title>
+                <Text size="md">
+                  Develop the products and tools of the future for billions of
+                  users.
+                </Text>
+                <Title size="lg">Engineering & Tech</Title>
+                <Text size="md">
+                  Develop the products and tools of the future for billions of
+                  users.
+                </Text>
+              </Stack>
+            </SimpleGrid>{' '}
+            <CommonButton title="View all teams" />
           </Stack>
         </SimpleGrid>
-        <
-      </SimpleGrid>
+      </Container>
     </>
   );
 };

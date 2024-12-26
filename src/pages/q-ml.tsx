@@ -11,8 +11,9 @@ export default function QML() {
       <CommonLayout>
         <CommonSectorHero
           section="Sector"
-          page="Q-ML"
-          text="Innovate with unparalleled precision, optimize mission planning, engineering, and strategic decision-making for Aerospace & Defense."
+          page="Machine Learning"
+          image="/ML-Hero.png"
+          text="Analyze complex datasets, optimize portfolios, accelerate complex financial modeling, enhance security measures, paving the way for unprecedented insights and efficiency gains."
         />
         <QMLSection1 />
         <CommonSectorSection

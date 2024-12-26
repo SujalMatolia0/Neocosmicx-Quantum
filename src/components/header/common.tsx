@@ -30,16 +30,17 @@ const DATA = [
         list: [
           { text: 'Individual', link: '/' },
           { text: 'Corporate', link: '/' },
-          { text: 'Corporate', link: '/' },
+          { text: 'Student', link: '/' },
         ],
       },
       {
         title: 'Sectors',
         list: [
-          { text: 'Q-ML', link: '/q-ml' },
-          { text: 'Q-Space', link: '/q-space' },
-          { text: 'Transmission & mobility', link: '/transportation' },
+          { text: 'Machine Learning', link: '/q-ml' },
+          { text: 'Space & Cosmology', link: '/q-space' },
+          { text: 'Transmission & Mobility', link: '/transportation' },
           { text: 'Pharma', link: '/pharma' },
+          { text: 'Material Science', link: '/material-science' },
           { text: 'Communication', link: '/communication' },
           { text: 'Defense', link: '/defense' },
         ],
@@ -47,9 +48,9 @@ const DATA = [
       {
         title: 'Accreditations',
         list: [
-          { text: 'Link1', link: '/' },
-          { text: 'Link2', link: '/' },
-          { text: 'Link3', link: '/' },
+          { text: 'Charted Quantum Boffin', link: '/' },
+          { text: 'Charted Associate Quantum Scientist', link: '/' },
+          { text: 'Certified Quantum Engineer', link: '/' },
         ],
       },
     ],
@@ -133,7 +134,7 @@ export const CommonHeader = () => {
                 {item.menu && (
                   <Menu.Dropdown
                     style={{
-                      background: 'rgba(255, 255, 255, 0.2)', // Semi-transparent background
+                      background: 'rgba(1, 55, 61, 0.2)', // Semi-transparent background
                       backdropFilter: 'blur(15px)', // Mirror-like effect
                       border: '1px solid rgba(255, 255, 255, 0.3)', // Subtle border for definition
                       borderRadius: '8px', // Rounded corners

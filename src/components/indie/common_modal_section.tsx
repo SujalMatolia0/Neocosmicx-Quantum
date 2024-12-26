@@ -34,26 +34,43 @@ export const CommonMenuSection = ({ data }: Props) => {
                 component={Link}
                 href={listItem.link}
                 size="sm"
+                style={{
+                  position: 'relative',
+                  cursor: 'pointer',
+                  transition: 'color 0.3s ease, background-color 0.3s ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.textDecoration = 'underline';
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.textDecoration = 'none';
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }}
               >
                 {listItem.text}
               </Text>
             ))}
 
           {'description' in item && (
-            <Text size="sm" c={COLOR.GRAY}>
+            <Text
+              size="sm"
+              c={COLOR.GRAY}
+              style={{
+                position: 'relative',
+                cursor: 'default',
+                transition: 'color 0.3s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = COLOR.TURQUOISE;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = COLOR.GRAY;
+              }}
+            >
               {item.description}
             </Text>
           )}
-
-          {/* <Text
-            td="underline"
-            c={COLOR.GREEN}
-            component={Link}
-            href="/coming_soon"
-            size="xs"
-          >
-            Coming Soon <IconArrowRight size={ICON_SIZE.XS} />
-          </Text> */}
         </Stack>
       ))}
     </>

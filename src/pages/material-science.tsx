@@ -11,7 +11,8 @@ export default function MaterialScience() {
       <CommonLayout>
         <CommonSectorHero
           section="Sector"
-          page="Q-ML"
+          page="Material Science"
+          image="/material-hero.png"
           text="Innovate with unparalleled precision, optimize mission planning, engineering, and strategic decision-making for Aerospace & Defense."
         />
         <QMLSection1 />
