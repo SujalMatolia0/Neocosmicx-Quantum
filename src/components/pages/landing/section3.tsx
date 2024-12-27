@@ -8,25 +8,27 @@ export const LandingSection3 = () => {
     <>
       <Stack pt={SIZE_CONFIG.SECTION_SPACE} align="center" mih="100vh">
         <Title fw={300} maw={600} ta="center" c={COLOR.TURQUOISE}>
-          Our Accreditation
+          Our Accreditations
         </Title>
-        <Text c="dimmed">Get Global recognition for your Quantum skills </Text>
+        <Text c="dimmed">
+          Build a strong foundation and stand out as a Global Quantum Professional
+        </Text>
 
         <SimpleGrid cols={{ base: 1, md: 3, sm: 2 }}>
           <CommonCard
-            title="Chartered Quantum Scientist"
+            title="Quantum Innovator Program"
             image="/charted-scientist.jpeg"
-            description="Global recognition of Quantum for beginner"
+            description="Global validation of your quantum skills for aspiring learners"
             data={[{ title: 'Title 1' }, { title: 'Title 2' }]}
           />
           <CommonCard
-            title="Certified Quantum Scientist"
+            title="Certified Quantum Scientist "
             image="/certified-scientist.jpeg"
-            description="Global recognition of Quantum for beginner"
+            description="Industry recognized Certification for Quantum technology specialties"
             data={[{ title: 'Title 1' }, { title: 'Title 2' }]}
           />
           <CommonCard
-            title="Quantum Workshop"
+            title="Chartered Quantum Engineer"
             image="/workshop.jpeg"
             description="Global recognition of Quantum for beginner"
             data={[{ title: 'Title 1' }, { title: 'Title 2' }]}

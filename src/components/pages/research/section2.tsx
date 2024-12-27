@@ -3,6 +3,7 @@ import { COLOR } from '@/configs/theme';
 import {
   Container,
   Divider,
+  Grid,
   SimpleGrid,
   Stack,
   Text,
@@ -36,24 +37,30 @@ export const ResearchSection2 = () => {
   return (
     <>
       <Container>
-        <Divider color={COLOR.TURQUOISE} />
-        <SimpleGrid cols={3}>
+        <Grid columns={10}>
           {Children.toArray(
             DATA.map((item) => (
               <>
-                {item.icon}
-                <Title pt="lg">{item.title}</Title>
-                <Stack pt="lg">
-                  <Text>{item.text}</Text>
-                  <CommonButton
-                    variant="outline"
-                    title={item.button || 'View Project'}
-                  />
-                </Stack>
+                <Grid.Col span={10}>
+                  <Divider color={COLOR.TURQUOISE} />
+                </Grid.Col>
+                <Grid.Col span="auto">{item.icon}</Grid.Col>
+                <Grid.Col span={3}>
+                  <Title pt="lg">{item.title}</Title>
+                </Grid.Col>
+                <Grid.Col span={5}>
+                  <Stack pt="lg">
+                    <Text>{item.text}</Text>
+                    <CommonButton
+                      variant="outline"
+                      title={item.button || 'View Project'}
+                    />
+                  </Stack>
+                </Grid.Col>
               </>
             ))
           )}
-        </SimpleGrid>
+        </Grid>
       </Container>
     </>
   );
