@@ -1,5 +1,5 @@
 import { CommonButton } from '@/components/indie/common_button';
-import { COLOR } from '@/configs/theme';
+import { COLOR, SIZE_CONFIG } from '@/configs/theme';
 import {
   Container,
   Divider,
@@ -36,7 +36,7 @@ const DATA = [
 export const ResearchSection2 = () => {
   return (
     <>
-      <Container>
+      <Container py={SIZE_CONFIG.SECTION_SPACE}>
         <Grid columns={10}>
           {Children.toArray(
             DATA.map((item) => (

@@ -50,14 +50,11 @@ export const LandingHero = () => {
             <Text size={size.TEXT_1}>
               Join us to unlock the potential of Quantum Technology{' '}
             </Text>
-            <Group>
-              <CommonButton
-                href="/join-us"
-                variant="outline"
-                title="Join now"
-              />
-              <CommonButton title="Explore Quantum Solutions " />
-            </Group>
+            <CommonButton
+              href="/join-us"
+              variant="outline"
+              title="Become a Member "
+            />
           </Stack>
 
           <Box

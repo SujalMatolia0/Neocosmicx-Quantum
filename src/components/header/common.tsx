@@ -26,14 +26,6 @@ const DATA = [
     title: 'Solutions',
     menu: [
       {
-        title: 'Membership',
-        list: [
-          { text: 'Individual', link: '/' },
-          { text: 'Corporate', link: '/' },
-          { text: 'Student', link: '/' },
-        ],
-      },
-      {
         title: 'Sectors',
         list: [
           { text: 'Machine Learning', link: '/q-ml' },
@@ -59,8 +51,8 @@ const DATA = [
     title: 'Resources',
     menu: [
       {
-        title: 'Resources Menu',
         list: [
+          { text: 'Membership', link: '/membership' },
           { text: 'Chapter', link: '/chapter' },
           { text: 'Journal (Q-Plus)', link: '/journal' },
           { text: 'Blogs', link: '/blog' },
@@ -73,7 +65,6 @@ const DATA = [
     title: 'Learnings',
     menu: [
       {
-        title: 'Learning Menu',
         list: [
           { text: 'Courses', link: '/courses' },
           { text: 'Trainings', link: '/training' },
@@ -87,7 +78,6 @@ const DATA = [
     title: 'About',
     menu: [
       {
-        title: 'About Us',
         list: [
           { text: 'Company', link: '/about' },
           { text: 'Team', link: '/team' },
@@ -156,7 +146,11 @@ export const CommonHeader = () => {
           </Group>
 
           <Group>
-            <CommonButton variant="transparent" title="Get Connected" />
+            <CommonButton
+              href="/contact"
+              variant="transparent"
+              title="Get Connected"
+            />
             <CommonButton title="Q-Platform" />
           </Group>
         </Group>
