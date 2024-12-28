@@ -1,5 +1,4 @@
 import { CommonFooter } from '@/components/footer/common';
-import { CommonSectorCard } from '@/components/indie/common_sector_card';
 import { CommonSectorHero } from '@/components/indie/common_sector_hero';
 import { CommonSectorSection } from '@/components/indie/common_sector_section';
 import { CommonLayout } from '@/components/layout/common';

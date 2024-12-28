@@ -1,10 +1,10 @@
-import { Container, Grid, Group, Stack, Text, Title } from '@mantine/core';
+import { Container, Grid, Stack, Text, Title } from '@mantine/core';
 
 export const ResearchHero = () => {
   return (
     <>
       <Container mih="80vh">
-        <Grid columns={10}>
+        <Grid h="100%" columns={10}>
           <Grid.Col span={3}>
             <Text>
               IBM Granite AI models are open sourced for innovation, tailored
@@ -12,8 +12,8 @@ export const ResearchHero = () => {
             </Text>
           </Grid.Col>
           <Grid.Col span="auto">
-            <Stack h="100%" align="end" justify="end">
-              <Title>Granite</Title>
+            <Stack h="80vh" align="end" justify="end">
+              <Title size="10vw">Granite</Title>
             </Stack>
           </Grid.Col>
         </Grid>

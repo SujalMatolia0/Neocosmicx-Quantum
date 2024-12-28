@@ -1,6 +1,5 @@
 import { CommonFooter } from '@/components/footer/common';
 import { CommonLayout } from '@/components/layout/common';
-import { CoursesHero } from '@/components/pages/courses/hero';
 import { TrainingHero } from '@/components/pages/training/hero';
 import { TrainingSection1 } from '@/components/pages/training/section1';
 import { TrainingSection2 } from '@/components/pages/training/section2';

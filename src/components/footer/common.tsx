@@ -2,10 +2,8 @@ import { COLOR, SIZE_CONFIG } from '@/configs/theme';
 import {
   ActionIcon,
   AspectRatio,
-  Center,
   Group,
   Image,
-  Paper,
   rem,
   SimpleGrid,
   Space,

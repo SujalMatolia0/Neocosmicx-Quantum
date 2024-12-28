@@ -1,13 +1,6 @@
 import { CommonButton } from '@/components/indie/common_button';
 import { COLOR, SIZE_CONFIG } from '@/configs/theme';
-import {
-  Container,
-  Group,
-  SimpleGrid,
-  Stack,
-  Text,
-  Title,
-} from '@mantine/core';
+import { Container, SimpleGrid, Stack, Text, Title } from '@mantine/core';
 
 export const JournalHero = () => {
   return (

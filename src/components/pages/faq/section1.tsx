@@ -1,6 +1,5 @@
 import { SIZE_CONFIG } from '@/configs/theme';
 import {
-  Anchor,
   Button,
   Container,
   Group,

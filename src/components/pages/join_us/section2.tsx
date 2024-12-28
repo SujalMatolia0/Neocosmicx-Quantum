@@ -14,7 +14,7 @@ export const JoinUsSection2 = () => {
     <>
       <Container mih="100vh" size="lg" py={SIZE_CONFIG.SECTION_SPACE}>
         <SimpleGrid h="100%" cols={{ base: 1, md: 2 }}>
-          <Image radius="lg" m="auto" src="/quantum-25.avif" />
+          <Image radius="lg" alt="image" m="auto" src="/quantum-25.avif" />
           <Stack>
             <Text>Teams</Text>
             <Title>Find your team</Title>

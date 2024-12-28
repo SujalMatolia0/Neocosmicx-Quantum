@@ -62,7 +62,7 @@ export const JoinUsSection3 = () => {
             </SimpleGrid>{' '}
             <CommonButton title="View all locations" />
           </Stack>
-          <Image radius="lg" m="auto" src="/quantum-25.avif" />
+          <Image radius="lg" alt="image" m="auto" src="/quantum-25.avif" />
         </SimpleGrid>
       </Container>
     </>

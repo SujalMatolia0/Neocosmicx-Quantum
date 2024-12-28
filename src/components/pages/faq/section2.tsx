@@ -1,7 +1,6 @@
 import { SIZE_CONFIG } from '@/configs/theme';
 import {
   Group,
-  Image,
   Paper,
   SimpleGrid,
   Stack,
@@ -10,7 +9,6 @@ import {
 } from '@mantine/core';
 import {
   IconBrackets,
-  IconCircle,
   IconCircleFilled,
   IconHome,
 } from '@tabler/icons-react';

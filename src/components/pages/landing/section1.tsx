@@ -1,7 +1,5 @@
 import {
-  Center,
   Group,
-  Paper,
   SimpleGrid,
   Stack,
   Text,
@@ -11,7 +9,6 @@ import {
 import { COLOR, SIZE_CONFIG } from '@/configs/theme';
 import { CommonButton } from '@/components/indie/common_button';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
-import Link from 'next/link';
 
 export const LandingSection1 = () => {
   const { MD } = useMediaQuerys();

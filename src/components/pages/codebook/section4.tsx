@@ -6,7 +6,7 @@ import { Children } from 'react';
 // Reference page
 // https://pennylane.ai/codebook
 
-const DATA = [
+export const DATA = [
   {
     image: '/quantum-27.webp',
     title: 'Form',

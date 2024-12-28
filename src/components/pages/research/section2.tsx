@@ -4,13 +4,11 @@ import {
   Container,
   Divider,
   Grid,
-  SimpleGrid,
   Stack,
   Text,
   Title,
 } from '@mantine/core';
 import { IconBrandYoutube } from '@tabler/icons-react';
-import { title } from 'process';
 import { Children } from 'react';
 
 const DATA = [

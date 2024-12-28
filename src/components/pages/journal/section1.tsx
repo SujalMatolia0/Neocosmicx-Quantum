@@ -1,6 +1,6 @@
 import { CommonButton } from '@/components/indie/common_button';
 import { COLOR } from '@/configs/theme';
-import { Group, SimpleGrid, Stack, Text, Title } from '@mantine/core';
+import { SimpleGrid, Stack, Title } from '@mantine/core';
 
 export const JournalSection1 = () => {
   return (

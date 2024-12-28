@@ -9,7 +9,6 @@ import {
   Text,
   Title,
 } from '@mantine/core';
-import { title } from 'process';
 import { Children } from 'react';
 
 const DATA = [

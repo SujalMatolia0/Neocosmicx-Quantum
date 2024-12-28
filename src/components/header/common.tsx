@@ -40,9 +40,15 @@ const DATA = [
       {
         title: 'Accreditations',
         list: [
-          { text: 'Charted Quantum Boffin', link: '/' },
-          { text: 'Charted Associate Quantum Scientist', link: '/' },
-          { text: 'Certified Quantum Engineer', link: '/' },
+          { text: 'Charted Quantum Boffin', link: '/charted_quantum_boffin' },
+          {
+            text: 'Charted Associate Quantum Scientist',
+            link: '/charted_quantum_scientist',
+          },
+          {
+            text: 'Certified Quantum Engineer',
+            link: '/charted_quantum_engineer',
+          },
         ],
       },
     ],
@@ -52,6 +58,7 @@ const DATA = [
     menu: [
       {
         list: [
+          { text: 'Quantune.py', link: '/' },
           { text: 'Membership', link: '/membership' },
           { text: 'Chapter', link: '/chapter' },
           { text: 'Journal (Q-Plus)', link: '/journal' },
@@ -115,7 +122,7 @@ export const CommonHeader = () => {
                   <Text
                     c={COLOR.TURQUOISE}
                     component={Link}
-                    href={item.description || '/'}
+                    href={item.description || ''}
                     style={{ cursor: item.description ? 'pointer' : 'default' }}
                   >
                     {item.title}

@@ -14,7 +14,7 @@ export const TrainingSection3 = () => {
     <>
       <Container mih="100vh" py={SIZE_CONFIG.SECTION_SPACE} size="xl">
         <SimpleGrid spacing="xl" cols={{ base: 1, md: 2 }}>
-          <Image radius="lg" ml="auto" src="/quantum-25.avif" />
+          <Image radius="lg" ml="auto" alt='image' src="/quantum-25.avif" />
           <Stack maw={500} justify="center">
             <Title>Build Your AWS Cloud skills with Ramp-Up Guides</Title>
             <Text>

@@ -7,13 +7,11 @@ import {
   Container,
   Image,
   Paper,
-  SimpleGrid,
   Stack,
   Text,
   Title,
 } from '@mantine/core';
 import { Children } from 'react';
-import { text } from 'stream/consumers';
 
 const DATA = [
   {
