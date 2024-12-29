@@ -62,7 +62,6 @@ const DATA = [
           { text: 'Membership', link: '/membership' },
           { text: 'Chapter', link: '/chapter' },
           { text: 'Journal (Q-Plus)', link: '/journal' },
-          { text: 'Blogs', link: '/blog' },
           { text: 'Challenges', link: '/challenges' },
         ],
       },
@@ -89,11 +88,15 @@ const DATA = [
           { text: 'Company', link: '/about' },
           { text: 'Team', link: '/team' },
           { text: 'Pricing', link: '/pricing' },
-          { text: 'Join Us', link: '/join-Us' },
+          { text: 'Join Us', link: '/join-us' },
           { text: 'FAQs', link: '/faq' },
         ],
       },
     ],
+  },
+  {
+    title: 'Spark',
+    description: '/blog',
   },
   {
     title: 'Contact',
@@ -216,9 +219,14 @@ export const CommonHeader = () => {
                     <Accordion.Panel>
                       {item.menu?.map((menuItem, idx) => (
                         <Stack key={idx}>
-                          <Text c={COLOR.GREEN} mt="xs" size="sm">
-                            {menuItem.title}
-                          </Text>
+                          {
+                            (menuItem.title) ?
+                              <Text c={COLOR.TURQUOISE} mt="xs" size="sm">
+                                {menuItem.title}
+                              </Text>
+                              : null
+                          }
+
                           {menuItem.list.map((linkItem, linkIdx) => (
                             <Text key={linkIdx} c={COLOR.GREEN} size="sm">
                               <Link href={linkItem.link}>{linkItem.text}</Link>
@@ -233,7 +241,8 @@ export const CommonHeader = () => {
             </Stack>
           </Modal>
         </>
-      )}
+      )
+      }
     </>
   );
 };

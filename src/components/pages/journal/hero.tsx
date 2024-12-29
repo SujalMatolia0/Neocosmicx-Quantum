@@ -1,11 +1,10 @@
 import { CommonButton } from '@/components/indie/common_button';
 import { COLOR, SIZE_CONFIG } from '@/configs/theme';
-import { Container, SimpleGrid, Stack, Text, Title } from '@mantine/core';
+import {  SimpleGrid, Stack, Text, Title } from '@mantine/core';
 
 export const JournalHero = () => {
   return (
     <>
-      <Container></Container>
       <Stack py={SIZE_CONFIG.SECTION_SPACE} px="8%" bg={COLOR.GRAY}>
         <Title>Journal(Q-Plus)</Title>
         <Text>

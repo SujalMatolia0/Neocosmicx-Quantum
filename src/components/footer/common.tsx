@@ -2,6 +2,8 @@ import { COLOR, SIZE_CONFIG } from '@/configs/theme';
 import {
   ActionIcon,
   AspectRatio,
+  Container,
+  Divider,
   Group,
   Image,
   rem,
@@ -11,7 +13,6 @@ import {
   Text,
   Title,
 } from '@mantine/core';
-import { CommonButton } from '../indie/common_button';
 import { Children } from 'react';
 import {
   IconBrandLinkedin,
@@ -96,99 +97,23 @@ export const CommonFooter = () => {
   return (
     <>
       <Stack
-        mih="100vh"
+        mih="70vh"
         bg={COLOR.TURQUOISE}
         pl={MD ? 150 : 'md'}
-        pt={SIZE_CONFIG.SECTION_SPACE}
+        py={SIZE_CONFIG.SECTION_SPACE}
       >
-        <SimpleGrid cols={{ base: 1, md: 2 }}>
-          <Stack maw={500}>
-            <Title c={COLOR.GREEN}>
-              Empowering Quantum Solutions with People and Technology
-            </Title>
-            <Text c={COLOR.GREEN}>
-              At CVRCQRD, we combine the power of cutting-edge quantum computing
-              technology with expert talent to deliver precise, efficient, and
-              innovative solutions. Whether it&apos;s training, research
-              collaboration, or quantum computing advancements, we ensure:
-            </Text>
-            <Group>
-              <CommonButton title="Let's Collaborate" color={COLOR.PEACH} />
-            </Group>
-          </Stack>
-          <Image px="md" radius="xl" src="/quantum-chip.jpeg" alt="image" />
-        </SimpleGrid>
-        <SimpleGrid cols={{ base: 1, md: 2 }}>
-          <Stack justify="center">
-            <AspectRatio ratio={11 / 2.8} maw="300">
-              <Image src="/logo-full.png" alt="logo" />
-            </AspectRatio>
-          </Stack>
-          <Stack>
-            <SimpleGrid cols={{ base: 2, md: 3 }}>
-              {MD ? (
-                <Stack>
-                  <CommonTag
-                    title="SOLUTIONS"
-                    list={[
-                      {
-                        links: [
-                          { text: 'Quantum for Business (Finance)' },
-                          { text: 'Quantum Simulation' },
-                          { text: 'Quantum Space' },
-                          { text: 'Quantum Chemistry ' },
-                          { text: 'Quantum Machine Learning' },
-                        ],
-                      },
-                    ]}
-                  />{' '}
-                  <CommonTag
-                    title="ABOUT"
-                    list={[
-                      {
-                        links: [
-                          { text: 'About' },
-                          { text: 'Pricing' },
-                          { text: 'Career (Join Us)' },
-                          { text: 'FAQ' },
-                        ],
-                      },
-                    ]}
-                  />
-                </Stack>
-              ) : null}
+        
+        <Stack
+          pr={100}
+          w="100%"
+          justify="center"
+        >
+          <AspectRatio ratio={11 / 2.8} maw="300">
+            <Image src="/logo-full.png" alt="logo" />
+          </AspectRatio>
 
-              {MD ? (
-                <Stack>
-                  <CommonTag
-                    title="RESOURCES"
-                    list={[
-                      {
-                        links: [
-                          { text: 'Case Studies' },
-                          { text: 'Learning' },
-                          { text: 'Blogs' },
-                          { text: 'Community' },
-                        ],
-                      },
-                    ]}
-                  />
-                  <CommonTag
-                    title="PARTNERS"
-                    list={[
-                      {
-                        links: [
-                          { text: 'Startup India' },
-                          { text: 'MNIT' },
-                          { text: 'BITS Pilani' },
-                          { text: 'SEO Meta Code' },
-                        ],
-                      },
-                    ]}
-                  />
-                </Stack>
-              ) : null}
-              <Stack>
+          <SimpleGrid py={SIZE_CONFIG.SECTION_SPACE} cols={{ base: 2, md: 4 }}>
+            {/* <Stack>
                 <CommonTag
                   title="GET IN TOUCH"
                   list={[
@@ -209,13 +134,66 @@ export const CommonFooter = () => {
                     },
                   ]}
                 />
-              </Stack>
-            </SimpleGrid>
-          </Stack>
-        </SimpleGrid>
-        <SimpleGrid cols={{ base: 1, md: 2 }}>
-          <Stack>
-            <Group>
+          </Stack> */}
+            <CommonTag
+              title="RESOURCES"
+              list={[
+                {
+                  links: [
+                    { text: 'Case Studies' },
+                    { text: 'Learning' },
+                    { text: 'Blogs' },
+                    { text: 'Community' },
+                  ],
+                },
+              ]}
+            />
+            <CommonTag
+              title="RESOURCES"
+              list={[
+                {
+                  links: [
+                    { text: 'Case Studies' },
+                    { text: 'Learning' },
+                    { text: 'Blogs' },
+                    { text: 'Community' },
+                  ],
+                },
+              ]}
+            />
+            <CommonTag
+              title="RESOURCES"
+              list={[
+                {
+                  links: [
+                    { text: 'Case Studies' },
+                    { text: 'Learning' },
+                    { text: 'Blogs' },
+                    { text: 'Community' },
+                  ],
+                },
+              ]}
+            />
+            <CommonTag
+              title="RESOURCES"
+              list={[
+                {
+                  links: [
+                    { text: 'Case Studies' },
+                    { text: 'Learning' },
+                    { text: 'Blogs' },
+                    { text: 'Community' },
+                  ],
+                },
+              ]}
+            />
+          </SimpleGrid>
+          <Divider color={COLOR.GREEN} />
+          <SimpleGrid cols={{ base: 1, md: 3 }}>
+            <Text size="xs" c={COLOR.GREEN}>
+              Copyright 2024 | All Rights Reserved<br /> Login Privacy Policy
+            </Text>
+            <Group justify='center'>
               {Children.toArray(
                 SocialLogo.map((item) => (
                   <>
@@ -230,33 +208,12 @@ export const CommonFooter = () => {
                 ))
               )}
             </Group>
-            <Text size="xs" c={COLOR.GREEN}>
-              Copyright 2024 | All Rights Reserved Login Privacy Policy
-            </Text>
-          </Stack>
-        </SimpleGrid>
-        {/* <Paper
-          bg={COLOR.GREEN}
-          h={MD ? 150 : 80}
-          w={MD ? 150 : 80}
-          pos="relative"
-          left={MD ? '80%' : '70%'}
-          bottom={MD ? 40 : 350}
-          radius="50%"
-          style={{
-            rotate: '35deg',
-          }}
-        >
-          <Center h="100%">
-            <Text
-              size={MD ?"1.2vw" : '3.5vw'}
-              c={COLOR.TURQUOISE}
-              maw={80}
-            >
-              CVRCQRD
-            </Text>
-          </Center>
-        </Paper> */}
+            <Group align='right' justify='right'>
+              <Text c={COLOR.GREEN}>Privacy</Text>
+              <Text c={COLOR.GREEN}>Terms</Text>
+            </Group>
+          </SimpleGrid>
+        </Stack>
       </Stack>
     </>
   );

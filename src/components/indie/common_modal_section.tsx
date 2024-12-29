@@ -5,7 +5,7 @@ import Link from 'next/link';
 interface Props {
   data: (
     | {
-        title: string;
+        title?: string;
         list: {
           text: string;
           link: string;
@@ -24,7 +24,7 @@ export const CommonMenuSection = ({ data }: Props) => {
       {data.map((item, index) => (
         <Stack align="start" key={index} maw={200} justify="start">
           <Text c={COLOR.TURQUOISE} size="lg">
-            {item.title}
+            {item?.title}
           </Text>
 
           {'list' in item &&
