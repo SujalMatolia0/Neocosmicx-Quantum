@@ -10,7 +10,7 @@ export default function Communication() {
       <CommonLayout>
         <CommonSectorHero
           section="Sector"
-          page="Communication"
+          page="Network & Security"
           image="/communication-hero.png"
           text="Innovate with unparalleled precision, optimize mission planning, engineering, and strategic decision-making for Aerospace & Defense."
         />

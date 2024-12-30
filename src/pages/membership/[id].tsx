@@ -1,7 +1,9 @@
+import { CommonLayout } from '@/components/layout/common';
+import { MembershipHero } from '@/components/pages/membership/hero';
 import { MembershipData } from '@/lib/data/memberships';
 import { GetServerSidePropsContext, InferGetServerSidePropsType } from 'next';
 
-export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
+export const getServerSideProps = (ctx: GetServerSidePropsContext) => {
   const membershipId =
     typeof ctx.params?.id === 'string' ? Number(ctx.params.id) : null;
 
@@ -28,6 +30,13 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   };
 };
 
-export default function Membership({
+export default function BlogPost({
   Membership,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {}
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  return (
+    <CommonLayout>
+      <MembershipHero Membership={Membership} />
+
+    </CommonLayout>
+  );
+}

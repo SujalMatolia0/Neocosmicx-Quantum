@@ -30,11 +30,12 @@ const DATA = [
         list: [
           { text: 'Machine Learning', link: '/q-ml' },
           { text: 'Space & Cosmology', link: '/q-space' },
-          { text: 'Transmission & Mobility', link: '/transportation' },
-          { text: 'Pharma', link: '/pharma' },
+          { text: 'Transportation & Mobility', link: '/transportation' },
+          { text: 'Pharma & Chemistry', link: '/pharma' },
           { text: 'Material Science', link: '/material-science' },
-          { text: 'Communication', link: '/communication' },
+          { text: 'Network & Security', link: '/communication' },
           { text: 'Defense', link: '/defense' },
+          { text: 'Finance', link: '/finance' },
         ],
       },
       {

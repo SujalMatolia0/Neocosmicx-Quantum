@@ -1,14 +1,15 @@
-import type { CobaltConfig as CC } from "@filante/cobalt/types";
+import type { CobaltConfig as CC } from '@filante/cobalt/types';
 
 export const CobaltConfig: CC = {
   theme: 'light',
   forceTheme: false,
   meta: {
-    title: 'Mantle',
+    image: '/logo-removebg.png',
+    title: 'Neocosmicx',
     description: "Don't build from scratch",
-    url: 'https://mohitxskull.dev',
-    twitterHandle: '@mohitxskull',
-    siteName: 'Mantle',
+    url: 'https://neocosmicx.in',
+    twitterHandle: '',
+    siteName: 'Neocosmicx',
   },
   gtag: null,
 };

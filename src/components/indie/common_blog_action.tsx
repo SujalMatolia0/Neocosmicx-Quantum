@@ -11,7 +11,7 @@ export const CommonBlogAction = (props: Props) => {
 
             <Paper h={150} w={250}>
                 <Stack h={150} w={250} gap={0}>
-                    <Image h={120} src={props.image} />
+                    <Image alt="image" h={120} src={props.image} />
                     <Button>{props.button}</Button>
                 </Stack>
             </Paper>

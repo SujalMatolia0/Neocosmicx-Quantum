@@ -2,7 +2,6 @@ import { COLOR, SIZE_CONFIG } from '@/configs/theme';
 import {
   ActionIcon,
   AspectRatio,
-  Container,
   Divider,
   Group,
   Image,
@@ -11,7 +10,6 @@ import {
   Space,
   Stack,
   Text,
-  Title,
 } from '@mantine/core';
 import { Children } from 'react';
 import {

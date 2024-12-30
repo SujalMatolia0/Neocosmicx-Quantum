@@ -4,13 +4,13 @@ import { CommonSectorSection } from '@/components/indie/common_sector_section';
 import { CommonLayout } from '@/components/layout/common';
 import { QMLSection1 } from '@/components/pages/q-ml/section1';
 
-export default function Pharma() {
+export default function Finance() {
   return (
     <>
       <CommonLayout>
         <CommonSectorHero
           section="Sector"
-          page="Pharma & Chemistry"
+          page="Finance"
           image="/pharma-hero.png"
           text="Innovate with unparalleled precision, optimize mission planning, engineering, and strategic decision-making for Aerospace & Defense."
         />

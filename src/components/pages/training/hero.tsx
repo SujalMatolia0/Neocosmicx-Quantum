@@ -1,5 +1,4 @@
-import { SIZE_CONFIG } from '@/configs/theme';
-import { Button, Container, Group, Stack, Text, Title } from '@mantine/core';
+import { Button,  Group, Stack, Text, Title } from '@mantine/core';
 
 export const TrainingHero = () => {
   return (
