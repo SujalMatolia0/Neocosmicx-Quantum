@@ -6,7 +6,7 @@ export const QuantumBoffinHero = () => {
     return (
         <>
             <Stack py={SIZE_CONFIG.SECTION_SPACE} px="8%" bg={COLOR.GRAY}>
-                <Title>Certified Quantum Boffin</Title>
+                <Title>Quantum Innovator Program</Title>
                 <Text maw={700}>
                     An international peer-reviewed and refereed journal on Quantum.
                     An international peer-reviewed and refereed journal on Quantum.

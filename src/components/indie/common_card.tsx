@@ -1,11 +1,13 @@
 import { COLOR } from '@/configs/theme';
 import { AspectRatio, Card, Group, Image, Stack, Text } from '@mantine/core';
 import { IconArrowRight } from '@tabler/icons-react';
+import Link from 'next/link';
 import { Children } from 'react';
 
 interface Props {
   image: string;
   title: string;
+  href: string;
   description: string;
   data: {
     title: string;
@@ -15,7 +17,7 @@ interface Props {
 export const CommonCard = (props: Props) => {
   return (
     <>
-      <Card radius="lg">
+      <Card component={Link} href={props.href} radius="lg">
         <Card.Section bg="#f5f5f5" p="lg">
           <Stack align="center">
             <AspectRatio ratio={6 / 5}>

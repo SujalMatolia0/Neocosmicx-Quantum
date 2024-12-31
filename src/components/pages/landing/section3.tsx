@@ -16,19 +16,22 @@ export const LandingSection3 = () => {
 
         <SimpleGrid cols={{ base: 1, md: 3, sm: 2 }}>
           <CommonCard
+            href='/quantum_innovator_program'
             title="Quantum Innovator Program"
             image="/charted-scientist.jpeg"
             description="Global validation of your quantum skills for aspiring learners"
             data={[{ title: 'Title 1' }, { title: 'Title 2' }]}
           />
           <CommonCard
-            title="Certified Quantum Scientist "
+            href='/certified_quantum_engineer'
+            title="Certified Quantum Engineer"
             image="/certified-scientist.jpeg"
             description="Industry recognized Certification for Quantum technology specialties"
             data={[{ title: 'Title 1' }, { title: 'Title 2' }]}
           />
           <CommonCard
-            title="Chartered Quantum Engineer"
+          href='/charted_quantum_scientist'
+            title="Chartered Quantum Scientist"
             image="/workshop.jpeg"
             description="Global recognition of Quantum for beginner"
             data={[{ title: 'Title 1' }, { title: 'Title 2' }]}
