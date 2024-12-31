@@ -26,27 +26,30 @@ const DATA = [
     title: 'Solutions',
     menu: [
       {
-        title: 'Membership',
+        title: 'Sectors',
         list: [
-          { text: 'Individual', link: '/' },
-          { text: 'Corporate', link: '/' },
-          { text: 'Corporate', link: '/' },
-        ],
-      },
-      {
-        title: 'Q-Programming',
-        list: [
-          { text: 'Q-Composer', link: '/' },
-          { text: 'Q-Space', link: '/' },
-          { text: 'Q-ML', link: '/' },
+          { text: 'Machine Learning', link: '/q-ml' },
+          { text: 'Space & Cosmology', link: '/q-space' },
+          { text: 'Transportation & Mobility', link: '/transportation' },
+          { text: 'Pharma & Chemistry', link: '/pharma' },
+          { text: 'Material Science', link: '/material-science' },
+          { text: 'Network & Security', link: '/communication' },
+          { text: 'Defense', link: '/defense' },
+          { text: 'Finance', link: '/finance' },
         ],
       },
       {
         title: 'Accreditations',
         list: [
-          { text: 'Link1', link: '/' },
-          { text: 'Link2', link: '/' },
-          { text: 'Link3', link: '/' },
+          { text: 'Charted Quantum Boffin', link: '/charted_quantum_boffin' },
+          {
+            text: 'Charted Associate Quantum Scientist',
+            link: '/charted_quantum_scientist',
+          },
+          {
+            text: 'Certified Quantum Engineer',
+            link: '/charted_quantum_engineer',
+          },
         ],
       },
     ],
@@ -55,12 +58,12 @@ const DATA = [
     title: 'Resources',
     menu: [
       {
-        title: 'Resources Menu',
         list: [
+          { text: 'Quantune.py', link: '/coming_soon' },
+          { text: 'Membership', link: '/membership' },
           { text: 'Chapter', link: '/chapter' },
-          { text: 'Journal (Q-Plus)', link: '/' },
-          { text: 'Blogs', link: '/blog' },
-          { text: 'Challenges', link: '/' },
+          { text: 'Journal (Q-Plus)', link: '/journal' },
+          { text: 'Challenges', link: '/challenges' },
         ],
       },
     ],
@@ -69,11 +72,10 @@ const DATA = [
     title: 'Learnings',
     menu: [
       {
-        title: 'Learning Menu',
         list: [
-          { text: 'Courses', link: '/' },
-          { text: 'Trainings', link: '/' },
-          { text: 'Research', link: '/' },
+          { text: 'Courses', link: '/courses' },
+          { text: 'Trainings', link: '/training' },
+          { text: 'Research', link: '/research' },
           { text: 'Codebook', link: '/codebook' },
         ],
       },
@@ -83,16 +85,19 @@ const DATA = [
     title: 'About',
     menu: [
       {
-        title: 'About Us',
         list: [
           { text: 'Company', link: '/about' },
           { text: 'Team', link: '/team' },
           { text: 'Pricing', link: '/pricing' },
-          { text: 'Join Us', link: '/joinUs' },
-          { text: 'FAQs', link: '/joinUs' },
+          { text: 'Join Us', link: '/join-us' },
+          { text: 'FAQs', link: '/faq' },
         ],
       },
     ],
+  },
+  {
+    title: 'Spark',
+    description: '/blog',
   },
   {
     title: 'Contact',
@@ -121,14 +126,23 @@ export const CommonHeader = () => {
                   <Text
                     c={COLOR.TURQUOISE}
                     component={Link}
-                    href={item.description || '/'}
+                    href={item.description || ''}
                     style={{ cursor: item.description ? 'pointer' : 'default' }}
                   >
                     {item.title}
                   </Text>
                 </Menu.Target>
                 {item.menu && (
-                  <Menu.Dropdown>
+                  <Menu.Dropdown
+                    style={{
+                      background: 'rgba(1, 55, 61, 0.2)', // Semi-transparent background
+                      backdropFilter: 'blur(15px)', // Mirror-like effect
+                      border: '1px solid rgba(255, 255, 255, 0.3)', // Subtle border for definition
+                      borderRadius: '8px', // Rounded corners
+                      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)', // Soft shadow
+                      padding: '8px', // Inner spacing
+                    }}
+                  >
                     <SimpleGrid cols={item.menu.length}>
                       {item.menu.map((menuItem, idx) => (
                         <Menu.Item key={idx}>
@@ -143,7 +157,11 @@ export const CommonHeader = () => {
           </Group>
 
           <Group>
-            <CommonButton variant="transparent" title="Get Connected" />
+            <CommonButton
+              href="/contact"
+              variant="transparent"
+              title="Get Connected"
+            />
             <CommonButton title="Q-Platform" />
           </Group>
         </Group>
@@ -202,9 +220,14 @@ export const CommonHeader = () => {
                     <Accordion.Panel>
                       {item.menu?.map((menuItem, idx) => (
                         <Stack key={idx}>
-                          <Text c={COLOR.GREEN} mt="xs" size="sm">
-                            {menuItem.title}
-                          </Text>
+                          {/* Check if menuItem has a title before rendering */}
+                          {'title' in menuItem && menuItem.title ? (
+                            <Text c={COLOR.TURQUOISE} mt="xs" size="sm">
+                              {menuItem.title}
+                            </Text>
+                          ) : null}
+
+                          {/* Render list items */}
                           {menuItem.list.map((linkItem, linkIdx) => (
                             <Text key={linkIdx} c={COLOR.GREEN} size="sm">
                               <Link href={linkItem.link}>{linkItem.text}</Link>
@@ -213,13 +236,15 @@ export const CommonHeader = () => {
                         </Stack>
                       ))}
                     </Accordion.Panel>
+
                   </Accordion.Item>
                 ))}
               </Accordion>
             </Stack>
           </Modal>
         </>
-      )}
+      )
+      }
     </>
   );
 };

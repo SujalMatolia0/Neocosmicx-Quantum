@@ -54,10 +54,10 @@ export const AboutSection2 = () => {
   const { MD } = useMediaQuerys();
   return (
     <>
-      <Center py={SIZE_CONFIG.SECTION_SPACE} mih="100vh" bg={COLOR.TURQUOISE}>
+      <Center py={SIZE_CONFIG.SECTION_SPACE} mih="100vh" >
         <Stack align="center">
-          <Title c={COLOR.GREEN}>Our Process</Title>
-          <Text maw={800} c={COLOR.PEACH} ta="center">
+          <Title c={COLOR.TURQUOISE}>Our Process</Title>
+          <Text maw={800} c={COLOR.TURQUOISE} ta="center">
             Our large and growing multinational team of consultants, managers,
             data specialists, and technologists is at the very heart of our
             success. We foster a culture of continuous learning and strive every
@@ -70,15 +70,12 @@ export const AboutSection2 = () => {
                   <Paper
                     p="md"
                     bg="transparent"
-                    style={{ borderColor: COLOR.GREEN }}
-                    // h={120}
-                    // w={MD ? "90%" : "5.5vw"}
+                    style={{ borderColor: COLOR.TURQUOISE }}
                     radius={0}
                     withBorder
                     mih={140}
                   >
                     <Stack
-                      //  miw={MD ? 350 : 300}
                       justify="space-between"
                     >
                       <Group justify="end">
@@ -91,11 +88,11 @@ export const AboutSection2 = () => {
                         </AspectRatio>
                       </Group>
                       <Stack gap={1}>
-                        <Text c={COLOR.PEACH} size={MD ? '2vw' : '5vw'}>
+                        <Text c={COLOR.TURQUOISE} size={MD ? '2vw' : '5vw'}>
                           {item.No}
                         </Text>
-                        <Text c={COLOR.PEACH}>{item.title}</Text>
-                        <Text c={COLOR.PEACH}>{item.text}</Text>
+                        <Text c={COLOR.TURQUOISE}>{item.title}</Text>
+                        <Text c={COLOR.TURQUOISE}>{item.text}</Text>
                       </Stack>
                     </Stack>
                   </Paper>

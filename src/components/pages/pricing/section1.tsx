@@ -33,7 +33,7 @@ export const PricingSection1 = () => {
   return (
     <>
       <Center py={SIZE_CONFIG.SECTION_SPACE} mih="100vh" bg={COLOR.TURQUOISE}>
-        <SimpleGrid cols={{ base: 1, md: 3 }} spacing={0}>
+        <SimpleGrid cols={{ base: 1, md: 3 }} spacing='xl'>
           {Children.toArray(
             DATA.map((item) => (
               <>

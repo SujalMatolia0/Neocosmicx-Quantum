@@ -18,13 +18,13 @@ import { Children } from 'react';
 
 const DATA = [
   {
-    text: 'Scalable Back Office Support Teams',
+    text: 'Dedicated Quantum Computing Solutions',
   },
   {
-    text: 'Scalable Back Office Support Teams',
+    text: 'Flexible for Research and Development',
   },
   {
-    text: 'Scalable Back Office Support Teams',
+    text: 'Enhanced and Optimized Algorithms',
   },
 ];
 export const LandingHero = () => {
@@ -45,15 +45,16 @@ export const LandingHero = () => {
         >
           <Stack align="start">
             <Title fw={300} lh={1} c={COLOR.TURQUOISE} size={size.TITLE_1}>
-              A Global Expert of Quantum
+              A global leader in Quantum
             </Title>
             <Text size={size.TEXT_1}>
-              Join Us to expertise your Quantum expertise
+              Join us to unlock the potential of Quantum Technology{' '}
             </Text>
-            <Group>
-              <CommonButton variant="outline" title="Become a Member" />
-              <CommonButton title="Quantum Platform" />
-            </Group>
+            <CommonButton
+              href="/join-us"
+              variant="outline"
+              title="Become a Member "
+            />
           </Stack>
 
           <Box

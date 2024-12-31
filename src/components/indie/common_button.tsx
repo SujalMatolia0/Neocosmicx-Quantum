@@ -2,16 +2,20 @@ import { COLOR } from '@/configs/theme';
 import { ICON_SIZE } from '@filante/cobalt';
 import { Button, Paper, Center } from '@mantine/core';
 import { IconArrowRight } from '@tabler/icons-react';
+import Link from 'next/link';
 
 export const CommonButton = (params: {
   title: string;
   variant?: string;
   color?: string;
+  href?: string;
 }) => {
   return (
     <>
       <Button
-      w="fit-content"
+        component={Link}
+        href={params.href ?? ''}
+        w="fit-content"
         variant={params.variant}
         h={50}
         radius="lg"

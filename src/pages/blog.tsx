@@ -1,26 +1,18 @@
 import { CommonFooter } from '@/components/footer/common';
 import { CommonLayout } from '@/components/layout/common';
-import { BlogSection1 } from '@/components/pages/blog/blogs';
 import { BlogHero } from '@/components/pages/blog/hero';
+import { BlogSection1 } from '@/components/pages/blog/section1';
+import { BlogSection2 } from '@/components/pages/blog/section2';
+import { BlogSection3 } from '@/components/pages/blog/section3';
 
 export default function Blog() {
   return (
     <>
       <CommonLayout>
-        {/* <CommonHero
-          button="Test"
-          image="/hero-removebg.png"
-          title="You are at at solution page"
-          text="welcome to neocosmicx"
-          data={[
-            { line: 'line one of hero page' },
-            { line: 'line two of hero page' },
-            { line: 'line three of hero page' },
-          ]}
-        /> */}
         <BlogHero />
-        {/* <SolutionSection1 /> */}
         <BlogSection1 />
+        <BlogSection2 />
+        <BlogSection3 />
         <CommonFooter />
       </CommonLayout>
     </>
