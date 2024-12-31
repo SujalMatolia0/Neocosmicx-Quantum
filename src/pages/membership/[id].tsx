@@ -30,7 +30,7 @@ export const getServerSideProps = (ctx: GetServerSidePropsContext) => {
   };
 };
 
-export default function BlogPost({
+export default function Membership({
   Membership,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (

@@ -9,6 +9,7 @@ export const QMLSection1 = () => {
         <SimpleGrid cols={{ bese: 1, md: 3 }}>
           <CommonSectorCard
             title="Drug Discovery"
+            href='/'
             description="Take a look at our offers and find the right solution to solve your problem"
             data={[
               { list: 'Feature 1' },
@@ -17,6 +18,8 @@ export const QMLSection1 = () => {
             ]}
           />
           <CommonSectorCard
+            href='/'
+
             title="Drug Discovery"
             description="Take a look at our offers and find the right solution to solve your problem"
             data={[
@@ -26,8 +29,9 @@ export const QMLSection1 = () => {
             ]}
           />
           <CommonSectorCard
-            title="Drug Discovery"
-            description="Take a look at our offers and find the right solution to solve your problem"
+            title="Drug "
+            href='/'
+            description="Take a look at our    find the right solution to solve your problem"
             data={[
               { list: 'Feature 1' },
               { list: 'Feature 1' },

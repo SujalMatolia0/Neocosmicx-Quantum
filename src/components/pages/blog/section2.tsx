@@ -6,39 +6,39 @@ import { Children } from "react"
 const DATA = [
     {
         text: 'Outline and align project scope.',
-        image: '/q-ml.png',
+        image: '/q-ml-1.png',
     },
     {
         text: 'Outline and align project scope.',
-        image: '/q-ml.png',
+        image: '/q-ml-1.png',
     },
     {
         text: 'Outline and align project scope.',
-        image: '/q-ml.png',
+        image: '/q-ml-1.png',
     },
     {
         text: 'Outline and align project scope.',
-        image: '/q-ml.png',
+        image: '/q-ml-1.png',
     },
     {
         text: 'Outline and align project scope.',
-        image: '/q-ml.png',
+        image: '/q-ml-1.png',
     },
     {
         text: 'Outline and align project scope.',
-        image: '/q-ml.png',
+        image: '/q-ml-1.png',
     },
     {
         text: 'Outline and align project scope.',
-        image: '/q-ml.png',
+        image: '/q-ml-1.png',
     },
     {
         text: 'Outline and align project scope.',
-        image: '/q-ml.png',
+        image: '/q-ml-1.png',
     },
     {
         text: 'Outline and align project scope.',
-        image: '/q-ml.png',
+        image: '/q-ml-1.png',
     },
 ];
 export const BlogSection2 = () => {

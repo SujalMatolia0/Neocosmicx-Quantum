@@ -18,7 +18,7 @@ export interface MembershipType {
 export const MainMembershipData: MembershipType[] = [
   {
     id: 1,
-    bg_image: '/quantum-27.webp',
+    bg_image: 'https://img.freepik.com/free-photo/group-coworkers-office-talking_23-2148985520.jpg?t=st=1735634085~exp=1735637685~hmac=ff0895383efbef3ffa2774b6b69dc96303c1517acec5d9a39039b6a0b5278e5a&w=826',
     hero_heading: 'Neocosmicx Membership',
     title: "Join the world's leading Quantum professional community",
     text: [

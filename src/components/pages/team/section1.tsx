@@ -13,39 +13,39 @@ import { Children } from 'react';
 export const TeamSection1 = () => {
   const DATA = [
     {
-      image: '/noor.png',
-      name: 'Noor-ul hasan ',
-      title: 'Developer',
+      image: '/shweta.png',
+      name: 'Shweta P',
+      title: 'CEO',
     },
     {
-      image: '/noor.png',
-      name: 'Noor-ul hasan ',
-      title: 'Developer',
+      image: '/abizer.png',
+      name: 'Abizer S',
+      title: 'CTO',
     },
     {
-      image: '/noor.png',
-      name: 'Noor-ul hasan ',
-      title: 'Developer',
+      image: '/mohit.png',
+      name: 'Mohit M',
+      title: 'Full Stack Developer',
     },
     {
-      image: '/noor.png',
-      name: 'Noor-ul hasan ',
-      title: 'Developer',
+      image: '/sejan.png',
+      name: 'Sejan Khan',
+      title: 'Python Developer',
     },
     {
-      image: '/noor.png',
-      name: 'Noor-ul hasan ',
-      title: 'Developer',
+      image: '/monika.png',
+      name: 'Monika S',
+      title: 'Quantum Engineer',
     },
     {
-      image: '/noor.png',
-      name: 'Noor-ul hasan ',
-      title: 'Developer',
+      image: '/noorul.png',
+      name: 'Noor-ul H',
+      title: 'Frontend Developer',
     },
     {
-      image: '/noor.png',
-      name: 'Noor-ul hasan ',
-      title: 'Developer',
+      image: '/sujal.png',
+      name: 'Sujal M ',
+      title: 'Backend Developer',
     },
   ];
   return (
@@ -56,13 +56,13 @@ export const TeamSection1 = () => {
             <>
               <Stack gap={1}>
                 <Center>
-                  <AspectRatio ratio={10 / 8}>
-                    <Image alt="image" maw={200} src={item.image} />
+                  <AspectRatio ratio={11 / 13}>
+                    <Image radius='lg' alt="image" maw={200} src={item.image} />
                   </AspectRatio>
                 </Center>
 
-                <Group p="md" justify="space-between" align="start">
-                  <Stack>
+                <Group p="md" justify="space-evenly" align="start">
+                  <Stack gap={2}>
                     <Text ta="left" size="md">
                       {item.name}
                     </Text>

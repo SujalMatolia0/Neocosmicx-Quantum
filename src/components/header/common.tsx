@@ -59,7 +59,7 @@ const DATA = [
     menu: [
       {
         list: [
-          { text: 'Quantune.py', link: '/' },
+          { text: 'Quantune.py', link: '/coming_soon' },
           { text: 'Membership', link: '/membership' },
           { text: 'Chapter', link: '/chapter' },
           { text: 'Journal (Q-Plus)', link: '/journal' },
@@ -220,14 +220,14 @@ export const CommonHeader = () => {
                     <Accordion.Panel>
                       {item.menu?.map((menuItem, idx) => (
                         <Stack key={idx}>
-                          {
-                            (menuItem.title) ?
-                              <Text c={COLOR.TURQUOISE} mt="xs" size="sm">
-                                {menuItem.title}
-                              </Text>
-                              : null
-                          }
+                          {/* Check if menuItem has a title before rendering */}
+                          {'title' in menuItem && menuItem.title ? (
+                            <Text c={COLOR.TURQUOISE} mt="xs" size="sm">
+                              {menuItem.title}
+                            </Text>
+                          ) : null}
 
+                          {/* Render list items */}
                           {menuItem.list.map((linkItem, linkIdx) => (
                             <Text key={linkIdx} c={COLOR.GREEN} size="sm">
                               <Link href={linkItem.link}>{linkItem.text}</Link>
@@ -236,6 +236,7 @@ export const CommonHeader = () => {
                         </Stack>
                       ))}
                     </Accordion.Panel>
+
                   </Accordion.Item>
                 ))}
               </Accordion>

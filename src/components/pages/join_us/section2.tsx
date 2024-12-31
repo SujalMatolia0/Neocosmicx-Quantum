@@ -48,7 +48,7 @@ export const JoinUsSection2 = () => {
                 </Text>
               </Stack>
             </SimpleGrid>{' '}
-            <CommonButton title="View all teams" />
+            <CommonButton title="View all teams" href='/team' />
           </Stack>
         </SimpleGrid>
       </Container>

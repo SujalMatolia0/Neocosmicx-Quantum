@@ -35,11 +35,11 @@ export const MembershipHero = (props: MembershipProps) => {
       >
         <Paper bg="transparent" mih="80vh">
           <Stack h="80vh" justify="center" align="center">
-            <Text c={COLOR.GRAY}>{props.Membership.hero_heading || ''}</Text>
+            <Text c={COLOR.TURQUOISE}>{props.Membership.hero_heading || ''}</Text>
             <Title c={COLOR.GREEN}>{props.Membership.hero_heading || ''}</Title>
             <Stack maw={600} ta="center" gap="xs">
               {props.Membership.text?.map((line, index) => (
-                <Text key={index} c={COLOR.GRAY}>
+                <Text key={index} c={COLOR.PEACH}>
                   {line}
                 </Text>
               ))}
