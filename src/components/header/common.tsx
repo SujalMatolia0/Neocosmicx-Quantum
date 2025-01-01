@@ -26,7 +26,6 @@ const DATA = [
     title: 'Solutions',
     menu: [
       {
-        title: 'Sectors',
         list: [
           { text: 'Machine Learning', link: '/q-ml' },
           { text: 'Space & Cosmology', link: '/q-space' },
@@ -38,20 +37,7 @@ const DATA = [
           { text: 'Finance', link: '/finance' },
         ],
       },
-      {
-        title: 'Accreditations',
-        list: [
-          { text: 'Quantum Innovator Program', link: '/quantum_innovator_program' },
-          {
-            text: 'Charted Quantum Scientist',
-            link: '/charted_quantum_scientist',
-          },
-          {
-            text: 'Certified Quantum Engineer',
-            link: '/certified_quantum_engineer',
-          },
-        ],
-      },
+
     ],
   },
   {
@@ -64,6 +50,24 @@ const DATA = [
           { text: 'Chapter', link: '/chapter' },
           { text: 'Journal (Q-Plus)', link: '/journal' },
           { text: 'Challenges', link: '/challenges' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Accreditations',
+    menu: [
+      {
+        list: [
+          { text: 'Quantum Innovator Program', link: '/quantum_innovator_program' },
+          {
+            text: 'Charted Quantum Scientist',
+            link: '/charted_quantum_scientist',
+          },
+          {
+            text: 'Certified Quantum Engineer',
+            link: '/certified_quantum_engineer',
+          },
         ],
       },
     ],

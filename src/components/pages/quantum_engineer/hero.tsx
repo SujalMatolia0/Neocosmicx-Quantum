@@ -1,21 +1,26 @@
-import { COLOR } from '@/configs/theme';
-import { BackgroundImage, Button, Stack, Text, Title } from '@mantine/core';
+import { SIZE_CONFIG } from '@/configs/theme';
+import { useMediaQuerys } from '@filante/cobalt/hooks';
+import { Image, SimpleGrid, Stack, Text, Title } from '@mantine/core';
 
 export const QuantumEngineerHero = () => {
+  const { MD } = useMediaQuerys()
   return (
     <>
-      <BackgroundImage mih="100vh" src="/quantum-26.avif">
-        <Stack justify="center" align="center" h="80vh">
-          <Title c={COLOR.GREEN}>CVRCQRD Certified Quantum Engineer</Title>
-          <Text ta="center" c={COLOR.TURQUOISE} maw={700}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-            eveniet ut quod aliquam possimus! Debitis aspernatur quibusdam quod
-            ab culpa quam quo dolorem omnis sint eum voluptatem, fugit
-            necessitatibus nostrum.
+      <SimpleGrid py={SIZE_CONFIG.SECTION_SPACE}
+        mah="100vh"
+        px={MD ? '140' : 'xs'}
+        cols={{ base: 1, md: 2 }}
+      >
+        <Stack py="xl">
+          <Title>Certified Quantum <br /> Engineer</Title>
+          <Text>
+            Get hands-on experience with quantum computing in PennyLane–from
+            quantum chemistry to quantum machine learning–using our exclusive
+            coding challenges.
           </Text>
-          <Button>Join The Program</Button>
         </Stack>
-      </BackgroundImage>
+        {MD ? <Image radius="lg" src="/quantum-27.webp" alt="image" /> : null}
+      </SimpleGrid >
     </>
   );
 };

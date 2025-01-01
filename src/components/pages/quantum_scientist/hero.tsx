@@ -1,42 +1,32 @@
-import { CommonButton } from '@/components/indie/common_button';
-import { SIZE_CONFIG, COLOR } from '@/configs/theme';
+import { SIZE_CONFIG } from '@/configs/theme';
+import { useMediaQuerys } from '@filante/cobalt/hooks';
 import {
-  Container,
-  BackgroundImage,
-  Paper,
   Stack,
   Title,
   Text,
+  Image,
+  SimpleGrid,
 } from '@mantine/core';
 
 export const QuantumScientistHero = () => {
+  const { MD } = useMediaQuerys()
   return (
     <>
-      <Container py={SIZE_CONFIG.SECTION_SPACE} size="xl">
-        <BackgroundImage
-          w="100%"
-          py={SIZE_CONFIG.SECTION_SPACE}
-          mih="40vh"
-          src="/quantum-25.avif"
-          radius="lg"
-        >
-          <Paper bg="transparent" mih="50vh">
-            <Stack h="80vh" justify="center" align="center">
-              <Text c={COLOR.GRAY}>CVRCQRD</Text>
-              <Title c={COLOR.GREEN}>
-                Charted Associate Quantum Scientist{' '}
-              </Title>
-              <Text ta="center" c={COLOR.GRAY}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque voluptas earum quod iure libero, sit voluptatum
-              </Text>
-              <CommonButton variant="outline" title="Register Now" />
-            </Stack>
-          </Paper>
-        </BackgroundImage>
-      </Container>
+      <SimpleGrid py={SIZE_CONFIG.SECTION_SPACE}
+        mah="100vh"
+        px={MD ? '140' : 'xs'}
+        cols={{ base: 1, md: 2 }}
+      >
+        <Stack py="xl">
+          <Title>Charted Quantum<br />Scientist</Title>
+          <Text>
+            Get hands-on experience with quantum computing in PennyLane–from
+            quantum chemistry to quantum machine learning–using our exclusive
+            coding challenges.
+          </Text>
+        </Stack>
+        {MD ? <Image radius="lg" src="/quantum-27.webp" alt="image" /> : null}
+      </SimpleGrid >
     </>
   );
 };
