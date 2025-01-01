@@ -227,11 +227,6 @@ export const CommonHeader = () => {
                     <Accordion.Panel>
                       {item.menu?.map((menuItem, idx) => (
                         <Stack key={idx}>
-                          {'title' in menuItem && menuItem.title ? (
-                            <Text c={COLOR.TURQUOISE} mt="xs" size="sm">
-                              {menuItem.title}
-                            </Text>
-                          ) : null}
 
                           {menuItem.list.map((linkItem, linkIdx) => (
                             <Text key={linkIdx} c={COLOR.GREEN} size="sm">
