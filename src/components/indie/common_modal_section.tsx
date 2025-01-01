@@ -22,7 +22,7 @@ export const CommonMenuSection = ({ data }: Props) => {
   return (
     <>
       {data.map((item, index) => (
-        <Stack key={index} justify='flex-start' h="100%" maw={200}>
+        <Stack key={index} justify="flex-start" h="100%" maw={200}>
           <Text c={COLOR.TURQUOISE} size="lg">
             {item?.title}
           </Text>
@@ -37,7 +37,9 @@ export const CommonMenuSection = ({ data }: Props) => {
                 style={{
                   position: 'relative',
                   cursor: 'pointer',
+                  // backgroundColor: "#487568",
                   transition: 'color 0.3s ease, background-color 0.3s ease',
+                  padding: '4px', // Added padding for better hover visibility
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.textDecoration = 'underline';
@@ -59,13 +61,16 @@ export const CommonMenuSection = ({ data }: Props) => {
               style={{
                 position: 'relative',
                 cursor: 'default',
-                transition: 'color 0.3s ease',
+                transition: 'color 0.3s ease, background-color 0.3s ease',
+                padding: '4px', // Added padding for better hover visibility
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.color = COLOR.TURQUOISE;
+                e.currentTarget.style.backgroundColor = '#01373d'; // Hover background color
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.color = COLOR.GRAY;
+                e.currentTarget.style.backgroundColor = 'transparent'; // Reset background color
               }}
             >
               {item.description}

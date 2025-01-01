@@ -13,10 +13,10 @@ import {
   Image,
   AspectRatio,
 } from '@mantine/core';
-import { CommonButton } from '../indie/common_button'; // Ensure this is correctly imported
+import { CommonButton } from '../indie/common_button';
 import { useState } from 'react';
-import { CommonMenuSection } from '../indie/common_modal_section'; // Ensure this is correctly imported
-import { useMediaQuerys } from '@filante/cobalt/hooks'; // Ensure this is correctly imported
+import { CommonMenuSection } from '../indie/common_modal_section';
+import { useMediaQuerys } from '@filante/cobalt/hooks';
 import { IconMenu2, IconX } from '@tabler/icons-react';
 import { ICON_SIZE } from '@filante/cobalt';
 import Link from 'next/link';
@@ -26,7 +26,6 @@ const DATA = [
     title: 'Solutions',
     menu: [
       {
-        title: 'Sectors',
         list: [
           { text: 'Machine Learning', link: '/q-ml' },
           { text: 'Space & Cosmology', link: '/q-space' },
@@ -38,20 +37,7 @@ const DATA = [
           { text: 'Finance', link: '/finance' },
         ],
       },
-      {
-        title: 'Accreditations',
-        list: [
-          { text: 'Charted Quantum Boffin', link: '/charted_quantum_boffin' },
-          {
-            text: 'Charted Associate Quantum Scientist',
-            link: '/charted_quantum_scientist',
-          },
-          {
-            text: 'Certified Quantum Engineer',
-            link: '/charted_quantum_engineer',
-          },
-        ],
-      },
+
     ],
   },
   {
@@ -64,6 +50,24 @@ const DATA = [
           { text: 'Chapter', link: '/chapter' },
           { text: 'Journal (Q-Plus)', link: '/journal' },
           { text: 'Challenges', link: '/challenges' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Accreditations',
+    menu: [
+      {
+        list: [
+          { text: 'Quantum Innovator Program', link: '/quantum_innovator_program' },
+          {
+            text: 'Charted Quantum Scientist',
+            link: '/charted_quantum_scientist',
+          },
+          {
+            text: 'Certified Quantum Engineer',
+            link: '/certified_quantum_engineer',
+          },
         ],
       },
     ],
@@ -106,54 +110,57 @@ const DATA = [
 ];
 
 export const CommonHeader = () => {
-  const { MD } = useMediaQuerys(); // Assuming useMediaQuerys() is correctly defined elsewhere
+  const { MD } = useMediaQuerys();
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <>
       {MD ? (
         <Group px={80} py={20} justify="space-between">
-          <Link href="/">
-            <AspectRatio ratio={11 / 9} maw={60}>
-              <Image src="/logo-removebg.png" alt="logo" />
-            </AspectRatio>
-          </Link>
+          <Group>
 
-          <Group gap="xl">
-            {DATA.map((item) => (
-              <Menu key={item.title} trigger="hover" openDelay={100}>
-                <Menu.Target>
-                  <Text
-                    c={COLOR.TURQUOISE}
-                    component={Link}
-                    href={item.description || ''}
-                    style={{ cursor: item.description ? 'pointer' : 'default' }}
-                  >
-                    {item.title}
-                  </Text>
-                </Menu.Target>
-                {item.menu && (
-                  <Menu.Dropdown
-                    style={{
-                      background: 'rgba(1, 55, 61, 0.2)', // Semi-transparent background
-                      backdropFilter: 'blur(15px)', // Mirror-like effect
-                      border: '1px solid rgba(255, 255, 255, 0.3)', // Subtle border for definition
-                      borderRadius: '8px', // Rounded corners
-                      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)', // Soft shadow
-                      padding: '8px', // Inner spacing
-                    }}
-                  >
-                    <SimpleGrid cols={item.menu.length}>
-                      {item.menu.map((menuItem, idx) => (
-                        <Menu.Item key={idx}>
-                          <CommonMenuSection data={[menuItem]} />
-                        </Menu.Item>
-                      ))}
-                    </SimpleGrid>
-                  </Menu.Dropdown>
-                )}
-              </Menu>
-            ))}
+            <Link href="/">
+              <AspectRatio ratio={11 / 9} maw={60}>
+                <Image src="/logo-removebg.png" alt="logo" />
+              </AspectRatio>
+            </Link>
+
+            <Group gap="xl">
+              {DATA.map((item) => (
+                <Menu key={item.title} trigger="hover" openDelay={100}>
+                  <Menu.Target>
+                    <Text
+                      c={COLOR.TURQUOISE}
+                      component={Link}
+                      href={item.description || ''}
+                      style={{ cursor: item.description ? 'pointer' : 'default' }}
+                    >
+                      {item.title}
+                    </Text>
+                  </Menu.Target>
+                  {item.menu && (
+                    <Menu.Dropdown
+                      style={{
+                        background: 'rgba(1, 55, 61, 0.2)',
+                        backdropFilter: 'blur(15px)',
+                        border: '1px solid rgba(255, 255, 255, 0.3)',
+                        borderRadius: '8px',
+                        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                        padding: '8px',
+                      }}
+                    >
+                      <SimpleGrid cols={item.menu.length}>
+                        {item.menu.map((menuItem, idx) => (
+                          <Menu.Item key={idx}>
+                            <CommonMenuSection data={[menuItem]} />
+                          </Menu.Item>
+                        ))}
+                      </SimpleGrid>
+                    </Menu.Dropdown>
+                  )}
+                </Menu>
+              ))}
+            </Group>
           </Group>
 
           <Group>
@@ -162,7 +169,7 @@ export const CommonHeader = () => {
               variant="transparent"
               title="Get Connected"
             />
-            <CommonButton title="Q-Platform" />
+            <CommonButton href='/coming_soon' title="Q-Platform" />
           </Group>
         </Group>
       ) : (
@@ -220,14 +227,7 @@ export const CommonHeader = () => {
                     <Accordion.Panel>
                       {item.menu?.map((menuItem, idx) => (
                         <Stack key={idx}>
-                          {/* Check if menuItem has a title before rendering */}
-                          {'title' in menuItem && menuItem.title ? (
-                            <Text c={COLOR.TURQUOISE} mt="xs" size="sm">
-                              {menuItem.title}
-                            </Text>
-                          ) : null}
 
-                          {/* Render list items */}
                           {menuItem.list.map((linkItem, linkIdx) => (
                             <Text key={linkIdx} c={COLOR.GREEN} size="sm">
                               <Link href={linkItem.link}>{linkItem.text}</Link>
