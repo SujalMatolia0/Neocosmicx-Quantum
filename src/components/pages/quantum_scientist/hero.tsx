@@ -25,7 +25,7 @@ export const QuantumScientistHero = () => {
             coding challenges.
           </Text>
         </Stack>
-        {MD ? <Image radius="lg" src="/quantum-27.webp" alt="image" /> : null}
+        {MD ? <Image radius="lg" src="/accredation_scientist.jpeg" alt="image" /> : null}
       </SimpleGrid >
     </>
   );

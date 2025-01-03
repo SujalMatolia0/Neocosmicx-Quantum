@@ -1,6 +1,6 @@
 import { CommonButton } from '@/components/indie/common_button';
 import { COLOR, SIZE_CONFIG } from '@/configs/theme';
-import {  SimpleGrid, Stack, Text, Title } from '@mantine/core';
+import { SimpleGrid, Stack, Text, Title } from '@mantine/core';
 
 export const JournalHero = () => {
   return (
@@ -13,14 +13,14 @@ export const JournalHero = () => {
       </Stack>
       <SimpleGrid mih="80vh" spacing="100" cols={{ base: 1, md: 2 }}>
         <Stack justify="center" ml="auto" maw="350px">
-          <Text ta="right">
+          <Text ta='justify'  >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
             dolorem laboriosam minima tempora soluta in, saepe necessitatibus
             veniam aspernatur quas temporibus qui mollitia fuga? Aperiam
             temporibus placeat odit molestias sit.
           </Text>
 
-          <Text ta="right">
+          <Text ta="justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
             dolorem laboriosam minima tempora soluta in, saepe necessitatibus
             veniam aspernatur quas temporibus qui mollitia fuga? Aperiam

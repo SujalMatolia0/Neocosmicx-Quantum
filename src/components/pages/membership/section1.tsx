@@ -8,6 +8,7 @@ import {
   Text,
   Image,
   Button,
+  AspectRatio,
 } from '@mantine/core';
 import { IconChevronRight } from '@tabler/icons-react';
 import Link from 'next/link';
@@ -15,19 +16,19 @@ import { Children } from 'react';
 
 const DATA = [
   {
-    image: '/quantum-chip.jpeg',
+    image: '/individual_membership.jpeg',
     title: 'Individual',
     href: "/membership/1",
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat vel animi earum, nisi enim accusamus nesciunt adipisci nostrum, facere ad veritatis? Cupiditate incidunt tempore deleniti cumque nostrum sint! Placeat, magnam!',
   },
   {
-    image: '/quantum-chip.jpeg',
-    title: 'Corporate', href: "/membership/2",
+    image: '/student_membershipjpeg.jpeg',
+    title: 'Student', href: "/membership/3",
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat vel animi earum, nisi enim accusamus nesciunt adipisci nostrum, facere ad veritatis? Cupiditate incidunt tempore deleniti cumque nostrum sint! Placeat, magnam!',
   },
   {
-    image: '/quantum-chip.jpeg',
-    title: 'Student', href: "/membership/3",
+    image: '/enterprise_membership.jpeg',
+    title: 'Enterprise', href: "/membership/2",
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat vel animi earum, nisi enim accusamus nesciunt adipisci nostrum, facere ad veritatis? Cupiditate incidunt tempore deleniti cumque nostrum sint! Placeat, magnam!',
   },
 ];
@@ -43,7 +44,10 @@ export const MembershipSection1 = () => {
                 <Paper component={Link} href={item.href} maw="25vw" mah="90vh" p="lg" withBorder>
                   <Stack mih="70vh" justify="space-between">
                     <Stack>
-                      <Image src={item.image} alt="image" />
+                      <AspectRatio ratio={11 / 9}>
+
+                        <Image src={item.image} alt="image" />
+                      </AspectRatio>
                       <Title lh={1}>{item.title}</Title>
                       <Text fw="lighter">{item.text}</Text>
                     </Stack>

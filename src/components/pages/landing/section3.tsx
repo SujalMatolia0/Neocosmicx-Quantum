@@ -18,31 +18,30 @@ export const LandingSection3 = () => {
           <CommonCard
             href='/quantum_innovator_program'
             title="Quantum Innovator Program"
-            image="/charted-scientist.jpeg"
+            image="/quantum_innovator.jpeg"
             description="Global validation of your quantum skills for aspiring learners"
             data={[{ title: 'Title 1' }, { title: 'Title 2' }]}
           />
           <CommonCard
             href='/certified_quantum_engineer'
             title="Certified Quantum Engineer"
-            image="/certified-scientist.jpeg"
+            image="/quantum_engineer.jpeg"
             description="Industry recognized Certification for Quantum technology specialties"
             data={[{ title: 'Title 1' }, { title: 'Title 2' }]}
           />
           <CommonCard
-          href='/charted_quantum_scientist'
+            href='/charted_quantum_scientist'
             title="Chartered Quantum Scientist"
-            image="/workshop.jpeg"
+            image="/quantum_scientist.jpeg"
             description="Global recognition of Quantum for beginner"
             data={[{ title: 'Title 1' }, { title: 'Title 2' }]}
-          />{' '}
+          />
         </SimpleGrid>
+
         <CommonSectionCard
-          title="A Quantum Leap in Research"
-          description="As a quantum researcher, I've benefited greatly from CVRCQRD's platform. It's streamlined my work, boosted my skills, and fosters a collaborative environment. Highly recommended!"
-          writer="Mr. Noor Ul Hasan"
-          position="Quantum Researcher"
-          image="https://images.unsplash.com/photo-1719937206667-ac87c15ad3e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8"
+          title="If you think you understand quantum mechanics, then you don't."
+          writer="Sir Richard Feynman"
+          image="/sir_richard.jpeg"
         />
       </Stack>
     </>

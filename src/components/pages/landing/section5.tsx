@@ -17,19 +17,19 @@ import { Children } from 'react';
 
 const DATA = [
   {
-    image: '/quantum-25.avif',
-    title: 'Sustainability',
-    description: 'Developing sustainable quantum technologies for the future',
+    image: '/empower.jpeg',
+    title: 'Empower',
+    description: 'Researcher, developers and enterprises by providing accessible and intuitive quantum computing tools.  ',
   },
   {
-    image: '/quantum-26.avif',
-    title: 'Excellence',
-    description: 'Striving for the highest standards of quality and precision',
+    image: '/accelerate.jpeg',
+    title: 'Accelerate',
+    description: 'Innovation through seamless integration and domain specific applications.',
   },
   {
-    image: '/quantum-27.webp',
-    title: 'Integrity',
-    description: 'Upholding ethical principles and transparent practices',
+    image: '/democratize.jpeg',
+    title: 'Democratize',
+    description: 'Quantum Computing to solve real world challenges across industries.',
   },
 ];
 
@@ -60,13 +60,13 @@ export const LandingSection5 = () => {
         gap="xl"
       >
         <Title c={COLOR.GREEN} ta="center">
-          Our Core Values
+          Our Mission
         </Title>
         <Group>
           {Children.toArray(
             DATA.map((item) => (
               <>
-                <Stack align="center">
+                <Stack mih={350} align="center">
                   <AspectRatio>
                     <Image
                       radius="lg"
@@ -79,7 +79,7 @@ export const LandingSection5 = () => {
                   <Title c={COLOR.GREEN} ta="center" order={2}>
                     {item.title}
                   </Title>
-                  <Text c={COLOR.PEACH} ta="center" size="sm">
+                  <Text maw={300} c={COLOR.PEACH} ta="center" size="sm">
                     {item.description}
                   </Text>
                 </Stack>
@@ -87,7 +87,7 @@ export const LandingSection5 = () => {
             ))
           )}
         </Group>
-        <CommonButton color={COLOR.PEACH} title="Get in touch" />
+        <CommonButton color={COLOR.PEACH} href='/contact' title="Get in touch" />
 
         <Space h="xl" />
         <SimpleGrid spacing={0} cols={{ base: 1, md: 4 }}>

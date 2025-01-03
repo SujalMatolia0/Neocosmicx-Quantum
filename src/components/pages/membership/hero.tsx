@@ -19,6 +19,7 @@ import {
 
 interface MembershipProps {
   Membership: MembershipType;
+
 }
 
 export const MembershipHero = (props: MembershipProps) => {
@@ -35,18 +36,18 @@ export const MembershipHero = (props: MembershipProps) => {
       >
         <Paper bg="transparent" mih="80vh">
           <Stack h="80vh" justify="center" align="center">
-            <Text c={COLOR.TURQUOISE}>{props.Membership.hero_heading || ''}</Text>
-            <Title c={COLOR.GREEN}>{props.Membership.hero_heading || ''}</Title>
-            <Stack maw={600} ta="center" gap="xs">
+            {/* <Text c={COLOR.TURQUOISE}>{props.Membership.hero_heading || ''}</Text> */}
+            <Title p='xs' size='3vw' c={COLOR.GREEN}>{props.Membership.hero_heading || ''}</Title>
+            <Stack maw={800} ta="center" gap="xs">
               {props.Membership.text?.map((line, index) => (
-                <Text key={index} c={COLOR.PEACH}>
+                <Text size="1.5vw" key={index} c={COLOR.PEACH}>
                   {line}
                 </Text>
               ))}
             </Stack>
-            <Group>
+            <Group p='md'  >
               {props.Membership.button?.map((value) =>
-                <CommonButton variant="outline" key={value} title={value} />
+                <CommonButton color={COLOR.PEACH} variant="outline" key={value} title={value} />
               )}
             </Group>
           </Stack>
@@ -58,9 +59,10 @@ export const MembershipHero = (props: MembershipProps) => {
     {props.Membership.membership_name ? (
       <Stack mt={SIZE_CONFIG.SECTION_SPACE} py={SIZE_CONFIG.SECTION_SPACE} bg={COLOR.TURQUOISE}>
         <Title c={COLOR.PEACH} ta='center'>{props.Membership.membership_name}</Title>
-        <SimpleGrid py={SIZE_CONFIG.SECTION_SPACE} px={MD ? '140' : 'xs'} cols={{ base: 1, md: 2 }}>
+        <SimpleGrid mah="80vh" py={SIZE_CONFIG.SECTION_SPACE} px={MD ? '140' : 'xs'} cols={{ base: 1, md: 2 }}>
           <Group>
-            <Image radius="lg" alt="pic" src="/section-one.jpeg" />
+
+            <Image radius="lg" alt="pic" src={props.Membership.membership_type_1_image} />
           </Group>
           <Stack pl={MD ? '80' : 'xs'}>
             <Title c={COLOR.PEACH}>
@@ -86,7 +88,7 @@ export const MembershipHero = (props: MembershipProps) => {
       <Stack py={SIZE_CONFIG.SECTION_SPACE} bg={COLOR.TURQUOISE}>
         <SimpleGrid py={SIZE_CONFIG.SECTION_SPACE} px={MD ? '140' : 'xs'} cols={{ base: 1, md: 2 }}>
           <Group>
-            <Image radius="lg" alt="pic" src="/section-one.jpeg" />
+            <Image radius="lg" alt="pic" src={props.Membership.membership_type_2_image} />
           </Group>
           <Stack pl={MD ? '80' : 'xs'}>
             <Title c={COLOR.PEACH}>

@@ -59,9 +59,9 @@ export const ContactHero = () => {
         </Group>
         <Group>
           <Text tt="uppercase" c={COLOR.TURQUOISE}>
-            8005982481
+            +91 99822 56688
           </Text>
-          <CopyButton value="8005982481" timeout={2000}>
+          <CopyButton value="+91 99822 56688" timeout={2000}>
             {({ copied, copy }) => (
               <Tooltip
                 label={copied ? 'Copied' : 'Copy'}

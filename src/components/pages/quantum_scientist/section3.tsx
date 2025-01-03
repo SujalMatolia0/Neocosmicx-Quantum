@@ -17,7 +17,7 @@ export const QuantumScientistSection3 = () => {
           w="100%"
           py={SIZE_CONFIG.SECTION_SPACE}
           mih="40vh"
-          src="/quantum-25.avif"
+          src="/accredation_scientist_1.jpeg"
           radius="lg"
         >
           <Paper bg="transparent" mih="50vh">
@@ -34,7 +34,7 @@ export const QuantumScientistSection3 = () => {
                 ipsum dolor sit amet consectetur adipisicing elit. Doloremque
                 voluptas earum quod iure libero, sit voluptatum
               </Text>
-              <CommonButton variant="outline" title="Register Now" />
+              <CommonButton variant="outline" color={COLOR.GREEN} title="Register Now" />
             </Stack>
           </Paper>
         </BackgroundImage>

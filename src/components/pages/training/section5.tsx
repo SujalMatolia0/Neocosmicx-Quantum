@@ -14,7 +14,7 @@ import {
 import { Children } from 'react';
 const DATA = [
   {
-    color: '#b5e9fb',
+    image: '/',
     badge: 'Digital Training',
     title:
       'Develop your generative Quantum career with training content by our expert.',
@@ -64,6 +64,7 @@ export const TrainingSection5 = () => {
             DATA.map((item) => (
               <>
                 <Paper bg={item.color} mih="60vh">
+                
                   <Stack p="md" h="100%" justify="space-between">
                     <Badge color={COLOR.GREEN}>{item.badge}</Badge>
                     <Stack>

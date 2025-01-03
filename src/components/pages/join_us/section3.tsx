@@ -1,6 +1,7 @@
 import { CommonButton } from '@/components/indie/common_button';
 import { SIZE_CONFIG } from '@/configs/theme';
 import {
+  AspectRatio,
   Container,
   Image,
   SimpleGrid,
@@ -62,7 +63,10 @@ export const JoinUsSection3 = () => {
             </SimpleGrid>{' '}
             <CommonButton title="View all locations" />
           </Stack>
-          <Image radius="lg" alt="image" m="auto" src="/quantum-25.avif" />
+          <AspectRatio ratio={11 / 8}>
+
+            <Image radius="lg" mih='60vh' alt="image" m="auto" src="/locations.jpeg" />
+          </AspectRatio>
         </SimpleGrid>
       </Container>
     </>

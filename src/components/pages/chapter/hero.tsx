@@ -7,13 +7,13 @@ import { Children } from 'react';
 
 const DATA = [
   {
-    image: '/quantum-25.avif',
+    image: '/chapter_hero.jpeg',
   },
   {
-    image: '/quantum-25.avif',
+    image: '/chapter_hero_1.jpeg',
   },
   {
-    image: '/quantum-25.avif',
+    image: '/chapter_hero_2.jpeg',
   },
 ];
 export const ChapterHero = () => {
