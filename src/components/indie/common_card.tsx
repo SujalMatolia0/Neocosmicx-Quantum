@@ -41,7 +41,7 @@ export const CommonCard = (props: Props) => {
                 <>
                   <Group>
                     <IconArrowRight color="white" />
-                    <Text size="sm" c="white" td="underline">
+                    <Text size="sm" c="white" >
                       {item.title}
                     </Text>
                   </Group>

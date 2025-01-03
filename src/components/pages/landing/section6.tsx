@@ -2,6 +2,7 @@ import { CommonButton } from '@/components/indie/common_button';
 import { COLOR } from '@/configs/theme';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
 import {
+  AspectRatio,
   Divider,
   Grid,
   Group,
@@ -45,8 +46,7 @@ export const LandingSection6 = () => {
           />
         )}
         <Title p={MD ? '' : 'md'} ta="center" c={COLOR.TURQUOISE} fw={300}>
-          Security Protocols
-        </Title>
+          Join Our Quantum Network        </Title>
         <Text
           mx="auto"
           p={MD ? '' : 'md'}
@@ -60,7 +60,7 @@ export const LandingSection6 = () => {
           availability across all operations. Our process includes:{' '}
         </Text>
         <Space h={80} />
-        <SimpleGrid cols={{ base: 1, md: 2 }} px={MD ? 200 : 20}>
+        <SimpleGrid cols={{ base: 1, md: 2 }} px={MD ? 150 : 20}>
           <Stack gap="sm">
             <Divider c={COLOR.TURQUOISE} />
             {Children.toArray(
@@ -82,7 +82,10 @@ export const LandingSection6 = () => {
           </Stack>
           <Group mx="auto">
             {MD ? (
-              <Image radius="lg" src="/quantum-security.webp" alt="pic" />
+              <AspectRatio ratio={11 / 9}>
+{/* Need to change */}
+                <Image radius="lg" maw={700} src="/quantum_network.jpeg" alt="Group_of_people" />
+              </AspectRatio>
             ) : null}
           </Group>
         </SimpleGrid>

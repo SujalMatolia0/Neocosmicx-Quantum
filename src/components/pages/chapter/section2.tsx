@@ -4,7 +4,7 @@ import { Center, Stack, Title, Button, Divider } from '@mantine/core';
 export const ChapterSection2 = () => {
   return (
     <>
-      {/* Add Video here */}
+      <video src='/chapter_video.mp4' loop />
 
       <Center mih="30vh">
         <Stack py={SIZE_CONFIG.SECTION_SPACE} align="center">

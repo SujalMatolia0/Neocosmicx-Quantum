@@ -20,7 +20,7 @@ export const QuantumBoffinHero = () => {
                         coding challenges.
                     </Text>
                 </Stack>
-                {MD ? <Image radius="lg" src="/quantum-27.webp" alt="image" /> : null}
+                {MD ? <Image radius="lg" src="/innovator_accredation.jpeg" alt="image" /> : null}
             </SimpleGrid >
 
         </>

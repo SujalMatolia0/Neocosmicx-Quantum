@@ -1,3 +1,4 @@
+import { CommonFooter } from '@/components/footer/common';
 import { CommonLayout } from '@/components/layout/common';
 import { MembershipHero } from '@/components/pages/membership/hero';
 import { MembershipData } from '@/lib/data/memberships';
@@ -35,8 +36,8 @@ export default function Membership({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <CommonLayout>
-      <MembershipHero Membership={Membership} />
-
+      <MembershipHero  Membership={Membership} />
+      <CommonFooter />
     </CommonLayout>
   );
 }

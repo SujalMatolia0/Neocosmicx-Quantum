@@ -1,12 +1,14 @@
 import { COLOR } from "@/configs/theme"
 import { SimpleGrid, Paper, Stack, Text, Image, ActionIcon } from "@mantine/core"
 import { IconArrowRight } from "@tabler/icons-react";
+import Link from "next/link";
 
 
 interface Props {
     image: string;
     title: string;
     text: string;
+    href: string;
 
 }
 export const CommonFeatureCard = (props: Props) => {
@@ -16,7 +18,7 @@ export const CommonFeatureCard = (props: Props) => {
 
 
 
-            <Paper h={150} w={250} withBorder style={{ borderColor: COLOR.TURQUOISE }} >
+            <Paper component={Link} href={props.href} h={150} w={250} withBorder style={{ borderColor: COLOR.TURQUOISE }} >
                 <SimpleGrid spacing={6} h='100%' w='100%' cols={2}>
                     <Image alt="image" h='100%' w='100%' src={props.image} />
                     <Stack justify="space-between" gap={2}>

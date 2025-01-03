@@ -1,6 +1,7 @@
-import { CommonBlogAction } from '@/components/indie/common_blog_action';
-import { CommonBlogSmall } from '@/components/indie/common_blog_small';
-import { COLOR, SIZE_CONFIG } from '@/configs/theme';
+import { CommonBlogAction } from "@/components/indie/common_blog_action";
+import { CommonBlogSmall } from "@/components/indie/common_blog_small";
+import { COLOR, SIZE_CONFIG } from "@/configs/theme";
+import { BlogData } from "@/lib/data/blog";
 import {
   Button,
   Container,
@@ -9,67 +10,86 @@ import {
   Stack,
   Text,
   Title,
-} from '@mantine/core';
-import { IconArrowRight } from '@tabler/icons-react';
+} from "@mantine/core";
+import { IconArrowRight } from "@tabler/icons-react";
 
 export const BlogHero = () => {
   return (
     <>
-      <Stack py={SIZE_CONFIG.SECTION_SPACE} px="8%" bg={COLOR.GRAY}>
+      <Stack
+        py={SIZE_CONFIG.SECTION_SPACE}
+        px="8%"
+        bg={COLOR.GRAY}
+        align="center"
+      >
         <Title>Neocosmicx Spark</Title>
-        <Text>Blog, News and Events</Text>
+        <Text>Blog, News, and Events</Text>
       </Stack>
       <Container py={SIZE_CONFIG.SECTION_SPACE} size="xl">
-        <Grid gutter={8} h='100vh' columns={10}>
-          <Grid.Col span="auto">
+        <Grid h="100vh" columns={10}>
+          {/* Latest Section */}
+          <Grid.Col span={3}>
             <Stack>
               <Title>Latest</Title>
-              <CommonBlogAction button="Read more" image="/quantum-25.avif" />
-              <CommonBlogSmall
-                button="Read more"
-                title="What is streaming"
-                image="/quantum-25.avif"
-              />
-              <CommonBlogSmall
-                button="Read more"
-                title="What is streaming"
-                image="/quantum-25.avif"
-              />
+              {BlogData.slice(0, 3).map((blog) => (
+                <CommonBlogSmall
+                  key={blog.id}
+                  id={blog.id}
+                  href={blog.href}
+                  button="Read more"
+                  title={blog.title}
+                  image={blog.image}
+                />
+              ))}
             </Stack>
           </Grid.Col>
-          <Grid.Col span={6}>
+
+          {/* Feature Section */}
+          <Grid.Col span="auto">
             <Stack>
               <Title>Feature</Title>
-              <Image alt='image' mah='40vh' w="100%" src="/quantum-25.avif" />
-              <Text>Transformers Podcast</Text>
-              <Title>There year to get open source right</Title>
+              <Image
+                alt={BlogData[0].title}
+                mah="40vh"
+                w="100%"
+                src={BlogData[0].image}
+              />
+              <Text size="lg">{BlogData[0].title}</Text>
+              <Title size="h3">{BlogData[0].text}</Title>
               <Text>
-                The year to get your open source right. Host Ann Funai talks
-                with Marco Bill-Peter of Red Hat about finding the mix of open
-                source and proprietary tech, getting the right infrastructure in
-                place, and making sure people have the skills to use it all.
+                Learn more about the latest in technology, including
+                {BlogData[0].tags?.join(", ")}.
               </Text>
-              <Button rightSection={<IconArrowRight />} variant="transparent">
+              <Button
+                rightSection={<IconArrowRight />}
+                variant="outline"
+                color="blue"
+                component="a"
+                href={BlogData[0].href}
+              >
                 Watch Now
               </Button>
             </Stack>
           </Grid.Col>
-          <Grid.Col span="auto">
+
+          {/* Editor's Picks Section */}
+          <Grid.Col span={3}>
             <Stack>
-              <Stack>
-                <Title>Editors&apos;picks</Title>
+              <Title>Editor&apos;s Picks</Title>
+              {BlogData.slice(3, 6).map((blog) => (
                 <CommonBlogSmall
+                  key={blog.id}
+                  id={blog.id}
+                  href={blog.href}
                   button="Read more"
-                  title="What is streaming"
-                  image="/quantum-25.avif"
+                  title={blog.title}
+                  image={blog.image}
                 />
-                <CommonBlogSmall
-                  button="Read more"
-                  title="What is streaming"
-                  image="/quantum-25.avif"
-                />
-                <CommonBlogAction button="Read more" image="/quantum-25.avif" />
-              </Stack>
+              ))}
+              <CommonBlogAction
+                button="Read more"
+                image={BlogData[6]?.image || "/default-image.avif"}
+              />
             </Stack>
           </Grid.Col>
         </Grid>

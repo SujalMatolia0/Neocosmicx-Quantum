@@ -4,9 +4,9 @@ import { Image, Paper, Space, Stack, Text, Title } from '@mantine/core';
 
 interface Props {
   title: string;
-  description: string;
+  description?: string;
   writer: string;
-  position: string;
+  position?: string;
   image?: string;
 }
 
@@ -61,7 +61,7 @@ export const CommonSectionCard = (props: Props) => {
       {props.image && (
         <Image
           h={MD ? 300 : 250}
-          w={MD ? 300 : 250}
+          w={MD ? 250 : 250}
           radius="lg"
           pos="relative"
           left={MD ? 450 : 0}

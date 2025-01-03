@@ -7,7 +7,7 @@ export const AboutSection1 = () => {
     <>
       <Center bg={COLOR.TURQUOISE} mih="100vh">
         <SimpleGrid m="md" spacing={60} cols={{ base: 1, md: 2 }}>
-          <Image radius="lg" alt="image" src="/quantum-27.webp" />
+          <Image mah='70vh' radius="lg" alt="image" src="/company_1.jpeg" />
           <Stack maw={650}>
             <Title c={COLOR.GREEN}>
               Pioneers in Outsourcing Services since 2002

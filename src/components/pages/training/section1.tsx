@@ -1,5 +1,5 @@
 import { CommonButton } from '@/components/indie/common_button';
-import { COLOR } from '@/configs/theme';
+import { COLOR, SIZE_CONFIG } from '@/configs/theme';
 import {
   Container,
   SimpleGrid,
@@ -51,7 +51,7 @@ const DATA = [
 export const TrainingSection1 = () => {
   return (
     <>
-      <Container mih="100vh" size="xl">
+      <Container pt={SIZE_CONFIG.SECTION_SPACE} mih="100vh" size="xl">
         <SimpleGrid cols={{ base: 1, md: 2 }}>
           {Children.toArray(
             DATA.map((item) => (

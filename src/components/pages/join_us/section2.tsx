@@ -1,6 +1,7 @@
 import { CommonButton } from '@/components/indie/common_button';
 import { SIZE_CONFIG } from '@/configs/theme';
 import {
+  AspectRatio,
   Container,
   Image,
   SimpleGrid,
@@ -14,7 +15,10 @@ export const JoinUsSection2 = () => {
     <>
       <Container mih="100vh" size="lg" py={SIZE_CONFIG.SECTION_SPACE}>
         <SimpleGrid h="100%" cols={{ base: 1, md: 2 }}>
-          <Image radius="lg" alt="image" m="auto" src="/quantum-25.avif" />
+          <AspectRatio ratio={11 / 8}>
+
+            <Image mih='60vh' radius="lg" alt="image" m="auto" src="/find_team.jpeg" />
+          </AspectRatio>
           <Stack>
             <Text>Teams</Text>
             <Title>Find your team</Title>
@@ -47,7 +51,7 @@ export const JoinUsSection2 = () => {
                   users.
                 </Text>
               </Stack>
-            </SimpleGrid>{' '}
+            </SimpleGrid>
             <CommonButton title="View all teams" href='/team' />
           </Stack>
         </SimpleGrid>

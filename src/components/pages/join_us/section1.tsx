@@ -58,7 +58,6 @@ export const JoinUsSection1 = () => {
         </Stack>
         <Container size="lg">
           <Carousel
-            // controlsOffset={0}
             loop
             mih="20vh"
             slideSize={MD ? '25%' : '50%'}
