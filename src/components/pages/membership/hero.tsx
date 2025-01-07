@@ -47,7 +47,7 @@ export const MembershipHero = (props: MembershipProps) => {
             </Stack>
             <Group p='md'  >
               {props.Membership.button?.map((value) =>
-                <CommonButton color={COLOR.PEACH} variant="outline" key={value} title={value} />
+                <CommonButton color={COLOR.PEACH} href='' variant="outline" key={value} title={value} />
               )}
             </Group>
           </Stack>
@@ -57,22 +57,22 @@ export const MembershipHero = (props: MembershipProps) => {
     </Center>
 
     {props.Membership.membership_name ? (
-      <Stack mt={SIZE_CONFIG.SECTION_SPACE} py={SIZE_CONFIG.SECTION_SPACE} bg={COLOR.TURQUOISE}>
-        <Title c={COLOR.PEACH} ta='center'>{props.Membership.membership_name}</Title>
+      <Stack mt={SIZE_CONFIG.SECTION_SPACE} py={SIZE_CONFIG.SECTION_SPACE} >
+        <Title c={COLOR.TURQUOISE} ta='center'>{props.Membership.membership_name}</Title>
         <SimpleGrid mah="80vh" py={SIZE_CONFIG.SECTION_SPACE} px={MD ? '140' : 'xs'} cols={{ base: 1, md: 2 }}>
           <Group>
 
             <Image radius="lg" alt="pic" src={props.Membership.membership_type_1_image} />
           </Group>
           <Stack pl={MD ? '80' : 'xs'}>
-            <Title c={COLOR.PEACH}>
+            <Title c={COLOR.TURQUOISE}>
               {props.Membership.membership_type}
             </Title>
             {props.Membership.membership_points?.map((points) =>
               <>
                 <List>
                   <ListItem>
-                    <Text c={COLOR.PEACH}>
+                    <Text >
                       {points}
                     </Text>
                   </ListItem>
@@ -85,20 +85,20 @@ export const MembershipHero = (props: MembershipProps) => {
       </Stack>
     ) : null}
     {props.Membership.membership_type_2 ? (
-      <Stack py={SIZE_CONFIG.SECTION_SPACE} bg={COLOR.TURQUOISE}>
+      <Stack py={SIZE_CONFIG.SECTION_SPACE} >
         <SimpleGrid py={SIZE_CONFIG.SECTION_SPACE} px={MD ? '140' : 'xs'} cols={{ base: 1, md: 2 }}>
           <Group>
             <Image radius="lg" alt="pic" src={props.Membership.membership_type_2_image} />
           </Group>
           <Stack pl={MD ? '80' : 'xs'}>
-            <Title c={COLOR.PEACH}>
+            <Title c={COLOR.TURQUOISE}>
               {props.Membership.membership_type_2}
             </Title>
             {props.Membership.membership_points?.map((points) =>
               <>
                 <List>
                   <ListItem>
-                    <Text c={COLOR.PEACH}>
+                    <Text >
                       {points}
                     </Text>
                   </ListItem>
