@@ -26,7 +26,7 @@ export const LandingSection1 = () => {
           </Group>
           <Stack pl={MD ? '80' : 'xs'}>
             <Title c={COLOR.PEACH}>
-              Revolutionize your thinking with quantum mastery
+              Revolutionize your thinking with QUANTUM MASTERY
             </Title>
             <Text c={COLOR.PEACH}>
               Our tailored quantum computing courses provide a transformation
@@ -42,7 +42,7 @@ export const LandingSection1 = () => {
           </Stack>
         </SimpleGrid>
         <Group pt="xl" justify="center" gap="xl">
-          <CommonButton href='/' title="Get Explored!" color={COLOR.PEACH} />
+          <CommonButton href='/' title="Explore More!" color={COLOR.PEACH} />
         </Group>
       </Stack>
     </>

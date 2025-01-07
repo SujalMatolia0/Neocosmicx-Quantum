@@ -45,13 +45,13 @@ export const LandingHero = () => {
         >
           <Stack align="start">
             <Title fw={300} lh={1} c={COLOR.TURQUOISE} size={size.TITLE_1}>
-              A global leader in Quantum
+              Where Science Meets Infinite Possibility!
             </Title>
             <Text size={size.TEXT_1}>
               Join us to unlock the potential of Quantum Technology{' '}
             </Text>
             <CommonButton
-              href="/join-us"
+              href="/membership"
               variant="outline"
               title="Become a Member "
             />

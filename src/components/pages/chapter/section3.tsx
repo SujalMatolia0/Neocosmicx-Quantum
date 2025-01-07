@@ -48,10 +48,10 @@ export const ChapterSection3 = () => {
         justify="space-between"
       >
         <Stack py={SIZE_CONFIG.SECTION_SPACE} align="center">
-          <Title>Fellows Directory</Title>
-          <Text ta="center" c="dimmed" maw={500}>
-            A global community of over 500 remarkable individuals who are
-            collaborating across disciplines to spark future-shaping change.
+          <Title size="5vh">Our Star Quantum Global Fellows</Title>
+          <Text ta="center" c="dimmed" size="1.9vh" maw={800}>
+            A global community of over 500+ remarkable individuals who are
+            collaborating in Quantum Computing to spark future-shaping change.
           </Text>
         </Stack>
         <SimpleGrid px="md" cols={{ base: 1, md: 4 }}>

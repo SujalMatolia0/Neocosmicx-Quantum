@@ -6,20 +6,20 @@ import { Children } from 'react';
 
 const DATA = [
   {
-    title: 'We are',
-    text: 'Dedicated to total client satisfaction.',
+    title: 'We turn',
+    text: 'Quantum dreams into tangible solutions that transform industries and redefine the future.',
   },
   {
-    title: 'We are',
-    text: 'Powered by proprietary technologies.',
+    title: 'With Us',
+    text: 'Discover the potential of Quantum Computing, your gateway to tomorrow’s technology, today.',
   },
   {
-    title: 'We are',
-    text: 'Built on a culture of data integrity and security.',
+    title: 'We',
+    text: 'We bridge the gap between quantum theory and practical applications to empower your business.',
   },
   {
-    title: 'We are',
-    text: 'Anchored by on-shore project management.',
+    title: 'With Us',
+    text: 'Experience the next frontier of technology—Quantum Computing, made simple.',
   },
 ];
 export const AboutHero = () => {
@@ -28,16 +28,17 @@ export const AboutHero = () => {
   return (
     <>
       <BackgroundImage src='/company_hero.jpeg'>
-        <Stack align="center" mih="90vh" justify="space-between" p='md'>
-          <Stack maw={900}>
+        <Stack align="center" mih="69vh" justify="space-evenly" p='md'>
+          <Stack maw={1100}>
             <Title c={COLOR.GREEN} size={MD ? size.TITLE_1 : '8vw'} ta="center">
-              We strive to be your valued partner.
+              Where Quantum Computing Meets Real-World Impact.
             </Title>
             <Text c='white' size={MD ? '1.5vw' : '5vw'} ta="center">
-              We innovate Quantum solutions, exceptional customer service
-              competitive pricing.
+              We innovate Quantum solutions, exceptional services
+              with competitive pricing.
             </Text>
           </Stack>
+          </Stack >
           <SimpleGrid p="md" spacing={0} cols={{ base: 1, md: 4 }}>
             {Children.toArray(
               DATA.map((item) => (
@@ -58,7 +59,6 @@ export const AboutHero = () => {
               ))
             )}
           </SimpleGrid >
-        </Stack >
       </BackgroundImage >
     </>
   );

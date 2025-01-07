@@ -15,7 +15,7 @@ export const SIZE_CONFIG: {
 } = {
   PADDING_X: 50,
   PADDING_MO: 10,
-  SECTION_SPACE: rem(50),
+  SECTION_SPACE: rem(90),
 };
 
 export const MantineTheme = createTheme({

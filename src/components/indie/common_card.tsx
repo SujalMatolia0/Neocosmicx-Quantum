@@ -28,10 +28,10 @@ export const CommonCard = (props: Props) => {
                 alt="Card image"
               />
             </AspectRatio>
-            <Text tt="uppercase" size="sm">
+            <Text tt="uppercase" size="xl">
               {props.title}
             </Text>
-            <Text maw={300}>{props.description}</Text>
+            <Text maw={400}>{props.description}</Text>
           </Stack>
         </Card.Section>
         <Card.Section bg={COLOR.TURQUOISE} p="md">

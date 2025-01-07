@@ -4,12 +4,12 @@ import { Center, Stack, Title, Button, Divider } from '@mantine/core';
 export const ChapterSection2 = () => {
   return (
     <>
-      <video src='/chapter_video.mp4' loop />
+      <video src='/chapter_video.mov' loop />
 
       <Center mih="30vh">
         <Stack py={SIZE_CONFIG.SECTION_SPACE} align="center">
-          <Title>Watch the new 2024 TED Fellows Films</Title>
-          <Button w="fit-content">See our fellow </Button>
+          <Title>Turning Classical into Quantum</Title>
+          <Button w="fit-content">See More </Button>
           <Divider w="800px" />
         </Stack>
       </Center>

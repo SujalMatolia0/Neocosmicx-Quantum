@@ -1,19 +1,19 @@
-import { CommonButton } from '@/components/indie/common_button';
-import { COLOR, SIZE_CONFIG } from '@/configs/theme';
-import { useMediaQuerys } from '@filante/cobalt/hooks';
-import { Carousel } from '@mantine/carousel';
-import { BackgroundImage, Stack, Text, Title } from '@mantine/core';
-import { Children } from 'react';
+import { CommonButton } from "@/components/indie/common_button";
+import { COLOR, SIZE_CONFIG } from "@/configs/theme";
+import { useMediaQuerys } from "@filante/cobalt/hooks";
+import { Carousel } from "@mantine/carousel";
+import { BackgroundImage, Stack, Text, Title } from "@mantine/core";
+import { Children } from "react";
 
 const DATA = [
   {
-    image: '/chapter_hero.jpeg',
+    image: "/chapter_hero.jpeg",
   },
   {
-    image: '/chapter_hero_1.jpeg',
+    image: "/chapter_hero_1.jpeg",
   },
   {
-    image: '/chapter_hero_2.jpeg',
+    image: "/chapter_hero_2.jpeg",
   },
 ];
 export const ChapterHero = () => {
@@ -23,26 +23,29 @@ export const ChapterHero = () => {
       <Carousel
         py={SIZE_CONFIG.SECTION_SPACE}
         mih="50vh"
-        px={MD ? '100' : 'xs'}
+        px={MD ? "100" : "xs"}
       >
         {Children.toArray(
           DATA.map((item) => (
             <>
               <Carousel.Slide mih="50vh">
                 <BackgroundImage src={item.image}>
-                  <Stack p="lg" mah="50vh" maw={500} align="start">
+                  <Stack p="lg" mah="80vh" maw={1000} align="start">
                     <Text size="xs" c={COLOR.GREEN}>
-                      Directory
+                      Know More, Explore More, Implement More
                     </Text>
                     <Title size="md" c={COLOR.GREEN}>
-                      Step inside the TED Fellows community
+                      Connecting Quantum Innovators Across the Globe
                     </Title>
                     <Text c={COLOR.GREEN}>
-                      Each year, a new group of TED Fellows from around the
-                      world, and from every discipline, are welcomed into this
-                      international community of remarkable thinkers and doers.
+                      At Neocosmicx, we believe that quantum innovation knows no
+                      boundaries. Our Chapters bring together quantum
+                      enthusiasts, professionals, researchers, and organizations
+                      in cities and regions across the world to foster
+                      collaboration, learning, and growth within the quantum
+                      computing community.
                     </Text>
-                    <CommonButton title="Start Browsing" />
+                    <CommonButton title="Get Noticed" />
                   </Stack>
                 </BackgroundImage>
               </Carousel.Slide>

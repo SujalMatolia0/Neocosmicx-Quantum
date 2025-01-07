@@ -1,6 +1,6 @@
-import { CommonButton } from '@/components/indie/common_button';
-import { COLOR } from '@/configs/theme';
-import { useMediaQuerys } from '@filante/cobalt/hooks';
+import { CommonButton } from "@/components/indie/common_button";
+import { COLOR } from "@/configs/theme";
+import { useMediaQuerys } from "@filante/cobalt/hooks";
 import {
   AspectRatio,
   Divider,
@@ -12,22 +12,22 @@ import {
   Stack,
   Text,
   Title,
-} from '@mantine/core';
-import { IconCheck } from '@tabler/icons-react';
-import { Children } from 'react';
+} from "@mantine/core";
+import { IconCheck } from "@tabler/icons-react";
+import { Children } from "react";
 
 const DATA = [
   {
-    title: 'Backup and Recovery',
+    title: "Collaborate with Global Experts",
   },
   {
-    title: 'Regular Audits',
+    title: "Access Exclusive Resources",
   },
   {
-    title: 'Access Control',
+    title: "Expand Your Opportunities",
   },
   {
-    title: 'Data Encryption',
+    title: "Shape the Future of Quantum Computing",
   },
 ];
 
@@ -45,23 +45,26 @@ export const LandingSection6 = () => {
             alt="pic"
           />
         )}
-        <Title p={MD ? '' : 'md'} ta="center" c={COLOR.TURQUOISE} fw={300}>
-          Join Our Quantum Network        </Title>
+        <Title p={MD ? "" : "md"} ta="center" c={COLOR.TURQUOISE} fw={300} size="3vw" >
+          Join Our Quantum Network{" "}
+        </Title>
         <Text
           mx="auto"
-          p={MD ? '' : 'md'}
+          p={MD ? "" : "md"}
           ta="center"
           maw={700}
+          size="1.2vw"
           c={COLOR.TURQUOISE}
         >
-          At CVRCQRD, we adhere to the highest security standards to protect
-          your research data, intellectual property, and sensitive information.
-          Our robust protocols ensure the utmost confidentiality, integrity, and
-          availability across all operations. Our process includes:{' '}
+          The Quantum Network of Neocosmicx is an exclusive platform uniting
+          quantum enthusiasts, professionals, researchers, and organizations
+          from across the globe. By joining this dynamic community, you gain
+          access to resources, collaborations, and opportunities to drive
+          innovation and shape the future of quantum computing.{" "}
         </Text>
-        <Space h={80} />
+        <Space h={100} />
         <SimpleGrid cols={{ base: 1, md: 2 }} px={MD ? 150 : 20}>
-          <Stack gap="sm">
+          <Stack gap="xl">
             <Divider c={COLOR.TURQUOISE} />
             {Children.toArray(
               DATA.map((item) => (
@@ -78,13 +81,26 @@ export const LandingSection6 = () => {
                 </>
               ))
             )}
-            <CommonButton title="call us for Support" />
+            <Group>
+
+            <CommonButton title="Join WhatsApp Group"
+            href="https://chat.whatsapp.com/HYSWQzeSv6XLuj2KgM9cu6" />
+            <CommonButton title="Join Discord Channel"
+            href="https://discord.gg/snT8Na7f" />
+            
+            </Group>
+            
           </Stack>
           <Group mx="auto">
             {MD ? (
               <AspectRatio ratio={11 / 9}>
-{/* Need to change */}
-                <Image radius="lg" maw={700} src="/quantum_network.jpeg" alt="Group_of_people" />
+                {/* Need to change */}
+                <Image
+                  radius="lg"
+                  maw={700}
+                  src="/quantum_network.jpeg"
+                  alt="Group_of_people"
+                />
               </AspectRatio>
             ) : null}
           </Group>

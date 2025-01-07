@@ -5,34 +5,40 @@ import { AspectRatio, Image, Paper, Stack, Title } from '@mantine/core';
 import { Children } from 'react';
 const TEAM = [
   {
-    image: '/noor.png',
-    name: 'Noor-ul Hasan',
+    image: '/india-chapter.jpg',
+    name: 'Chapter - QIND-Q',
     country: 'India',
-    role: 'Web Developer',
+    role: 'Know More',
   },
   {
-    image: '/noor.png',
-    name: 'Noor-ul Hasan',
-    country: 'India',
-    role: 'Web Developer',
+    image: '/Germany-chapter.jpg',
+    name: 'Chapter - QGER',
+    country: 'Germany',
+    role: 'Know More',
   },
   {
-    image: '/noor.png',
-    name: 'Noor-ul Hasan',
-    country: 'India',
-    role: 'Web Developer',
+    image: '/Australia-chapter.jpg',
+    name: 'Chapter - QAUS',
+    country: 'Australia',
+    role: 'Know More',
   },
   {
-    image: '/noor.png',
-    name: 'Noor-ul Hasan',
-    country: 'India',
-    role: 'Web Developer',
+    image: '/England-chapter.jpg',
+    name: 'Chapter - QENG',
+    country: 'England',
+    role: 'Know More',
   },
   {
-    image: '/noor.png',
-    name: 'Noor-ul Hasan',
-    country: 'India',
-    role: 'Web Developer',
+    image: '/Japan-chapter.jpg',
+    name: 'Chapter - QJAP',
+    country: 'Japan',
+    role: 'Know More',
+  },
+  {
+    image: '/America-chapter.jpg',
+    name: 'Chapter - QUS',
+    country: 'US of A',
+    role: 'Know More',
   },
 ];
 
@@ -42,7 +48,7 @@ export const ChapterSection1 = () => {
     <>
       {/* <Center > */}
       <Stack gap="xl" p="xl" py={SIZE_CONFIG.SECTION_SPACE}>
-        <Title ta="center">Neocosmicx Fellow Chapters</Title>
+        <Title ta="center">Our Fellow Chapters</Title>
         <Carousel
           px={MD ? '100' : 'xs'}
           // py={SIZE_CONFIG.SECTION_SPACE}
@@ -57,7 +63,7 @@ export const ChapterSection1 = () => {
                 <Carousel.Slide>
                   <Paper
                     style={{ borderRadius: '10px', borderColor: COLOR.GREEN }}
-                    mih={MD ? '50vh' : '30vh'}
+                    mih={MD ? '70vh' : '30vh'}
                     radius={0}
                     withBorder
                     bg="transparent"

@@ -19,17 +19,19 @@ const DATA = [
     image: '/individual_membership.jpeg',
     title: 'Individual',
     href: "/membership/1",
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat vel animi earum, nisi enim accusamus nesciunt adipisci nostrum, facere ad veritatis? Cupiditate incidunt tempore deleniti cumque nostrum sint! Placeat, magnam!',
+    text: 'If you’re passionate about quantum computing and eager to explore its potential, this membership is your starting point. Stay ahead in your industry by exploring how quantum computing can transform your business and skillset.',
   },
   {
     image: '/student_membershipjpeg.jpeg',
-    title: 'Student', href: "/membership/3",
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat vel animi earum, nisi enim accusamus nesciunt adipisci nostrum, facere ad veritatis? Cupiditate incidunt tempore deleniti cumque nostrum sint! Placeat, magnam!',
+    title: 'Student', 
+    href: "/membership/3",
+    text: 'Gain access to beginner-friendly tutorials, advanced quantum programming guides, and white papers to fuel your academic and personal growth. Connect with like-minded students, researchers, and industry experts through our global quantum community.',
   },
   {
     image: '/enterprise_membership.jpeg',
-    title: 'Enterprise', href: "/membership/2",
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat vel animi earum, nisi enim accusamus nesciunt adipisci nostrum, facere ad veritatis? Cupiditate incidunt tempore deleniti cumque nostrum sint! Placeat, magnam!',
+    title: 'Enterprise', 
+    href: "/membership/2",
+    text: 'Access bespoke quantum tools and resources that address your organizations unique challenges and objectives. Receive an in-depth evaluation of your businesss potential for adopting and implementing quantum technologies.',
   },
 ];
 export const MembershipSection1 = () => {

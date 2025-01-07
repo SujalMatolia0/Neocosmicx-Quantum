@@ -18,7 +18,7 @@ const DATA = [
   {
     title: 'Quantum Innovation, Engineered',
     description:
-      'Since 2002, we’ve been at the forefront of quantum computing, delivering cutting-edge solutions.',
+      'Since 2023, we’ve been at the forefront of quantum computing, delivering cutting-edge solutions.',
     btnTitle: 'Discover Our Solutions',
     list: [
       'Expert Team: Our team of seasoned quantum researchers brings a wealth of knowledge and experience to every project.',
