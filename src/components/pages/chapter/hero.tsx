@@ -28,9 +28,9 @@ export const ChapterHero = () => {
         {Children.toArray(
           DATA.map((item) => (
             <>
-              <Carousel.Slide mih="50vh">
-                <BackgroundImage src={item.image}>
-                  <Stack p="lg" mah="80vh" maw={1000} align="start">
+              <Carousel.Slide>
+                <BackgroundImage mih="70vh" src={item.image}>
+                  <Stack p="lg" h="70vh" w="100%" justify="end" align="end">
                     <Text size="xs" c={COLOR.GREEN}>
                       Know More, Explore More, Implement More
                     </Text>

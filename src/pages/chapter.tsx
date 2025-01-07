@@ -5,6 +5,8 @@ import { ChapterSection1 } from '@/components/pages/chapter/section1';
 import { ChapterSection2 } from '@/components/pages/chapter/section2';
 import { ChapterSection3 } from '@/components/pages/chapter/section3';
 import { ChapterSection4 } from '@/components/pages/chapter/section4';
+import { ChapterSection5 } from '@/components/pages/chapter/section5';
+
 
 export default function Chapter() {
   return (
@@ -15,6 +17,7 @@ export default function Chapter() {
         <ChapterSection2 />
         <ChapterSection3 />
         <ChapterSection4 />
+        <ChapterSection5 />
         <CommonFooter />
       </CommonLayout>
     </>
