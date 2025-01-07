@@ -6,7 +6,7 @@ import { Children } from 'react';
 const TEAM = [
   {
     image: '/india-chapter.jpg',
-    name: 'Chapter - QIND-Q',
+    name: 'Chapter - IND-Q',
     country: 'India',
     role: 'Know More',
   },
