@@ -6,6 +6,7 @@ export const COLOR = {
   PEACH: '#f2e0c9',
   GRAY: '#cec7ff',
   GREEN: '#c1f43d',
+  PURPLE: '#521B5B',
 };
 
 export const SIZE_CONFIG: {

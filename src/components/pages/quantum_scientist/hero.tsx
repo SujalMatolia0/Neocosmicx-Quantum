@@ -1,32 +1,41 @@
-import { SIZE_CONFIG } from '@/configs/theme';
-import { useMediaQuerys } from '@filante/cobalt/hooks';
-import {
-  Stack,
-  Title,
-  Text,
-  Image,
-  SimpleGrid,
-} from '@mantine/core';
+import { COLOR, SIZE_CONFIG } from "@/configs/theme";
+import { useMediaQuerys } from "@filante/cobalt/hooks";
+import { Stack, Title, Text, Image, SimpleGrid } from "@mantine/core";
 
 export const QuantumScientistHero = () => {
-  const { MD } = useMediaQuerys()
+  const { MD } = useMediaQuerys();
   return (
     <>
-      <SimpleGrid py={SIZE_CONFIG.SECTION_SPACE}
+      <SimpleGrid
+        py={SIZE_CONFIG.SECTION_SPACE}
         mah="100vh"
-        px={MD ? '140' : 'xs'}
+        px={MD ? "140" : "xs"}
         cols={{ base: 1, md: 2 }}
       >
         <Stack py="xl">
-          <Title>Charted Quantum<br />Scientist</Title>
+          <Text size="xl" c={COLOR.GREEN}>
+            Chartered Quantum Scientist
+          </Text>
+          <Title size="8vh">
+            The Pinnacle of Quantum <br />
+            Excellence
+          </Title>
           <Text>
-            Get hands-on experience with quantum computing in PennyLane–from
-            quantum chemistry to quantum machine learning–using our exclusive
-            coding challenges.
+            The Chartered Quantum Scientist designation by Neocosmicx is the
+            highest recognition of expertise, leadership, and innovation in the
+            quantum computing field. This prestigious program is tailored for
+            seasoned professionals, researchers, scientists, and academicians
+            who are shaping the future of quantum technology and driving
+            groundbreaking advancements in their fields. <br/><br/>As a Chartered Quantum
+            Scientist, you join an elite group of thought leaders who are
+            defining the boundaries of what quantum computing can achieve, both
+            theoretically and in real-world applications.
           </Text>
         </Stack>
-        {MD ? <Image radius="lg" src="/accredation_scientist.jpeg" alt="image" /> : null}
-      </SimpleGrid >
+        {MD ? (
+          <Image radius="lg" src="/accredation_scientist.jpeg" alt="image" />
+        ) : null}
+      </SimpleGrid>
     </>
   );
 };

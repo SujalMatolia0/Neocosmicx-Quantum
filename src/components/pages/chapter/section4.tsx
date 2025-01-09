@@ -13,29 +13,29 @@ import { Children } from 'react';
 
 const DATA = [
   {
-    image: '/noor.png',
-    name: 'Noor-ul Hasan',
-    role: 'Web Developer',
+    image: '/newgirl1.png',
+    name: 'Taniya Johns',
+    role: 'UAE',
   },
   {
-    image: '/noor.png',
-    name: 'Noor-ul Hasan',
-    role: 'Web Developer',
+    image: '/newboy1.png',
+    name: 'Akshay Jain',
+    role: 'India',
   },
   {
-    image: '/noor.png',
-    name: 'Noor-ul Hasan',
-    role: 'Web Developer',
+    image: '/newgirl2.png',
+    name: 'Melina Roberts',
+    role: 'Australia',
   },
   {
-    image: '/noor.png',
-    name: 'Noor-ul Hasan',
-    role: 'Web Developer',
+    image: '/newboy2.png',
+    name: 'Alexander',
+    role: 'Germany',
   },
   {
-    image: '/noor.png',
-    name: 'Noor-ul Hasan',
-    role: 'Web Developer',
+    image: '/newgirl3.png',
+    name: 'Hasina Sheikh',
+    role: 'Israel',
   },
 ];
 export const ChapterSection4 = () => {
