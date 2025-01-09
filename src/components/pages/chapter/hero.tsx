@@ -2,7 +2,7 @@ import { CommonButton } from "@/components/indie/common_button";
 import { COLOR, SIZE_CONFIG } from "@/configs/theme";
 import { useMediaQuerys } from "@filante/cobalt/hooks";
 import { Carousel } from "@mantine/carousel";
-import { BackgroundImage, Group, Stack, Text, Title } from "@mantine/core";
+import { BackgroundImage, Stack, Text, Title } from "@mantine/core";
 import { Children } from "react";
 
 const DATA = [
