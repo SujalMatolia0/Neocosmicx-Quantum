@@ -1,5 +1,5 @@
 import { CommonButton } from '@/components/indie/common_button';
-import { COLOR, SIZE_CONFIG } from '@/configs/theme';
+import { COLOR } from '@/configs/theme';
 import { useSizeHelper } from '@/lib/hooks/size_helper';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
 import {
@@ -34,8 +34,7 @@ export const LandingHero = () => {
     <>
       <Grid
         mih="calc(100vh - 5.7rem)"
-        // mih="100vh"
-        pt={SIZE_CONFIG.SECTION_SPACE}
+        pt="lg"
         columns={10}
       >
         <Grid.Col
@@ -80,7 +79,6 @@ export const LandingHero = () => {
             <Stack
               gap="sm"
               px={MD ? '60px' : 'md'}
-              // pt={MD ? rem(80) : 'lg'}
               justify="end"
               style={{
                 position: 'absolute',

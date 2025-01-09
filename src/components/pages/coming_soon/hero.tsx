@@ -3,7 +3,13 @@ import { Center, Title } from '@mantine/core';
 
 export const ComingSoonHero = () => {
   return (
-    <div style={{ position: 'relative', height: '85vh', overflow: 'hidden' }}>
+    <div
+      style={{
+        position: 'relative',
+        height: '89vh',
+        overflow: 'hidden',
+      }}
+    >
       <video
         src="/comingsoonbg.mp4"
         autoPlay

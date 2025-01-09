@@ -27,17 +27,19 @@ const DATA = [
     menu: [
       {
         list: [
-          { text: 'Machine Learning', link: '/q-ml' },
-          { text: 'Space & Cosmology', link: '/q-space' },
-          { text: 'Transportation & Mobility', link: '/transportation' },
-          { text: 'Pharma & Chemistry', link: '/pharma' },
-          { text: 'Material Science', link: '/material-science' },
-          { text: 'Network & Security', link: '/communication' },
-          { text: 'Defense', link: '/defense' },
-          { text: 'Finance', link: '/finance' },
+          { text: 'Machine Learning', link: '/solutions/q-ml' },
+          { text: 'Space & Cosmology', link: '/solutions/q-space' },
+          {
+            text: 'Transportation & Mobility',
+            link: '/solutions/transportation',
+          },
+          { text: 'Pharma & Chemistry', link: '/solutions/pharma' },
+          { text: 'Material Science', link: '/solutions/material-science' },
+          { text: 'Network & Security', link: '/solutions/communication' },
+          { text: 'Defense', link: '/solutions/defense' },
+          { text: 'Finance', link: '/solutions/finance' },
         ],
       },
-
     ],
   },
   {
@@ -46,10 +48,9 @@ const DATA = [
       {
         list: [
           { text: 'Quantune.py', link: '/coming_soon' },
-          { text: 'Membership', link: '/membership' },
-          { text: 'Chapter', link: '/chapter' },
-          { text: 'Journal (Q-Plus)', link: '/coming_soon' },
-          // { text: 'Challenges', link: '/challenges' },
+          { text: 'Membership', link: '/resources/membership' },
+          { text: 'Chapter', link: '/resources/chapter' },
+          { text: 'Journal (Q-Plus)', link: '/resources/coming_soon' },
         ],
       },
     ],
@@ -59,14 +60,17 @@ const DATA = [
     menu: [
       {
         list: [
-          { text: 'Quantum Innovator Program', link: '/quantum_innovator_program' },
+          {
+            text: 'Quantum Innovator Program',
+            link: '/accreditations/quantum_innovator_program',
+          },
           {
             text: 'Charted Quantum Scientist',
-            link: '/charted_quantum_scientist',
+            link: '/accreditations/charted_quantum_scientist',
           },
           {
             text: 'Certified Quantum Engineer',
-            link: '/certified_quantum_engineer',
+            link: '/accreditations/certified_quantum_engineer',
           },
         ],
       },
@@ -77,10 +81,9 @@ const DATA = [
     menu: [
       {
         list: [
-          { text: 'Courses', link: '/courses' },
-          { text: 'Trainings', link: '/training' },
-          { text: 'Research', link: '/research' },
-          // { text: 'Codebook', link: '/codebook' },
+          { text: 'Courses', link: '/learnings/courses' },
+          { text: 'Trainings', link: '/learnings/coming_soon' },
+          { text: 'Research', link: '/learnings/research' },
         ],
       },
     ],
@@ -90,18 +93,18 @@ const DATA = [
     menu: [
       {
         list: [
-          { text: 'Company', link: '/about' },
-          { text: 'Team', link: '/team' },
-          { text: 'Pricing', link: '/pricing' },
-          { text: 'Join Us', link: '/join-us' },
-          { text: 'FAQs', link: '/faq' },
+          { text: 'Company', link: '/about/company' },
+          { text: 'Team', link: '/about/team' },
+          { text: 'Pricing', link: '/about/pricing' },
+          { text: 'Join Us', link: '/about/join-us' },
+          { text: 'FAQs', link: '/about/faq' },
         ],
       },
     ],
   },
   {
     title: 'Spark',
-    description: '/blog',
+    description: '/spark',
   },
   {
     title: 'Contact',
@@ -118,7 +121,6 @@ export const CommonHeader = () => {
       {MD ? (
         <Group px={80} py={20} justify="space-between">
           <Group>
-
             <Link href="/">
               <AspectRatio ratio={11 / 9} maw={60}>
                 <Image src="/logo-removebg.png" alt="logo" />
@@ -133,7 +135,9 @@ export const CommonHeader = () => {
                       c={COLOR.TURQUOISE}
                       component={Link}
                       href={item.description || ''}
-                      style={{ cursor: item.description ? 'pointer' : 'default' }}
+                      style={{
+                        cursor: item.description ? 'pointer' : 'default',
+                      }}
                     >
                       {item.title}
                     </Text>
@@ -169,7 +173,7 @@ export const CommonHeader = () => {
               variant="transparent"
               title="Get Connected"
             />
-            <CommonButton href='/coming_soon' title="Q-Platform" />
+            <CommonButton href="/coming_soon" title="Q-Platform" />
           </Group>
         </Group>
       ) : (
@@ -227,7 +231,6 @@ export const CommonHeader = () => {
                     <Accordion.Panel>
                       {item.menu?.map((menuItem, idx) => (
                         <Stack key={idx}>
-
                           {menuItem.list.map((linkItem, linkIdx) => (
                             <Text key={linkIdx} c={COLOR.GREEN} size="sm">
                               <Link href={linkItem.link}>{linkItem.text}</Link>
@@ -236,15 +239,13 @@ export const CommonHeader = () => {
                         </Stack>
                       ))}
                     </Accordion.Panel>
-
                   </Accordion.Item>
                 ))}
               </Accordion>
             </Stack>
           </Modal>
         </>
-      )
-      }
+      )}
     </>
   );
 };

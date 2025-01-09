@@ -42,7 +42,7 @@ export const LandingSection1 = () => {
           </Stack>
         </SimpleGrid>
         <Group pt="xl" justify="center" gap="xl">
-          <CommonButton href='/' title="Explore More!" color={COLOR.PEACH} />
+          <CommonButton href='/coming_soon' title="Explore More!" color={COLOR.PEACH} />
         </Group>
       </Stack>
     </>

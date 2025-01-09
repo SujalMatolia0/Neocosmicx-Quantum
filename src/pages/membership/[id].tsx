@@ -1,6 +1,6 @@
 import { CommonFooter } from '@/components/footer/common';
 import { CommonLayout } from '@/components/layout/common';
-import { MembershipHero } from '@/components/pages/membership/hero';
+import { MembershipHero } from '@/components/pages/resources/membership/hero';
 import { MembershipData } from '@/lib/data/memberships';
 import { GetServerSidePropsContext, InferGetServerSidePropsType } from 'next';
 

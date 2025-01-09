@@ -3,7 +3,6 @@ import { useMediaQuerys } from '@filante/cobalt/hooks';
 import {
   AspectRatio,
   Button,
-  // Container,
   Image,
   SimpleGrid,
   Stack,
@@ -12,9 +11,8 @@ import {
 } from '@mantine/core';
 
 interface Props {
-  section: string;
-  page: string;
-  text: string;
+  title: string;
+  description: string;
   image: string;
 }
 
@@ -23,7 +21,6 @@ export const CommonSectorHero = (props: Props) => {
   return (
     <>
       <Stack mih="100vh">
-        {/* <Container size="lg"> */}
         <SimpleGrid
           px={MD ? '8%' : 'md'}
           py="md"
@@ -32,22 +29,21 @@ export const CommonSectorHero = (props: Props) => {
         >
           <Stack h="100%" justify="end">
             <Button color={COLOR.GREEN} tt="uppercase" w="fit-content">
-              {props.section}
+              Sector
             </Button>
             <Stack gap={0.2}>
               <Title lh={1} size="7vw">
                 Quantum
               </Title>
-              <Text size="3vw">{props.page}</Text>
+              <Text size="3vw">{props.title}</Text>
             </Stack>
           </Stack>
           <Stack h="100%" justify="end">
-            <Text>{props.text}</Text>
+            <Text>{props.description}</Text>
           </Stack>
         </SimpleGrid>
-        {/* </Container> */}
         <AspectRatio ratio={16 / 4.2}>
-          <Image mih="55vh" src={props.image} alt="Hero-Image" />{' '}
+          <Image mih="60vh" src={props.image} alt="Hero-Image" />
         </AspectRatio>
       </Stack>
     </>
