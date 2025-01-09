@@ -40,7 +40,7 @@ export const ChapterSection5 = () => {
           determination, and a vision for impact. Whether you’re a quantum
           technologist, entrepreneur, scientist, educator, artist, researcher,
           or changemaker, your work and ideas can help drive the quantum
-          revolution. Here's what we look for in a Neocosmicx Visionary:
+          revolution. Here&apos;s what we look for in a Neocosmicx Visionary:
         </Text>
         <SimpleGrid p="md" cols={{ base: 1, md: 2 }}>
           {Children.toArray(
