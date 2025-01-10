@@ -17,7 +17,7 @@ export const CommonSectionCard = (props: Props) => {
       <Paper
         pos="relative"
         right={300}
-        top={50}
+        top={200}
         radius="xl"
         bg={COLOR.GRAY}
         h={MD ? 60 : 250}
@@ -29,6 +29,7 @@ export const CommonSectionCard = (props: Props) => {
       <Paper
         pos="relative"
         p="xl"
+        top={150}
         mih={MD ? 250 : 100}
         w={MD ? 650 : 300}
         shadow="xl"
@@ -49,7 +50,7 @@ export const CommonSectionCard = (props: Props) => {
       <Paper
         pos="relative"
         left={300}
-        top={-50}
+        top={100}
         radius="xl"
         bg={COLOR.GRAY}
         h={60}
@@ -64,8 +65,8 @@ export const CommonSectionCard = (props: Props) => {
           w={MD ? 250 : 250}
           radius="lg"
           pos="relative"
-          left={MD ? 450 : 0}
-          top={MD ? -350 : -750}
+          left={MD ? 400 : 0}
+          top={MD ? -300 : -750}
           src={props.image}
           alt="pic"
           style={{

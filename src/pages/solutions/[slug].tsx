@@ -1,4 +1,5 @@
 import { CommonFooter } from '@/components/footer/common';
+import { CommonHeader } from '@/components/header/common';
 import { CommonLayout } from '@/components/layout/common';
 import { CommonSolutions } from '@/components/pages/solutions';
 import { SolutionsData } from '@/lib/data/solutions';
@@ -35,9 +36,8 @@ export default function Category({
   solution,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
-    <CommonLayout>
+    <CommonLayout footer={<CommonFooter/>} header={<CommonHeader />} fixedHeader>
       <CommonSolutions solution={solution} />
-      <CommonFooter />
     </CommonLayout>
   );
 }

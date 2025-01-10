@@ -60,7 +60,7 @@ export const ChapterSection4 = () => {
               <>
                 <Stack gap={1}>
                   <Center>
-                    <AspectRatio ratio={10 / 10}>
+                    <AspectRatio ratio={10 / 11}>
                       <Image
                         radius="lg"
                         alt="image"

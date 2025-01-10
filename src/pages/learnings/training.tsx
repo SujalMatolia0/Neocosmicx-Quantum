@@ -1,4 +1,5 @@
 import { CommonFooter } from '@/components/footer/common';
+import { CommonHeader } from '@/components/header/common';
 import { CommonLayout } from '@/components/layout/common';
 import { TrainingHero } from '@/components/pages/learning/training/hero';
 import { TrainingSection1 } from '@/components/pages/learning/training/section1';
@@ -10,14 +11,13 @@ import { TrainingSection5 } from '@/components/pages/learning/training/section5'
 export default function Courses() {
   return (
     <>
-      <CommonLayout>
+       <CommonLayout footer={<CommonFooter/>} header={<CommonHeader />} fixedHeader>
         <TrainingHero />
         <TrainingSection1 />
         <TrainingSection2 />
         <TrainingSection3 />
         <TrainingSection4 />
         <TrainingSection5 />
-        <CommonFooter />
       </CommonLayout>
     </>
   );

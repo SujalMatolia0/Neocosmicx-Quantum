@@ -68,7 +68,7 @@ const CommonTag = (props: CommonTagsProps) => (
       {Children.toArray(
         props.list.map((item) => (
           <>
-            <Stack gap={0}>
+            <Stack gap="3">
               {item.title && (
                 <Text size="xs" opacity={0.8} c={COLOR.GREEN}>
                   {item.title}
@@ -77,7 +77,7 @@ const CommonTag = (props: CommonTagsProps) => (
               <Space h="xs" />
               {item.links.map((link) => (
                 <>
-                  <Text size="sm" opacity={0.9} c={COLOR.GREEN}>
+                  <Text size="sm" c={COLOR.GREEN}>
                     {link.text}
                   </Text>
                 </>
@@ -110,7 +110,7 @@ export const CommonFooter = () => {
             <Image src="/logo-full.png" alt="logo" />
           </AspectRatio>
 
-          <SimpleGrid py={SIZE_CONFIG.SECTION_SPACE} cols={{ base: 2, md: 4 }}>
+          <SimpleGrid py={SIZE_CONFIG.SECTION_SPACE} cols={{ base: 2, md: 5 }}>
             {/* <Stack>
                 <CommonTag
                   title="GET IN TOUCH"
@@ -134,14 +134,18 @@ export const CommonFooter = () => {
                 />
           </Stack> */}
             <CommonTag
-              title="RESOURCES"
+              title="SOLUTIONS"
               list={[
                 {
                   links: [
-                    { text: 'Case Studies' },
-                    { text: 'Learning' },
-                    { text: 'Blogs' },
-                    { text: 'Community' },
+                    { text: 'Quantum Machine Learning' },
+                    { text: 'Quantum Space & Cosmology' },
+                    { text: 'Quantum Transportation & Mobility' },
+                    { text: 'Quantum Pharma & Chemistry' },
+                    { text: 'Quantum Network & Security' },
+                    { text: 'Quantum Material Science' },
+                    { text: 'Quantum Defense' },
+                    { text: 'Quantum Finance' },
                   ],
                 },
               ]}
@@ -151,36 +155,48 @@ export const CommonFooter = () => {
               list={[
                 {
                   links: [
-                    { text: 'Case Studies' },
-                    { text: 'Learning' },
-                    { text: 'Blogs' },
-                    { text: 'Community' },
+                    { text: 'Quantune.py' },
+                    { text: 'Membership' },
+                    { text: 'Chapter' },
+                    { text: 'Journal (Q-Plus)' },
                   ],
                 },
               ]}
             />
             <CommonTag
-              title="RESOURCES"
+              title="ACCREDITATIONS"
               list={[
                 {
                   links: [
-                    { text: 'Case Studies' },
-                    { text: 'Learning' },
-                    { text: 'Blogs' },
-                    { text: 'Community' },
+                    { text: 'Quantum Innovator Program' },
+                    { text: 'Charted Quantum Scientist' },
+                    { text: 'Charted Quantum Engineer' },
                   ],
                 },
               ]}
             />
             <CommonTag
-              title="RESOURCES"
+              title="LEARNINGS"
               list={[
                 {
                   links: [
-                    { text: 'Case Studies' },
-                    { text: 'Learning' },
-                    { text: 'Blogs' },
-                    { text: 'Community' },
+                    { text: 'Courses' },
+                    { text: 'Trainings' },
+                    { text: 'Research' },
+                  ],
+                },
+              ]}
+            />
+            <CommonTag
+              title="ABOUT"
+              list={[
+                {
+                  links: [
+                    { text: 'Company' },
+                    { text: 'Pricing' },
+                    { text: 'Join Us' },
+                    { text: 'FAQs' },
+
                   ],
                 },
               ]}

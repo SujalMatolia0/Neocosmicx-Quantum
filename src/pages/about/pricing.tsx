@@ -1,4 +1,5 @@
 import { CommonFooter } from '@/components/footer/common';
+import { CommonHeader } from '@/components/header/common';
 import { CommonLayout } from '@/components/layout/common';
 import { PricingHero } from '@/components/pages/about/pricing/hero';
 import { PricingSection1 } from '@/components/pages/about/pricing/section1';
@@ -9,14 +10,13 @@ import { LandingSection5 } from '@/components/pages/landing/section5';
 export default function Pricing() {
   return (
     <>
-      <CommonLayout>
+       <CommonLayout footer={<CommonFooter/>} header={<CommonHeader />} fixedHeader>
         <PricingHero />
         <PricingSection1 />
         <PricingSection2 />
         <PricingSection3 />
         <LandingSection4 />
         <LandingSection5 />
-        <CommonFooter />
       </CommonLayout>
     </>
   );

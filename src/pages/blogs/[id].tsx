@@ -1,3 +1,5 @@
+import { CommonFooter } from '@/components/footer/common';
+import { CommonHeader } from '@/components/header/common';
 import { CommonLayout } from '@/components/layout/common';
 import { BlogCommon } from '@/components/pages/spark/bolgcommon';
 import { BlogData } from '@/lib/data/blog';
@@ -32,7 +34,7 @@ export default function BlogPost({
   Blog,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
-    <CommonLayout>
+     <CommonLayout footer={<CommonFooter/>} header={<CommonHeader />} fixedHeader>
       <BlogCommon BlogData={Blog} />
     </CommonLayout>
   );

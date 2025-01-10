@@ -1,26 +1,39 @@
-import { SIZE_CONFIG } from '@/configs/theme';
 import { useMediaQuerys } from '@filante/cobalt/hooks';
-import { Image, SimpleGrid, Stack, Text, Title } from '@mantine/core';
+import {
+  AspectRatio,
+  Image,
+  SimpleGrid,
+  Stack,
+  Text,
+  Title,
+} from '@mantine/core';
 
 export const QuantumEngineerHero = () => {
-  const { MD } = useMediaQuerys()
+  const { MD } = useMediaQuerys();
   return (
     <>
-      <SimpleGrid py={SIZE_CONFIG.SECTION_SPACE}
+      <SimpleGrid
+        py="xl"
         mah="100vh"
         px={MD ? '140' : 'xs'}
         cols={{ base: 1, md: 2 }}
       >
         <Stack py="xl">
-          <Title>Certified Quantum <br /> Engineer</Title>
+          <Title>
+            Certified Quantum <br /> Engineer
+          </Title>
           <Text>
             Get hands-on experience with quantum computing in PennyLane–from
             quantum chemistry to quantum machine learning–using our exclusive
             coding challenges.
           </Text>
         </Stack>
-        {MD ? <Image radius="lg" src="/accredation_engineer.jpeg" alt="image" /> : null}
-      </SimpleGrid >
+        {MD ? (
+          <AspectRatio ratio={14 / 14}>
+            <Image radius="lg" src="/accredation_engineer.jpeg" alt="image" />
+          </AspectRatio>
+        ) : null}
+      </SimpleGrid>
     </>
   );
 };

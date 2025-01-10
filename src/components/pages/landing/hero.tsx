@@ -33,8 +33,8 @@ export const LandingHero = () => {
   return (
     <>
       <Grid
-        mih="calc(100vh - 5.7rem)"
-        pt="lg"
+        mih="calc(100vh - 5rem)"
+        pt="xl"
         columns={10}
       >
         <Grid.Col

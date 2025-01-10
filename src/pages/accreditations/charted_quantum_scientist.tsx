@@ -1,4 +1,5 @@
 import { CommonFooter } from '@/components/footer/common';
+import { CommonHeader } from '@/components/header/common';
 import { CommonFaqAccredation } from '@/components/indie/common_faq_accredation';
 import { CommonLayout } from '@/components/layout/common';
 import { QuantumScientistHero } from '@/components/pages/accreditation/quantum_scientist/hero';
@@ -8,69 +9,44 @@ import { QuantumScientistSection3 } from '@/components/pages/accreditation/quant
 
 const FAQ_DATA = [
   {
+    id:'1',
     question: 'Who can appear for the exam?',
-    answer: {
-      answer: [
-        {
-          text: 'Anyone who meets the eligibility criteria Additional resources are provided on the official websiteAdditional resources are provided on the official websitecan appear for the exam.',
-        },
-        {
-          text: 'Additional resources are provided on the official websiteAdditional resources are provided on the official websiteAdditional resources are provided on the official websiteThe eligibility criteria vary based on the course.',
-        },
-      ],
-    },
+    answer:
+      'Anyone who meets the eligibility criteria Additional resources are provided on the official websiteAdditional resources are provided on the official websitecan appear for the exam.',
   },
   {
-    question: 'What is the syllabus for the exam?',
-    answer: {
-      answer: [
-        {
-          text: 'The  Additional resources are provided on the officialAdditional resources are provided on the official website websiteAdditional resources are provided on the official website syllabus covers topics A, B, C, and D.',
-        },
-        {
-          text: 'Additional resources are provided on the official websiteAdditional resources are provided on the official websiteAdditional resources are provided on the official website.The syllabus covers topics A, B, C, and D.',
-        },
-      ],
-    },
+    id:'2',
+    question: 'Who can appear for the exam?',
+    answer:
+      'Anyone who meets the eligibility criteria Additional resources are provided on the official websiteAdditional resources are provided on the official websitecan appear for the exam.',
   },
   {
-    question: 'What is the syllabus for the exam?',
-    answer: {
-      answer: [
-        {
-          text: 'The  Additional resources are provided on the officialAdditional resources are provided on the official website websiteAdditional resources are provided on the official website syllabus covers topics A, B, C, and D.',
-        },
-        {
-          text: 'Additional resources are provided on the official websiteAdditional resources are provided on the official websiteAdditional resources are provided on the official website.The syllabus covers topics A, B, C, and D.',
-        },
-      ],
-    },
+    id:'3',
+    question: 'Who can appear for the exam?',
+    answer:
+      'Anyone who meets the eligibility criteria Additional resources are provided on the official websiteAdditional resources are provided on the official websitecan appear for the exam.',
   },
   {
-    question: 'What is the syllabus for the exam?',
-    answer: {
-      answer: [
-        {
-          text: 'The  Additional resources are provided on the officialAdditional resources are provided on the official website websiteAdditional resources are provided on the official website syllabus covers topics A, B, C, and D.',
-        },
-        {
-          text: 'Additional resources are provided on the official websiteAdditional resources are provided on the official websiteAdditional resources are provided on the official website.The syllabus covers topics A, B, C, and D.',
-        },
-      ],
-    },
+    id:'4',
+    question: 'Who can appear for the exam?',
+    answer:
+      'Anyone who meets the eligibility criteria Additional resources are provided on the official websiteAdditional resources are provided on the official websitecan appear for the exam.',
   },
 ];
 
 export default function QuantumScientist() {
   return (
     <>
-      <CommonLayout>
+      <CommonLayout
+        footer={<CommonFooter />}
+        header={<CommonHeader />}
+        fixedHeader
+      >
         <QuantumScientistHero />
         <QuantumScientistSection1 />
         <QuantumScientistSection2 />
         <QuantumScientistSection3 />
         <CommonFaqAccredation data={FAQ_DATA} />;
-        <CommonFooter />
       </CommonLayout>
     </>
   );

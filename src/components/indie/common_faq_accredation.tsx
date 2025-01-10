@@ -1,44 +1,32 @@
-import { COLOR } from '@/configs/theme';
-import {
-  Container,
-  Stack,
-  Title,
-  SimpleGrid,
-  Divider,
-  Text,
-} from '@mantine/core';
-
-interface Answer {
-  text: string;
-}
+import { Container, Title, SimpleGrid, Text, Accordion } from '@mantine/core';
 
 interface Props {
   data: {
+    id: string;
     question: string;
-    answer: {
-      answer: Answer[];
-    };
+    answer: string;
   }[];
 }
 
 export const CommonFaqAccredation = ({ data }: Props) => {
   return (
     <Container size="xl">
-      <Stack align="center">
+      <SimpleGrid cols={{ base: 1, md: 2 }}>
         <Title>Frequently Asked Questions</Title>
 
-        <SimpleGrid cols={2}>
-          {data.map((item, index) => (
-            <Stack key={index}>
-              <Title order={4}>{item.question}</Title>
-              {item.answer.answer.map((arr, arrIndex) => (
-                <Text key={arrIndex}>{arr.text}</Text>
-              ))}
-              <Divider size={1} color={COLOR.TURQUOISE} />
-            </Stack>
+        <Accordion>
+          {data.map((item) => (
+            <Accordion.Item key={item.id} value={item.id}>
+              <Accordion.Control w={500}>{item.question}</Accordion.Control>
+              <Accordion.Panel maw={500}>
+                <Text size="sm" c="dimmed">
+                  {item.answer}
+                </Text>
+              </Accordion.Panel>
+            </Accordion.Item>
           ))}
-        </SimpleGrid>
-      </Stack>
+        </Accordion>
+      </SimpleGrid>
     </Container>
   );
 };

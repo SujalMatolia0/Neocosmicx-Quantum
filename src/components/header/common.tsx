@@ -31,13 +31,13 @@ const DATA = [
           { text: 'Space & Cosmology', link: '/solutions/q-space' },
           {
             text: 'Transportation & Mobility',
-            link: '/solutions/transportation',
+            link: '/solComingSoon',
           },
-          { text: 'Pharma & Chemistry', link: '/solutions/pharma' },
-          { text: 'Material Science', link: '/solutions/material-science' },
-          { text: 'Network & Security', link: '/solutions/communication' },
-          { text: 'Defense', link: '/solutions/defense' },
-          { text: 'Finance', link: '/solutions/finance' },
+          { text: 'Pharma & Chemistry', link: '/solComingSoon' },
+          { text: 'Material Science', link: '/solComingSoon' },
+          { text: 'Network & Security', link: '/solComingSoon' },
+          { text: 'Defense', link: '/solComingSoon' },
+          { text: 'Finance', link: '/solComingSoon' },
         ],
       },
     ],
@@ -50,7 +50,7 @@ const DATA = [
           { text: 'Quantune.py', link: '/coming_soon' },
           { text: 'Membership', link: '/resources/membership' },
           { text: 'Chapter', link: '/resources/chapter' },
-          { text: 'Journal (Q-Plus)', link: '/resources/coming_soon' },
+          { text: 'Journal (Q-Plus)', link: '/coming_soon' },
         ],
       },
     ],
@@ -81,8 +81,8 @@ const DATA = [
     menu: [
       {
         list: [
-          { text: 'Courses', link: '/learnings/courses' },
-          { text: 'Trainings', link: '/learnings/coming_soon' },
+          { text: 'Courses', link: '/coming_soon' },
+          { text: 'Trainings', link: '/learnings/training' },
           { text: 'Research', link: '/learnings/research' },
         ],
       },
@@ -94,7 +94,7 @@ const DATA = [
       {
         list: [
           { text: 'Company', link: '/about/company' },
-          { text: 'Team', link: '/about/team' },
+          // { text: 'Team', link: '/about/team' },
           { text: 'Pricing', link: '/about/pricing' },
           { text: 'Join Us', link: '/about/join-us' },
           { text: 'FAQs', link: '/about/faq' },
@@ -106,10 +106,10 @@ const DATA = [
     title: 'Spark',
     description: '/spark',
   },
-  {
-    title: 'Contact',
-    description: '/contact',
-  },
+  // {
+  //   title: 'Contact',
+  //   description: '/contact',
+  // },
 ];
 
 export const CommonHeader = () => {
@@ -119,7 +119,7 @@ export const CommonHeader = () => {
   return (
     <>
       {MD ? (
-        <Group px={80} py={20} justify="space-between">
+        <Group px={80} py={10} justify="space-between">
           <Group>
             <Link href="/">
               <AspectRatio ratio={11 / 9} maw={60}>
@@ -178,7 +178,7 @@ export const CommonHeader = () => {
         </Group>
       ) : (
         <>
-          <Group p="sm" justify="space-between">
+          <Group p="sm"  justify="space-between">
             <Link href="/">
               <AspectRatio ratio={11 / 9} maw={50}>
                 <Image src="/logo-removebg.png" alt="logo" />

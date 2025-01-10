@@ -1,13 +1,13 @@
-import { COLOR, SIZE_CONFIG } from "@/configs/theme";
+import { COLOR } from "@/configs/theme";
 import { useMediaQuerys } from "@filante/cobalt/hooks";
-import { Image, SimpleGrid, Stack, Text, Title, } from "@mantine/core";
+import { AspectRatio, Image, SimpleGrid, Stack, Text, Title, } from "@mantine/core";
 
 export const QuantumBoffinHero = () => {
   const { MD } = useMediaQuerys();
   return (
     <>
       <SimpleGrid
-        py={SIZE_CONFIG.SECTION_SPACE}
+        py="xl"
         mah="100vh"
         px={MD ? "140" : "xs"}
         cols={{ base: 1, md: 2 }}
@@ -30,8 +30,11 @@ export const QuantumBoffinHero = () => {
             quantum computing accessible and impactful for everyone.
           </Text>
         </Stack>
-        {MD ? (
+        {MD ? (<>
+        <AspectRatio ratio={14 / 14}>
           <Image radius="lg" src="/innovator_accredation.png" alt="image" />
+        </AspectRatio>
+        </>
         ) : null}
       </SimpleGrid>
     </>

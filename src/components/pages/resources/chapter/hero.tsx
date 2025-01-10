@@ -47,7 +47,7 @@ export const ChapterHero = () => {
                       {item.text}                    </Title>
                     <Text ta='right' maw={700} c={COLOR.GREEN}>
                       {item.description}                    </Text>
-                    <CommonButton title="Get Noticed" />
+                    <CommonButton title="Start a Chapter" />
                   </Stack>
                 </BackgroundImage>
               </Carousel.Slide >
