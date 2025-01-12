@@ -13,6 +13,7 @@
     "@filante/arcessere": "^0.0.3",
     "@filante/cobalt": "^0.0.10",
     "@filante/imprimer": "^0.0.2",
+    "@folie/dishook": "^0.0.1",
     "@mantine/carousel": "^7.15.0",
     "@mantine/core": "^7.15.0",
     "@mantine/form": "^7.15.0",
@@ -24,11 +25,13 @@
     "@tanstack/react-query": "^5.52.2",
     "embla-carousel-autoplay": "^7.1.0",
     "embla-carousel-react": "^7.1.0",
+    "next": "15.1.0",
+    "node-fetch": "^3.3.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.1.0"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -37,8 +40,7 @@
     "postcss": "^8.4.49",
     "postcss-preset-mantine": "^1.17.0",
     "postcss-simple-vars": "^7.0.1",
-    "typescript": "^5",
-    "@eslint/eslintrc": "^3"
+    "typescript": "^5"
   },
   "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387"
 }
